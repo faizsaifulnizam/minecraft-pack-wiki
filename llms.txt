@@ -1,0 +1,18 @@
+# Minecraft pack handbook
+
+> Development snapshot dev-0.5-20261015. Partial tutorial coverage; not runtime certification.
+
+Each entry links to a human page and a Markdown copy. URL access and context size depend on your model.
+
+- [Minecraft pack handbook](https://faizsaifulnizam.github.io/minecraft-pack-wiki/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/index.md)
+- [Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/pack-map.md)
+- [Mod reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/mods.md)
+- [Getting started](https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/getting-started.md)
+- [Troubleshooting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/troubleshooting.md)
+- [Sources and evidence](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/sources.md)
+- [Changes](https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/changes.md)
+- [Find recipes and item uses](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/guides/recipe-search.md)
+- [Prepare your first AE2 storage system](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/guides/ae2-starter.md)
+- [Make your first MI bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/) | [Markdown](https://faizsaifulnizam.github.io/minecraft-pack-wiki/text/guides/mi-starter.md)
+
+[Combined text edition](https://faizsaifulnizam.github.io/minecraft-pack-wiki/llms-full.txt)

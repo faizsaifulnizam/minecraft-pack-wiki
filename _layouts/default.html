@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Handbook sidebar">
+      <a class="brand" href="{{ '/' | relative_url }}">PACK<br>HANDBOOK<span>Minecraft 1.21.1 · NeoForge</span></a>
+      <p class="edition">DEVELOPMENT REFERENCE</p>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}"{% if page.permalink == '/' %} aria-current="page"{% endif %}>Overview</a>
+        <a href="{{ '/getting-started/' | relative_url }}"{% if page.permalink == '/getting-started/' %} aria-current="page"{% endif %}>Getting started</a>
+        <a href="{{ '/pack-map/' | relative_url }}"{% if page.permalink == '/pack-map/' %} aria-current="page"{% endif %}>Pack map</a>
+        <a href="{{ '/mods/' | relative_url }}"{% if page.permalink == '/mods/' %} aria-current="page"{% endif %}>Mod reference</a>
+        <a href="{{ '/troubleshooting/' | relative_url }}"{% if page.permalink == '/troubleshooting/' %} aria-current="page"{% endif %}>Troubleshooting</a>
+        <a href="{{ '/sources/' | relative_url }}"{% if page.permalink == '/sources/' %} aria-current="page"{% endif %}>Sources &amp; evidence</a>
+        <a href="{{ '/changes/' | relative_url }}"{% if page.permalink == '/changes/' %} aria-current="page"{% endif %}>Changes</a>
+      </nav>
+      <nav class="secondary" aria-label="Starter guides">
+        <h2>FIRST GUIDES</h2>
+        <a href="{{ '/guides/recipe-search/' | relative_url }}"{% if page.permalink == '/guides/recipe-search/' %} aria-current="page"{% endif %}>Recipes &amp; uses</a>
+        <a href="{{ '/guides/ae2-starter/' | relative_url }}"{% if page.permalink == '/guides/ae2-starter/' %} aria-current="page"{% endif %}>First AE2 storage</a>
+        <a href="{{ '/guides/mi-starter/' | relative_url }}"{% if page.permalink == '/guides/mi-starter/' %} aria-current="page"{% endif %}>First MI bronze</a>
+      </nav>
+      <div class="text-edition">
+        <h2>FOR YOUR LLM</h2>
+        <a href="{{ '/llms.txt' | relative_url }}">Plain-text index</a>
+        <a href="{{ '/llms-full.txt' | relative_url }}" download>Download combined text</a>
+        <p>No chat service or API key needed by this site.</p>
+      </div>
+    </aside>
+    <div class="reading">
+      <header class="status-bar"><span class="status-dot" aria-hidden="true"></span>Still in development · Partial tutorial coverage</header>
+      <main id="main" tabindex="-1">
+        {{ content }}
+      </main>
+      <footer>
+        <p>Baseline <strong>{{ page.baseline | escape }}</strong> · Snapshot date: 15 October 2026 (Singapore). Inspect the <a href="{{ '/sources/' | relative_url }}">evidence status</a> before following a guide.</p>
+        <p>Unofficial Minecraft modpack documentation. File inspection is not a gameplay, compatibility or performance test.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

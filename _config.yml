@@ -1,0 +1,26 @@
+title: Minecraft Pack Handbook
+description: A development-pack reference for players and their chosen LLMs.
+url: "https://faizsaifulnizam.github.io"
+baseurl: "/minecraft-pack-wiki"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+exclude:
+  - README.md
+  - tools
+  - tests
+  - .gitignore
+  - .superpowers
+  - Gemfile
+  - Gemfile.lock
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
