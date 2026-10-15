@@ -28,7 +28,7 @@ class ContentTests(unittest.TestCase):
             self.assertTrue((ROOT/name).is_file(), name)
         for name in PAGES:
             text = (ROOT/name).read_text(encoding='utf-8')
-            self.assertIn('baseline: dev-0.5-20261015', text, name)
+            self.assertIn('baseline: dev-0.5-20261015-r2', text, name)
             if name.startswith('guides/'):
                 for heading in ('Baseline','Evidence status','Prerequisites','Steps','Expected result','Common failures','Sources'):
                     self.assertIn('## '+heading, text, name)
@@ -42,6 +42,18 @@ class ContentTests(unittest.TestCase):
 import importlib.util
 import shutil
 import tempfile
+import os
+import subprocess
+# Test copies belong in the agent scratch directory, not the system temp tree.
+tempfile.tempdir = os.environ.get('TMPDIR') or (str(Path(os.environ.get('LOCALAPPDATA',str(Path.home()/'AppData/Local')))/'hermes/cache/scratch') if os.name=='nt' else None)
+if tempfile.tempdir:Path(tempfile.tempdir).mkdir(parents=True,exist_ok=True)
+
+def link_directory(target, link):
+    try:os.symlink(target,link,target_is_directory=True)
+    except OSError:
+        if os.name!='nt':raise
+        result=subprocess.run(['cmd','/c','mklink','/J',str(link),str(target)],capture_output=True,text=True)
+        if result.returncode:raise OSError(result.stdout+result.stderr)
 
 class ExportTests(unittest.TestCase):
     def tool(self):
@@ -68,7 +80,7 @@ class ExportTests(unittest.TestCase):
             self.assertIn('https://example.org/minecraft-pack-wiki/guides/recipe-search/', guide)
             self.assertNotIn('layout: default', guide)
             self.assertNotIn('{{', guide)
-            self.assertIn('dev-0.5-20261015', guide)
+            self.assertIn('dev-0.5-20261015-r2', guide)
 
     def test_root_origin_deterministic_parity_and_literal_ids(self):
         tool = self.tool()
@@ -184,6 +196,202 @@ class ExportTests(unittest.TestCase):
             root=self.fixture(Path(tmp));p=root/'index.md'
             p.write_text(p.read_text(encoding='utf-8')+'\n[Bad](javascript:alert)\n',encoding='utf-8')
             self.assertTrue(any('unsafe' in e for e in tool.check(root,'https://example.org','')))
+
+class RegistryTests(unittest.TestCase):
+    tool = ExportTests.tool
+    fixture = ExportTests.fixture
+    def test_registry_strict_and_no_write(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp)); p=root/'_data/pages.json'
+            self.assertTrue(p.exists(), 'reviewed registry missing')
+            original=json.loads(p.read_text(encoding='utf-8'))
+            for change in ('duplicate','unknown','traversal','private','private-backslash'):
+                doc=json.loads(json.dumps(original))
+                if change=='duplicate':doc['pages'].append(doc['pages'][0])
+                elif change=='unknown':doc['pages'][0]['secret']='x'
+                elif change=='traversal':doc['pages'][0]['source']='../outside.md'
+                elif change=='private-backslash':doc['pages'][0]['aliases']=[r'C:\Users\Example\private']
+                else:doc['pages'][0]['aliases']=['C:/Users/Example/private']
+                p.write_text(json.dumps(doc),encoding='utf-8')
+                before={f.relative_to(root).as_posix():f.read_bytes() for f in root.rglob('*') if f.is_file()}
+                with self.assertRaises(ValueError):tool.export(root,'https://example.org','/pack')
+                self.assertEqual(before,{f.relative_to(root).as_posix():f.read_bytes() for f in root.rglob('*') if f.is_file()})
+
+    def test_safe_full_sections_release_and_reclassification(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json'
+            self.assertTrue(p.exists(), 'reviewed registry missing')
+            doc=json.loads(p.read_text(encoding='utf-8'));row=next(r for r in doc['pages'] if r['source']=='changes.md')
+            row['spoiler']='full';row['aliases']=['SECRET_ALIAS'];p.write_text(json.dumps(doc),encoding='utf-8')
+            q=root/'changes.md';q.write_text(q.read_text(encoding='utf-8').replace('title:','title:').replace('title: "Changes"','title: "SECRET_TITLE"')+'\n## Exact ae2:controller / MI!\nSECRET_BODY ae2:controller\n',encoding='utf-8')
+            tool.export(root,'https://example.org','/pack')
+            for name in ('llms-safe.txt','assets/search-safe.json','llms.txt'):
+                text=(root/name).read_text(encoding='utf-8')
+                for token in ('SECRET_ALIAS','SECRET_BODY','SECRET_TITLE'):self.assertNotIn(token,text)
+            full=json.loads((root/'assets/search-full.json').read_text(encoding='utf-8'))
+            self.assertTrue(any('ae2:controller' in d['text'] and d['anchor']=='exact-ae2controller--mi' for d in full['documents']))
+            self.assertTrue(all(set(d)=={'title','url','anchor','text','aliases','group','kind','evidence','spoiler'} for d in full['documents']))
+            self.assertEqual(full['release'],json.loads((root/'_data/release.json').read_text())['id'])
+            self.assertIn('FULL SPOILERS',(root/'llms-full.txt').read_text(encoding='utf-8'))
+            raw=(root/'text/changes.md').read_text(encoding='utf-8')
+            self.assertIn('Spoiler: full',raw)
+            self.assertIn('FULL SPOILERS',raw)
+            row['spoiler']='safe';p.write_text(json.dumps(doc),encoding='utf-8');tool.export(root,'https://example.org','/pack')
+            self.assertIn('SECRET_BODY',(root/'llms-safe.txt').read_text(encoding='utf-8'))
+            self.assertEqual(tool.check(root,'https://example.org','/pack'),[])
+
+    def test_full_human_route_and_reclassification(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text())
+            row=next(r for r in doc['pages'] if r['source']=='changes.md');row.update(spoiler='full',aliases=['SECRET_ALIAS'])
+            p.write_text(json.dumps(doc));q=root/'changes.md';q.write_text(q.read_text()+'\n## Secret section\nSECRET_BODY\n',encoding='utf-8');before=q.read_bytes()
+            tool.export(root,'https://example.org','/pack')
+            route=root/'full/changes.md'
+            self.assertTrue(route.is_file(),'distinct full-human route missing')
+            self.assertIn('FULL SPOILERS',route.read_text(encoding='utf-8'))
+            self.assertIn('Return to safe entry',route.read_text(encoding='utf-8'))
+            self.assertIn('SECRET_BODY',route.read_text(encoding='utf-8'))
+            self.assertEqual(before,q.read_bytes())
+            docs=json.loads((root/'assets/search-full.json').read_text(encoding='utf-8'))['documents']
+            self.assertTrue(any(d['url']=='/pack/full/changes/' and d['anchor']=='secret-section' for d in docs))
+            self.assertNotIn('SECRET', (root/'assets/search-safe.json').read_text(encoding='utf-8'))
+            route.write_text(route.read_text(encoding='utf-8')+'STALE',encoding='utf-8')
+            self.assertTrue(any('stale' in e for e in tool.check(root,'https://example.org','/pack')))
+            row['spoiler']='safe';p.write_text(json.dumps(doc));tool.export(root,'https://example.org','/pack')
+            self.assertFalse(route.exists(),'reclassification left revealing route')
+            self.assertEqual(tool.check(root,'https://example.org','/pack'),[])
+
+    def test_heading_punctuation_preserves_kramdown_space_hyphens(self):
+        self.assertEqual(self.tool().slug('Conditional J1 reading chain — not a completed journey'), 'conditional-j1-reading-chain--not-a-completed-journey')
+
+    def test_ordinary_layout_omits_curated_full_content(self):
+        layout=(ROOT/'_layouts/default.html').read_text(encoding='utf-8')
+        self.assertIn("entry.spoiler == 'full'",layout)
+        self.assertIn('Reveal full spoilers',layout)
+        branch=layout.rsplit("{% if spoiler_entry.spoiler == 'full' %}",1)[1].split('{% endif %}',1)[0]
+        full,safe=branch.split('{% else %}',1)
+        self.assertNotIn('content',full)
+        self.assertIn("{{ content | replace: '<table>', table_open | replace: '</table>', table_close }}",safe)
+        self.assertIn('display_title | escape',layout)
+
+    def test_safe_links_cannot_leak_full_anchor_or_alias(self):
+        tool=self.tool()
+        for payload in ('\n[Neutral](changes.md#secret-section)\n','\n[SECRET_ALIAS](changes.md)\n'):
+            with self.subTest(payload=payload),tempfile.TemporaryDirectory() as tmp:
+                root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text());row=next(r for r in doc['pages'] if r['source']=='changes.md');row.update(spoiler='full',aliases=['SECRET_ALIAS']);p.write_text(json.dumps(doc))
+                q=root/'changes.md';q.write_text(q.read_text()+'\n## Secret section\nSECRET_BODY\n',encoding='utf-8')
+                q=root/'index.md';q.write_text(q.read_text()+payload,encoding='utf-8')
+                before=(root/'llms.txt').read_bytes()
+                with self.assertRaisesRegex(ValueError,'spoiler'):tool.export(root,'https://example.org','/pack')
+                self.assertEqual(before,(root/'llms.txt').read_bytes())
+
+    def test_unowned_full_route_collision_no_write(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text());next(r for r in doc['pages'] if r['source']=='changes.md')['spoiler']='full';p.write_text(json.dumps(doc))
+            (root/'full').mkdir(exist_ok=True);q=root/'full/changes.md';q.write_text('unowned content',encoding='utf-8');before=(root/'llms.txt').read_bytes()
+            with self.assertRaisesRegex(ValueError,'unowned'):tool.export(root,'https://example.org','/pack')
+            self.assertEqual(q.read_text(),'unowned content');self.assertEqual(before,(root/'llms.txt').read_bytes())
+
+    def test_full_body_unsafe_injection_no_write(self):
+        tool=self.tool()
+        for payload in ('[Link](sources.md){: onclick="alert(1)"}', '<img src="x" onerror="alert(1)">'):
+            with self.subTest(payload=payload),tempfile.TemporaryDirectory() as tmp:
+                root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text());next(r for r in doc['pages'] if r['source']=='changes.md')['spoiler']='full';p.write_text(json.dumps(doc))
+                q=root/'changes.md';q.write_text(q.read_text()+'\n'+payload,encoding='utf-8');before=(root/'llms.txt').read_bytes()
+                with self.assertRaisesRegex(ValueError,'unsafe'):tool.export(root,'https://example.org','/pack')
+                self.assertFalse((root/'full/changes.md').exists());self.assertEqual(before,(root/'llms.txt').read_bytes())
+
+    def test_stale_remove_and_unowned_refusal(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));tool.export(root,'https://example.org','/pack')
+            p=root/'_data/pages.json';doc=json.loads(p.read_text());doc['pages']=[r for r in doc['pages'] if r['source']!='changes.md'];p.write_text(json.dumps(doc))
+            (root/'changes.md').unlink()
+            for page in doc['pages']:
+                q=root/page['source'];q.write_text(q.read_text(encoding='utf-8').replace('(changes.md)','(sources.md)'),encoding='utf-8')
+            tool.export(root,'https://example.org','/pack');self.assertFalse((root/'text/changes.md').exists())
+            (root/'text/unowned.md').write_text('Source: https://example.org/pack/unowned/\nBaseline: '+tool.BASELINE+'\n\nunowned')
+            with self.assertRaises(ValueError):tool.export(root,'https://example.org','/pack')
+            self.assertIn('unowned',(root/'text/unowned.md').read_text())
+
+    def test_image_and_html_url_safety_no_write(self):
+        tool=self.tool()
+        for payload in ('[Safe](sources.md){: onclick="alert(12345)"}', '{: #unsafe onclick="alert(1)"}', '![bad](javascript:alert)', '![missing](assets/missing.png)', '[bad]( javascript:alert)', '[bad](javascript:alert "title")', '![]( javascript:alert)', '<img src="x" onerror="alert(1)">', '<a href="javascript:alert(1)">bad</a>'):
+            with self.subTest(payload=payload),tempfile.TemporaryDirectory() as tmp:
+                root=self.fixture(Path(tmp));q=root/'index.md';q.write_text(q.read_text(encoding='utf-8')+'\n'+payload+'\n',encoding='utf-8')
+                before=(root/'llms.txt').read_bytes()
+                with self.assertRaises(ValueError):tool.export(root,'https://example.org','/pack')
+                self.assertEqual(before,(root/'llms.txt').read_bytes())
+
+    def test_family_bundles_safe_full_and_stale_cleanup(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text());row=next(r for r in doc['pages'] if r['source']=='changes.md');row.update(group='canary',spoiler='full',aliases=['SECRET_ALIAS']);p.write_text(json.dumps(doc))
+            q=root/'changes.md';q.write_text(q.read_text(encoding='utf-8').replace('title: "Changes"','title: "SECRET_TITLE"')+'\nSECRET_BODY\n',encoding='utf-8')
+            tool.export(root,'https://example.org','/pack')
+            safe=root/'text/groups/canary-safe.txt';full=root/'text/groups/canary-full.txt'
+            self.assertTrue(safe.exists(),'family safe bundle missing');self.assertTrue(full.exists(),'family full bundle missing')
+            self.assertNotIn('SECRET',safe.read_text(encoding='utf-8'));self.assertIn('SECRET_BODY',full.read_text(encoding='utf-8'));self.assertIn('FULL SPOILERS',full.read_text(encoding='utf-8'))
+            row['group']='handbook';p.write_text(json.dumps(doc));tool.export(root,'https://example.org','/pack')
+            self.assertFalse(safe.exists());self.assertFalse(full.exists())
+
+    def test_export_directory_collision_no_write(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));tool.export(root,'https://example.org','/pack');q=root/'assets/search-full.json';q.unlink();q.mkdir()
+            before={f.relative_to(root).as_posix():f.read_bytes() for f in root.rglob('*') if f.is_file()}
+            with self.assertRaisesRegex(ValueError,'export|unexpected'):tool.export(root,'https://example.org','/different')
+            self.assertEqual(before,{f.relative_to(root).as_posix():f.read_bytes() for f in root.rglob('*') if f.is_file()})
+
+    def test_linked_registry_directory_rejected_before_read(self):
+        import os
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp,tempfile.TemporaryDirectory() as outside:
+            root=self.fixture(Path(tmp));shutil.rmtree(root/'_data');(Path(outside)/'pages.json').write_text('not JSON')
+            try:link_directory(outside,root/'_data')
+            except OSError as exc:self.skipTest('symlink unavailable: '+str(exc))
+            with self.assertRaisesRegex(ValueError,'linked'):tool.export(root,'https://example.org','/pack')
+
+    def test_linked_export_directory_no_write(self):
+        import os
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp,tempfile.TemporaryDirectory() as outside:
+            root=self.fixture(Path(tmp));shutil.rmtree(root/'text')
+            try:link_directory(outside,root/'text')
+            except OSError as exc:self.skipTest('symlink unavailable: '+str(exc))
+            before=(root/'llms.txt').read_bytes()
+            with self.assertRaisesRegex(ValueError,'linked|unsafe'):tool.export(root,'https://example.org','/pack')
+            self.assertEqual(before,(root/'llms.txt').read_bytes());self.assertEqual(list(Path(outside).iterdir()),[])
+
+    def test_safe_source_cannot_leak_full_metadata(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json';doc=json.loads(p.read_text());row=next(r for r in doc['pages'] if r['source']=='changes.md');row['spoiler']='full';row['aliases']=['SECRET_ALIAS'];p.write_text(json.dumps(doc))
+            q=root/'index.md';q.write_text(q.read_text(encoding='utf-8')+'\nSECRET_ALIAS\n',encoding='utf-8')
+            before=(root/'llms.txt').read_bytes()
+            with self.assertRaisesRegex(ValueError,'spoiler'):tool.export(root,'https://example.org','/pack')
+            self.assertEqual(before,(root/'llms.txt').read_bytes())
+            self.assertTrue(any('spoiler' in e for e in tool.check(root,'https://example.org','/pack')))
+
+    def test_canonical_paths_and_unsafe_reference_links(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));q=root/'index.md';original=q.read_text(encoding='utf-8')
+            q.write_text(original+'\n[Guide](/guides/recipe-search/)\n',encoding='utf-8')
+            tool.export(root,'https://example.org','/pack')
+            self.assertIn('https://example.org/pack/guides/recipe-search/',(root/'text/index.md').read_text(encoding='utf-8'))
+            q.write_text(original+'\n[bad][x]\n[x]: javascript:alert\n',encoding='utf-8')
+            with self.assertRaises(ValueError):tool.export(root,'https://example.org','/pack')
+
+    def test_registry_duplicate_json_key_rejected(self):
+        tool=self.tool()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(Path(tmp));p=root/'_data/pages.json';p.write_text(p.read_text().replace('"schema": 1','"schema": 0, "schema": 1'))
+            with self.assertRaises(ValueError):tool.export(root,'https://example.org','/pack')
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

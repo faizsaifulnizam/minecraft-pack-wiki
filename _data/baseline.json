@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "snapshot_utc": "2026-10-14T21:49:01.594413+00:00",
-  "baseline_id": "dev-0.5-20261015",
+  "snapshot_utc": "2026-10-15T00:25:01.028068+00:00",
+  "baseline_id": "dev-0.5-20261015-r2",
   "minecraft": "1.21.1",
   "loader": "21.1.250",
-  "instance_label": "Faiz-NeoForge-1.21.1-0.5-Solo-Tensura-Trial",
+  "instance_label": "Solo-Tensura development pack",
   "active_archives": 120,
   "disabled_archives": 2,
   "active_mod_ids": 121,
@@ -361,7 +361,7 @@
     },
     {
       "filename": "dungeons-and-taverns-v4.4.4.jar",
-      "sha256": "1db28e89e0cb76aebe9e40955d1866e8ac1779575d15c2a1e250ac804a762d05",
+      "sha256": "848716d689b3c013e72efc85acef395567a506cf12957c682070871970b55795",
       "status": "active",
       "role": "dimensions/bosses/exploration",
       "metadata_status": "parsed",
@@ -711,7 +711,7 @@
     },
     {
       "filename": "irons_spellbooks-1.21.1-3.16.3.jar",
-      "sha256": "55a290db9b966e0c5d2f5c051d50775f3db6375cdb52730c4da528bcf5d5daa0",
+      "sha256": "d01937925160e32bb68910262af861d168e1d792808a29dfb596dc94bdff5c75",
       "status": "active",
       "role": "magic",
       "metadata_status": "parsed",
@@ -1517,7 +1517,7 @@
     },
     {
       "filename": "tensura-neoforge-2.0.1.3.jar",
-      "sha256": "914043ed6d84877a1565daa6164ea489426acb518d797b954386523c1d85a676",
+      "sha256": "2309a22ceb7e423e2f3212ea87686ccc510fe0003595500037e0b6c64baef213",
       "status": "active",
       "role": "Tensura/Solo progression",
       "metadata_status": "parsed",
@@ -1639,7 +1639,7 @@
     },
     {
       "filename": "twilightforest-1.21.1-4.8.3345-universal.jar",
-      "sha256": "493da16d10210f9f53a3c33b3d8fcb4ae9b14016ee420d753c894562bd9aba35",
+      "sha256": "122a33b65cedd7dd7c41fb148cf92e95ca8d473b0aac5b8581c78f789f9c7a6f",
       "status": "active",
       "role": "dimensions/bosses/exploration",
       "metadata_status": "parsed",

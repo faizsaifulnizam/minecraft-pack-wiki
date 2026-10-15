@@ -1,0 +1,635 @@
+<!-- wiki.py managed group export schema=1 -->
+# Safe group bundle
+
+--- BEGIN PAGE: Make your first Ars Nouveau utility spell ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Make your first Ars Nouveau utility spell
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Minecraft 1.21.1, NeoForge 21.1.250; Ars Nouveau **5.13.3**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Tutorial based on hash-matched shipped recipes and English documentation. Not gameplay tested. Ingredient tags and recipes describe shipped intent, not resolved pack overrides. Ars spells are assembled from glyphs; this is not the scroll-inscription route used by [Iron's Spellbooks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/).
+
+## Prerequisites
+
+Set aside a book, an iron shovel, iron pickaxe, iron axe and iron sword for the Novice Spell Book. These are crafting ingredients, so do not use your only working tools. For a Scribe's Table, collect three Archwood Slabs, two gold nuggets and two Archwood Logs. Keep experience available. The two optional glyph recipes below each declare **`exp: 27`**; the experience-unit implementation was not independently traced. Check the displayed cost rather than reading that as 27 levels. [A01]
+
+Work in a clear area away from containers, animals and valuable blocks. Use a utility spell before experimenting with destructive effects. This is safety advice, not a tested protection mechanism.
+
+## Steps
+
+1. **Craft the Novice Spell Book.** Combine the ordinary book and the four iron tools in a shapeless recipe. You should receive `ars_nouveau:novice_spell_book`. A separate documentation item, `ars_nouveau:worn_notebook`, is displayed as **Tattered Tome** in this version; make it from a book and a lapis-tag gem if you want the shipped documentation. The alternate novice-book recipe consumes that tome instead of an ordinary book, so keep a separate copy if you want both. [A01]
+2. **Build a Scribe's Table.** In the crafting grid put three Archwood Slabs across the top, gold nuggets at middle left and right, and Archwood Logs at bottom left and right. Place the table somewhere you can reach. Use your spell book on it to open the glyph codex. [A02]
+3. **Check for Touch and Conjure Magelight.** If either is missing from your learned glyphs, select it in the table's codex and choose **Select**. Supply the displayed ingredients by throwing them onto the table: Touch takes one button accepted by the `minecraft:buttons` tag; Conjure Magelight takes one lantern and one torch. Supply the recipe's experience cost as well. The table can also pull from nearby inventories, so keep unrelated materials away while learning. [A03]
+4. **Learn each produced glyph.** Consume the crafted glyph item. Crafting it alone does not add it to your spellcrafting list. If the glyph is already learned, do not craft another just for this tutorial. [A03]
+5. **Open spellcrafting with the spell book selected.** Use your configured spellcrafting control. The shipped text prints **[C]**, but this is not a verified saved keybinding. Choose a free bookmark, add **Touch**, then **Conjure Magelight**, give the spell a name, and choose **Create**. Clicking an unwanted glyph in the assembled spell removes it. A spell must start with exactly one Form; Touch is the targeting Form here. [A04]
+6. **Try the spell against an expendable solid block.** Use the book's cast action while aiming at that block. The Light description says a block-targeted cast creates a permanent light source. Your mana should fall when the spell casts and regenerate over time. The cast binding and the appearance of the result still need a runtime check; no key is assumed here. [A05]
+
+## Expected result
+
+You have a Novice Spell Book, learned utility glyphs and a saved two-glyph spell. The documented checkpoint is a light at the target and mana expenditure, not a combat victory. Continue with [Source production and the Ars workshop](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/ars-workshop/) only after you can save and select this spell.
+
+## Common failures
+
+- **The glyph was crafted but is absent from the list:** consume the glyph item, then reopen spellcrafting. [A03]
+- **The spell cannot be constructed:** put one Form first; remove extra Forms and unsupported augments. The Novice book casts tier-I glyphs only. Do not spend materials on higher-tier glyphs for this book. [A04]
+- **The table seems to take items unexpectedly:** its shipped documentation says it pulls nearby inventories. The Dominion Wand can disable that behavior, but crafting the wand is outside this starter route. Move unrelated stock away meanwhile. [A03]
+- **Casting stops after repeated attempts:** wait for mana regeneration before changing your Source setup. Mana is the casting resource; Source powers workshop processes. Their co-presence does not make them interchangeable. [A05, A06]
+- **The controls do not match the text:** inspect the game's current Controls screen rather than changing keys based on this manuscript. No current binding was verified.
+
+## Sources
+
+- [A01–A03] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/`: `novice_spell_book.json`, `novice_spellbook_alt.json`, `worn_notebook.json`, `scribes_table.json`, `glyph_touch.json`, `glyph_light.json`.
+- [A02–A06] Same archive, `assets/ars_nouveau/lang/en_us.json`: `item.ars_nouveau.worn_notebook`, `ars_nouveau.page1.scribes_table`, `learning_glyphs`, `introduction_to_glyphs`, `introduction_to_spellcrafting`, `spell_mana`, `source`; `ars_nouveau.glyph_desc.glyph_touch`, `glyph_light`.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/novice_spell_book.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/novice_spellbook_alt.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/worn_notebook.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/scribes_table.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_touch.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_light.json`: `witness`.
+- [A01] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A02] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/scribes_table.json`: `witness`.
+- [A02] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_touch.json`: `witness`.
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_light.json`: `witness`.
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A04] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A05] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A06] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+--- END PAGE: Make your first Ars Nouveau utility spell ---
+
+--- BEGIN PAGE: Put a first scroll into an Iron's spell book ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Put a first scroll into an Iron's spell book
+
+## Baseline
+
+**dev-0.5-20261015-r2 (candidate; unapplied)** — Minecraft 1.21.1, NeoForge 21.1.250; baseline lists Iron's Spells 'n Spellbooks **1.21.1-3.16.3**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+**Candidate-specific static evidence; not runtime tested.** These revisions target **dev-0.5-20261015-r2**, an unapplied candidate, not the accepted dev-0.5-20261015 baseline. Retained exact text witnesses belong to `irons_spellbooks-1.21.1-3.16.3.jar`, SHA-256 `d01937925160e32bb68910262af861d168e1d792808a29dfb596dc94bdff5c75`. That differs from the old baseline hash; the mismatch establishes different bytes, not their cause, archive origin or changed gameplay. Construction recipes below are now directly supported by those retained objects. Shipped-book statements are labelled as documentation, not demonstrated behavior; unversioned-only details remain provisional. Effective overrides, controls and gameplay have not been tested. [I00]
+
+## Prerequisites
+
+Have a safely obtained scroll and a spell book, found or crafted. No particular structure, enemy or drop chance is required by this route. If you do not yet have a scroll, the [workstation reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/iron-workstations/) explains the documented crafting alternative; it does not promise that the ingredients are available in your world.
+
+To craft the candidate Ironbound Tome (Iron Spell Book), reserve **three chains, four leather-tag items and two paper**. For an Inscription Table, reserve **one book, three wooden slabs and two wooden fences**. You need an ordinary crafting grid as well. [I01, I02]
+
+
+**Identify your book before committing a scroll.** The retained translation calls `irons_spellbooks:iron_spell_book` **Ironbound Tome** and the copper book **Flimsy Journal**. The shipped Early Game entry points to the copper recipe as a beginner option; the Ironbound Tome below remains a valid independent construction route, not a required first tier. An optional Iron’s Guidebook recipe combines one ordinary book and one Arcane Essence, but explicitly requires Patchouli to be loaded and produces `patchouli:guide_book` with book component `irons_spellbooks:iss_guide_book`. A documentation book is not the casting book. No guidebook craft or Patchouli loading was tested. [I08, I09]
+
+## Steps
+
+1. **Craft the Ironbound Tome (Iron Spell Book) if you need a book.** Put chains down the left column, leather across the two remaining cells of the top and bottom rows, and paper in the two remaining middle-row cells. The retained candidate recipe produces `irons_spellbooks:iron_spell_book`. Keep this system separate from Ars spellcrafting; this object produces the Iron item, not an Ars book. [I01]
+2. **Craft an Inscription Table.** Put a book in the top-right cell, wooden slabs across the middle row and wooden fences in the bottom-left and bottom-right cells. Place the resulting table at your base, not inside an active fight. [I02]
+3. **Decide whether to save the scroll.** The documentation distinguishes two uses: consuming a scroll casts it once without mana or cooldown, while inscription puts its spell in a book. If you want repeat use, take it to the table instead of consuming it. The retained Early Game entry says retrieving a scroll uninscribes its spell. This documents an intended recovery route for editable books, not a tested guarantee. Unique books are a documented exception: their existing spells cannot be removed or edited. [I08] [I03]
+4. **Open the table and place your book and scroll in its interface.** The guide describes slotting the scroll's spell into the book here. Check whether the book accepts that scroll before taking a result. Rarity can make a scroll too powerful for a particular book; this is a book/scroll constraint, not evidence that another magic mod must be progressed first. [I03]
+5. **Inspect the resulting book's spell list.** Confirm that the intended spell is listed. This is the first checkpoint; do not assume a crafted empty book already contains spells. The retained English interface text includes “This scroll is too rare for this spell book.” This supports the rarity warning, but not numeric slot counts or ceilings. [I08] [I03]
+6. **Prepare a separate casting check.** Find the mod's current casting/selection controls in the game's Controls screen, read the chosen spell's target and cost information, and use an expendable target in an open practice area. No binding, friendly-fire rule or spell-specific safe range has been verified here. If you cannot establish a safe target, stop at inscription rather than testing on a pet or player.
+
+**Checkpoint and recovery:** note the scroll’s spell/level and the book’s existing spell list before inscription. Inspect the intended result before taking it; if it differs, stop rather than consuming a rare scroll or overwriting a valued slot. Afterward compare the actual spell list with that note. The shipped book documents scroll retrieval for editable books, but this guide does not invent a removal button or promise item recovery after an unexpected result. [I08]
+
+## Expected result
+
+The shipped-book-documented outcome is a book containing the chosen scroll's spell, ready for a later controlled casting check. It is not proof of a working local recipe, active mana settings or compatibility with another mod's power system. Once inscription is understood, use [ink, rarity and workstation checks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/iron-workstations/) to plan the next spell without wasting a rare scroll.
+
+## Common failures
+
+- **The book rejects a scroll:** compare the scroll's rarity with the book's supported rarity before making another table. The documentation says a better book may be needed. Exact local caps remain unresolved. [I03]
+- **You cast the scroll instead of saving it:** the guide explicitly describes consumption as a separate one-use path. Do not consume your only copy when your goal is inscription. No undo is promised. [I03]
+- **The crafting grid gives a different result or nothing:** record the recipe ID, displayed inputs and result as a discrepancy; static archive evidence does not establish effective recipe precedence. Do not rename, replace or reinstall the JAR on this guide's authority. [I00]
+- **A saved spell does not cast:** binding, mana, cooldown and spell conditions need a runtime check. The no-mana/no-cooldown statement applies to consumed scrolls, not an unlimited spell-book mode. [I03]
+- **You encounter hostile magic while gathering:** withdraw to ordinary shelter and retain your normal equipment. This tutorial does not require fighting an identified boss or raiding a specific structure.
+
+## Sources
+
+Candidate archive and internal-entry source citations are listed below; retained evidence is not a public navigation target. I01/I02/I04/I06 now cite actual candidate recipe objects; upstream links below are supplementary comparisons only. I03 is supported for consumption/inscription by shipped book text, but exact UI procedure remains provisional. I05 has shipped support for inputs/rarity/school; the precise lowest-level-in-each-rarity selection remains provisional. I07 sword-imbuement and upgrade-orb details remain unversioned-only and provisional. I08–I10 cite retained candidate documentation, not tested execution.
+
+- [I00] Official repository [version declaration](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/gradle.properties); local identity mismatch retained privately.
+- [I01] Pinned upstream [Iron Spell Book recipe](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/recipe/iron_spell_book.json).
+- [I02] Pinned upstream [Inscription Table recipe](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/recipe/inscription_table.json).
+- [I03] Official [Getting Started](https://iron.wiki/#getting-started), unversioned; read as supplementary guidance, not shipped-book verification.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [I01] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/recipe/iron_spell_book.json`.
+- [I02] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/recipe/inscription_table.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/lang/en_us.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/early_game.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/scrolls.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/uncraftable_spell_books.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/lang/en_us.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/early_game.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/uncraftable_spell_books.json`.
+- [I09] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/patchouli_books/iss_guide_book/book.json`.
+- [I09] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/recipe/patchouli_book.json`.
+--- END PAGE: Put a first scroll into an Iron's spell book ---
+
+--- BEGIN PAGE: Start a Nature's Aura garden and measure its Aura ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Start a Nature's Aura garden and measure its Aura
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Minecraft 1.21.1, NeoForge 21.1.250; Nature's Aura **41.10**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Tutorial from hash-matched recipes and shipped Book of Natural Aura entries. Not gameplay tested. Patchouli renders that book; it is not an independent magic system. The book's ritual structure is identified, but its exact code-defined geometry has not been independently transcribed here. Use its in-game structure page rather than a guessed ring diagram. [N00]
+
+## Prerequisites
+
+Bring two paper, one leather and any accepted sapling for the book. For one batch of Brilliant Fiber, collect four leaf blocks, four gold nuggets and one Short Grass item. Keep access to a grown tree and an oak sapling with enough space to grow. For an Environmental Eye ritual, reserve one spider eye, one gold ingot and two Gold Leaf; those are ingredient items in addition to the central oak sapling and the setup materials. [N01, N02, N04]
+
+Work away from your main garden while learning Aura consumption. The shipped guide warns that draining an area and dimension changes affect behavior. If conditions worsen, stop adding consumers and leave the affected area; no instant restoration or universal safe radius is established. [N05]
+
+## Steps
+
+1. **Craft the Book of Natural Aura.** Combine two paper, leather and a sapling, shapeless. The output is a Patchouli guide book carrying `patchouli:book = naturesaura:book`; a generic empty book is not the same item. Its orange icons point toward next research steps, while red icons mark newly unlocked chapters. [N00, N01]
+2. **Craft four Brilliant Fiber.** Arrange leaves at the four corners, gold nuggets at the four edge centers and Short Grass in the center. Do not substitute wheat seeds or an ordinary Grass Block. The result is `naturesaura:gold_fiber`, count four. [N02]
+3. **Apply Brilliant Fiber to a tree's crown and wait.** The Brilliant Trees entry describes this as the way to produce a tree that sheds Gold Leaf when harvested. Watch for the transformed foliage before harvesting. Conversion timing, tree-size limits and the exact interaction gesture are not established by the retained text; follow the book's presentation and do not assume an immediate result. [N02]
+4. **Divide your Gold Leaf between setup and products.** One leaf crafts into two Gold Powder. One leaf above one log crafts one Wooden Stand. Do not turn every leaf into powder: the Eye recipe itself consumes two leaf. [N03, N04]
+5. **Prepare the Ritual of the Forest.** Open that book entry and reproduce its Gold Powder configuration around the central sapling position. Put the recipe ingredients on Wooden Stands around the setup. The text says not every shown stand is required, but it does not specify a stand radius; do not infer one from another magic mod. This manuscript cannot replace the missing geometry with a prose approximation. [N03]
+6. **Make an Environmental Eye.** Use an **oak** sapling in the center and provide one spider eye, one gold ingot and two Gold Leaf on stands. Grow the central sapling, naturally or using fertilizer, to start the ritual. The ritual consumes the growing tree while transforming the ingredients. Check for `naturesaura:eye` as the recipe result. [N03, N04]
+7. **Move the Eye into your hotbar.** It does not need to be actively selected according to the shipped text. Check the top-left Aura bar: half full represents the expected default level, not an empty environment. The Eye can also show stored Aura for Aura-bearing blocks. [N04]
+
+## Expected result
+
+You have the book, a Gold Leaf supply and a way to observe Aura before committing to consuming devices. The Eye is the handoff to [the Natural Altar and sustainable Aura reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/natures-aura-workshop/). Do not use a full-looking bar as proof of unlimited capacity; the basic Eye cannot quantify beyond the ends of its displayed scale. [N04]
+
+## Common failures
+
+- **A chapter is missing:** the shipped book ties chapter visibility to advancements and highlights next steps. Its `tree_ritual` entry declares `naturesaura:gold_leaf`; the Eye entry declares `naturesaura:wood_stand`. These are book conditions, not proof of a universal code-enforced crafting lock. [N00]
+- **A sapling grows but no ritual result appears:** compare the powder arrangement, stand ingredients and exact sapling species with the chosen recipe. Different rituals require different saplings. Exact geometry remains an explicit documentation gap. [N03]
+- **You cannot make the setup after crafting powder:** retain leaf for stands and recipe ingredients as well. [N03, N04]
+- **Aura seems absent at half a bar:** that is the documented normal level. Consult the [measurement and depletion checks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/natures-aura-workshop/), not Ars Source Jars; no cross-system power conversion is established. [N04, N05]
+
+## Sources
+
+- [N00–N05] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/`: `intro/intro.json`, `intro/aura.json`, `practices/gold_trees.json`, `practices/tree_ritual.json`, `items/eye.json`.
+- [N00–N04] Same archive, `data/naturesaura/patchouli_books/book/book.json`; `data/naturesaura/recipe/book.json`, `gold_fiber.json`, `gold_powder.json`, `wood_stand.json`, `tree_ritual/eye.json`.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [N00] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/intro/intro.json`: `witness`.
+- [N00] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/practices/tree_ritual.json`: `witness`.
+- [N00] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/items/eye.json`: `witness`.
+- [N00] `NaturesAura-41.10.jar!data/naturesaura/patchouli_books/book/book.json`: `witness`.
+- [N01] `NaturesAura-41.10.jar!data/naturesaura/recipe/book.json`: `witness`.
+- [N02] `NaturesAura-41.10.jar!data/naturesaura/recipe/gold_fiber.json`: `witness`.
+- [N02] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/practices/gold_trees.json`: `witness`.
+- [N03] `NaturesAura-41.10.jar!data/naturesaura/recipe/gold_powder.json`: `witness`.
+- [N03] `NaturesAura-41.10.jar!data/naturesaura/recipe/wood_stand.json`: `witness`.
+- [N03] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/practices/tree_ritual.json`: `witness`.
+- [N04] `NaturesAura-41.10.jar!data/naturesaura/recipe/tree_ritual/eye.json`: `witness`.
+- [N04] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/items/eye.json`: `witness`.
+- [N05] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/intro/aura.json`: `witness`.
+--- END PAGE: Start a Nature's Aura garden and measure its Aura ---
+
+--- BEGIN PAGE: Prepare your first Occultism work area ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Prepare your first Occultism work area
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Minecraft 1.21.1, NeoForge 21.1.250; Occultism **1.224.5**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Beginner tutorial from hash-matched shipped recipes, Dictionary of Spirits structures and their English translation entries. Not runtime tested. Modonomicon supplies this book's presentation; it is not a fifth magic progression system. This safe route reaches a usable conversion area and ritual preparation. Optional discovery and the first summoning are separated onto a full-spoiler page.
+
+## Prerequisites
+
+Start with ordinary shelter and a small farm. Bring a book, spare andesite and access to flint and steel. Reserve one feather, one black-dye-tag item and an additional ordinary book for later conversions. Do not consume unfamiliar farm produce while exploring: the shipped guide describes potentially negative side effects. Wait somewhere secure if affected, and postpone combat or hazardous travel. Exact duration and recovery items have not been verified. [O01, O02]
+
+## Steps
+
+1. **Get the book's seed ingredient.** Break grass to look for Demon's Dream seeds, as the shipped guide describes. Keep one seed for crafting and grow additional plants for fruit; no drop probability or growth time is established here. Craft a Dictionary of Spirits from one accepted datura-seed-tag item and one book-tag item, shapeless. [O01]
+2. **Prepare a separate conversion spot.** The guide says to throw a grown `occultism:datura` fruit onto the ground and light it with flint and steel to make Spirit Fire. Clear ordinary flammables from your ignition area first. The resulting Spirit Fire is documented as not harming living beings, but that does not establish that the initial ignition or surrounding ordinary fire is harmless. Do not try this beside your storage. [O02]
+3. **Convert one andesite as a test.** Drop it into the Spirit Fire. The recipe produces one `occultism:otherstone`. Check that exact item ID/name before committing a stack. This avoids the need to pursue the book's optional discovery route just to obtain a basic crafting material. [O03]
+4. **Make five sacrificial bowls.** Each ordinary bowl uses five Otherstone in a shallow U: `o o` above `ooo`. Upgrade one bowl to a Golden Sacrificial Bowl by surrounding it with eight gold ingots. You now have one central golden bowl and four ordinary ingredient bowls. [O04]
+5. **Prepare binding materials without starting a ritual.** Convert the spare black dye into Purified Ink, feather into Awakened Feather and book into a Taboo Book, one item per conversion. The book's basic binding recipe also uses four blue dyes. Keep these materials labelled and separate from ordinary ink, feathers and books. [O05]
+6. **Prepare basic chalk.** The recipe uses three chalk-base dust ingredients and three Otherworld-wood dust ingredients in two vertical columns. In this archive, the retained dust tags name **Burnt Otherstone** and **Otherworld Ashes**, respectively. Smelt Otherstone into Polished Otherstone, then smelt it again into Burnt Otherstone. Otherworld Ashes come from converting an accepted Otherworld log in Spirit Fire; the [Full-spoiler content omitted] explains the tree/harvest route and its discovery mechanics. Craft Impure White Chalk from three of each material, then convert it in Spirit Fire to White Chalk. [O06]
+7. **Choose your next checkpoint.** If you only wanted basic conversion, you can already produce Otherstone and the three binding ingredients. For a prepared first summoning, finish the chalk materials and then consult [Full-spoiler content omitted]. That page names the summon, layout, ingredients and expected result. Do not start an unfamiliar ritual merely to see what appears.
+
+## Expected result
+
+You have the Dictionary, a one-item conversion checkpoint, a central activation bowl, four ingredient bowls and the binding-material chain. The chalk recipe is traced through its shipped tags rather than inferred from names; its log-harvesting route and the complete first summoning are in the full procedure. This safe page deliberately stops before those discoveries, not at an unexplained material gap.
+
+For a returning reader who already has chalk, the [ritual troubleshooting reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/occultism-workbench/) explains bowl placement, waiting states and book naming without revealing later entities or rewards.
+
+## Common failures
+
+- **The result is the wrong stone:** use andesite for the retained Spirit Fire recipe. Otherrock is documented as useful for decoration and bowls, but not a substitute for all chalk/storage bases. [O03]
+- **A binding book is rejected later:** an unbound book is not the activation item. Bind the correct book type with the Dictionary as described on the full procedure page. [O05]
+- **Chalk will not craft:** check dust tags, not just the translated display name. The starter does not prove how every local dust is obtained. [O06]
+- **A ritual appears stuck:** stop adding unrelated items and use the [waiting-state checks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/occultism-workbench/). Do not sacrifice a random animal to test a guess.
+
+## Sources
+
+- [O01–O02] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`, `book.occultism.dictionary_of_spirits.getting_started.demons_dream.*` and `spirit_fire.*`; `data/occultism/recipe/crafting/dictionary_of_spirits.json`.
+- [O03–O06] Same archive, `data/occultism/recipe/`: `spirit_fire/otherstone.json`, `crafting/sacrificial_bowl.json`, `crafting/golden_sacrificial_bowl.json`, `spirit_fire/purified_ink.json`, `spirit_fire/awakened_feather.json`, `spirit_fire/taboo_book.json`, `crafting/book_of_binding_foliot.json`, `crafting/chalk_white_impure.json`, `spirit_fire/chalk_white.json`; `data/occultism/tags/item/dusts/chalk_base.json`.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [O01] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/crafting/dictionary_of_spirits.json`: `witness`.
+- [O01] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O02] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O03] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/otherstone.json`: `witness`.
+- [O03] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O04] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/crafting/sacrificial_bowl.json`: `witness`.
+- [O04] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/crafting/golden_sacrificial_bowl.json`: `witness`.
+- [O05] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/purified_ink.json`: `witness`.
+- [O05] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/awakened_feather.json`: `witness`.
+- [O05] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/taboo_book.json`: `witness`.
+- [O05] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/crafting/book_of_binding_foliot.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/crafting/chalk_white_impure.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/chalk_white.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/smelting/polished_otherstone.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/smelting/burnt_otherstone.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/recipe/spirit_fire/otherworld_ashes.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/c/tags/item/dusts/otherstone.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/c/tags/item/dusts/otherworld_wood.json`: `witness`.
+- [O06] `occultism-1.21.1-neoforge-1.224.5.jar!data/occultism/tags/item/dusts/chalk_base.json`: `witness`.
+--- END PAGE: Prepare your first Occultism work area ---
+
+--- BEGIN PAGE: Run an Ars Nouveau Source workshop ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/ars-workshop/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Run an Ars Nouveau Source workshop
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Ars Nouveau **5.13.3**, Minecraft 1.21.1 / NeoForge 21.1.250.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Reference and workshop how-to from hash-matched shipped English documentation and recipes. No device, automation interface or save/reopen behavior was exercised. Start with [a saved utility spell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/); this page does not add another mod's power system as a prerequisite.
+
+## Prerequisites
+
+Keep amethyst shards or lapis, Archwood Planks, gold and access to a crop/tree-growing area. A basic Imbuement Chamber uses six Archwood Planks and two gold ingots. A Source Jar uses six Archwood Slabs and two glass-block-tag ingredients. An Agronomic Sourcelink uses two Source Gems, two gold ingots and one wheat. These are individual shipped recipe totals, not a complete workshop bill of materials. [A07]
+
+## Steps
+
+1. **Make the chamber before building a power network.** Its pattern is `xyx / x x / xyx`, where `x` is Archwood Planks and `y` is gold ingots. Put amethyst or lapis into the chamber to obtain Source Gems according to the shipped guide. The chamber passively accumulates Source for recipes; a jar is a speedup route, not a documented prerequisite for the first gem. Exact processing time and input/output count for this conversion were not captured. [A07, A08]
+2. **Build a Source Jar beside your crop area.** The recipe has slabs across the top and bottom, with glass at middle left and right. Craft an Agronomic Sourcelink with Source Gems top-center and bottom-center, gold at middle left/right and wheat in the center. [A07]
+3. **Use natural growth to supply it.** The documented collection range is 15 blocks for crop and tree growth. Put the jar within five blocks of the Sourcelink for output. The guide expressly says bonemealing crops does **not** grant Source, so do not spend bone meal to diagnose an empty jar. Magical plants provide bonus Source, but ordinary crop/tree growth is already the described trigger. [A09]
+4. **Move a filled jar within two blocks of the chamber for faster processing.** For recipes with extra pedestal ingredients, the guide places those pedestals within one block of the chamber and says their items are not consumed. Do not apply that non-consumption rule to the different Enchanting Apparatus. [A08]
+5. **Prepare the Enchanting Apparatus as a separate station.** Its recipe uses two Sourcestone, four gold nuggets, two gold ingots and one diamond-tag gem. The Arcane Core uses six Sourcestone, two gold ingots and one Source Gem. Each Arcane Pedestal uses four Sourcestone, four gold nuggets and one Source Gem. Obtaining Sourcestone and selecting a first complete apparatus recipe remain outside this captured material chain. [A10]
+6. **Load only a verified apparatus recipe.** The guide requires an Arcane Core next to the Apparatus base, ingredient pedestals within three blocks and the recipe's middle item used on the Apparatus last. Check that recipe's Source cost rather than assuming every craft is passive or free. The exact core geometry and a completed apparatus output still need an authorized runtime check. [A10]
+
+## Expected result
+
+The documented handoff is a Source Gem supply and naturally replenished jar feeding the chamber, followed by a prepared apparatus plan. The player-visible checks are gem conversion and jar accumulation; neither was observed by this authoring task.
+
+## Material and resource distinctions
+
+| Question | Shipped answer |
+|---|---|
+| Why can I cast but not run a machine? | Casting spends regenerating Mana; workshop functions use Source. [A05, A06] |
+| Why does learning more glyphs matter beyond recipe variety? | Learned glyphs give a small permanent Mana-capacity and regeneration increase. No numeric amount is asserted. [A05] |
+| How far can a basic relay reach? | Up to 30 blocks. Use the Dominion Wand jar → relay to take Source; relay → destination to send. Sneak-use the wand on the relay to clear links. [A11] |
+| Why did a correctly linked relay stop? | A redstone signal disables it. [A11] |
+
+## Common failures
+
+- **No Source from a growing-area setup:** check natural growth within 15 blocks and a receiving jar within five. Bonemealed crop growth is specifically excluded. Effective tick/chunk behavior is untested. [A09]
+- **The chamber works slowly:** passive operation is documented. Check the two-block jar distance before rebuilding the station. [A08]
+- **Pedestal ingredients vanish unexpectedly:** do not transfer the chamber's catalyst rule to the Apparatus. Check the chosen recipe and stop feeding rare ingredients until its roles are clear. [A08, A10]
+- **A relay has no throughput:** check link direction and redstone before assuming a larger Source producer is needed. [A11]
+- **A heat-producing alternative damages the work area:** the Volcanic Sourcelink description warns that its heat changes stone to magma and then lava. Keep that option away from a starter garden; stop adding fuel and retreat from exposed hazards. No shutdown/cooling timing is established. [A12]
+
+## Tips with trade-offs
+
+- **Wait for natural growth before spending bone meal.** Prerequisite: an Agronomic Sourcelink and nearby jar. Benefit: tests the actual documented source trigger without wasting bone meal. Trade-off: slower feedback while crops grow. [A09]
+- **Keep an uncluttered table inventory boundary.** Prerequisite: a Scribe's Table. Benefit: nearby inventories do not become accidental material suppliers while you learn glyph costs. Trade-off: manual ingredient delivery; the documented Dominion Wand toggle is the later alternative. [A03]
+- **Separate the jar bank from your mana diagnosis.** Prerequisite: a saved spell and a chamber. Benefit: waiting for mana and checking Source are separate troubleshooting actions. Trade-off: two resource displays to learn; no cross-conversion is promised. [A05, A06]
+
+## Sources
+
+- [A03, A05–A12] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `ars_nouveau.page1.scribes_table`, `spell_mana`, `source`, `imbuement_chamber`, `enchanting_apparatus`, `volcanic_sourcelink`; `ars_nouveau.page.agronomic_sourcelink`, `ars_nouveau.page.relay`, `ars_nouveau.page2.relay`, `tooltip.source_gem`.
+- [A07, A10] Same archive, `data/ars_nouveau/recipe/`: `imbuement_chamber.json`, `source_jar.json`, `agronomic_sourcelink.json`, `enchanting_apparatus.json`, `arcane_core.json`, `arcane_pedestal.json`.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_touch.json`: `witness`.
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/glyph_light.json`: `witness`.
+- [A03] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A05] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A06] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A07] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/imbuement_chamber.json`: `witness`.
+- [A07] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/source_jar.json`: `witness`.
+- [A07] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/agronomic_sourcelink.json`: `witness`.
+- [A08] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A09] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A10] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/enchanting_apparatus.json`: `witness`.
+- [A10] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/arcane_core.json`: `witness`.
+- [A10] `ars_nouveau-1.21.1-5.13.3.jar!data/ars_nouveau/recipe/arcane_pedestal.json`: `witness`.
+- [A10] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A11] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+- [A12] `ars_nouveau-1.21.1-5.13.3.jar!assets/ars_nouveau/lang/en_us.json`: `witness`.
+--- END PAGE: Run an Ars Nouveau Source workshop ---
+
+--- BEGIN PAGE: Choose an Iron's magic workstation and avoid wasted scrolls ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/iron-workstations/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Choose an Iron's magic workstation and avoid wasted scrolls
+
+## Baseline
+
+**dev-0.5-20261015-r2 (candidate; unapplied)** — baseline version **1.21.1-3.16.3**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+**Candidate-specific static evidence; not runtime tested.** These revisions target **dev-0.5-20261015-r2**, an unapplied candidate, not the accepted dev-0.5-20261015 baseline. Retained exact text witnesses belong to `irons_spellbooks-1.21.1-3.16.3.jar`, SHA-256 `d01937925160e32bb68910262af861d168e1d792808a29dfb596dc94bdff5c75`. That differs from the old baseline hash; the mismatch establishes different bytes, not their cause, archive origin or changed gameplay. Construction recipes below are now directly supported by those retained objects. Shipped-book statements are labelled as documentation, not demonstrated behavior; unversioned-only details remain provisional. Effective overrides, controls and gameplay have not been tested. [I00]
+
+## Prerequisites
+
+Finish [first-scroll inscription](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/) or already have a book and a safely obtained scroll. Keep your rare scrolls in storage while you identify which workstation the task needs. The stages below are alternatives for different jobs, not a claim that all stations are mandatory in this order.
+
+## Steps
+
+1. **For putting a known spell in a book, use the Inscription Table.** A found scroll is already a spell; the Scroll Forge is not required merely to inscribe it. Check the scroll's rarity against the book rather than trying to combine ingredients at the wrong station. [I03]
+2. **For making a new scroll, plan the Scroll Forge.** The retained candidate recipe uses three Polished Deepslate across the top row, Crying Obsidian in the center and Crying Obsidian across the bottom row: four Crying Obsidian total. The documentation describes inputs of ink, paper and a school focus. Do not assume Ars glyphs or Source Gems are valid substitutes. [I04, I05]
+3. **Choose ink before committing to a spell.** The guide describes five ink rarities. Unversioned guidance provisionally says ink crafts a spell at the lowest level available in that rarity; exact candidate selection behavior remains unverified. A spell whose minimum rarity is above your ink is unavailable with that ink; a focus alone does not override this. Exact per-spell eligibility is a later reference gap. [I05]
+4. **For upgrading or combining magic items, plan an Arcane Anvil.** The retained candidate crafting recipe is three Blocks of Amethyst across the top, one diamond-tag gem in the center, and Polished Deepslate / ordinary Anvil / Polished Deepslate across the bottom. The unversioned guide provisionally lists scroll upgrades, upgrade-orb application and sword imbuement as different anvil tasks; it does not justify a universal two-scroll recipe or level-cap claim. [I06, I07]
+5. **Treat sword imbuement as a commitment.** Unversioned official guidance provisionally says a sword holds one imbued spell at a time and that the scroll cannot be retrieved afterward; neither rule is verified for this candidate. Check the intended spell and item before taking an output. Avoid using your only valuable scroll as an interface experiment. [I07]
+
+**Forge checkpoint:** the retained Mid Game entry names ink, paper and a focus; ink determines rarity/level and focus determines school. The retained Ink entry lists Common, Uncommon, Rare, Epic and Legendary inks and warns that a spell whose lowest level is above an ink cannot be crafted with it. The English interface includes “Obtain higher quality ink”. Before gathering more materials, compare the selected school, available spell and displayed ink requirement. No exact per-spell table or focus-item catalogue is established here. [I05, I08]
+
+## Expected result
+
+You can select the correct station, budget the candidate construction materials and explain why a particular ink or book may reject a spell. The candidate identity is recorded, but baseline acceptance, effective recipe selection, successful crafts and casting remain unverified.
+
+**Version-specific upgrade route:** the retained Scrolls entry describes combining a scroll with ink of the corresponding rarity of its **next level** in the Arcane Anvil. Do not substitute a universal two-scroll recipe. Check the target spell, next level and displayed ink requirement before taking output; per-spell caps and effective costs remain unverified. This does not validate the separate sword-imbuement or upgrade-orb rules. [I10]
+
+## Workstation reference
+
+| Goal | Station | Important boundary |
+|---|---|---|
+| Save a scroll's spell in a book | Inscription Table | Scroll rarity may exceed book capability. [I03] |
+| Craft a scroll from materials | Scroll Forge | Ink constrains rarity/level; focus constrains school. [I05] |
+| Upgrade scrolls or apply upgrade orbs | Arcane Anvil | Individual recipes and caps must be checked; no free upgrade is promised. [I07] |
+| Put a spell on a sword | Arcane Anvil | Provisional unversioned guidance: one spell at a time; scroll not retrievable. Candidate behavior unverified. [I07] |
+
+## Common failures
+
+- **The Forge has no desired spell:** check its minimum rarity against your ink, then the school focus. The guide does not say every spell can be crafted with common ink. [I05]
+- **A scroll will not enter a book:** return to book rarity/capability checks, not Forge ingredients. Exact capacities remain unknown here. [I03]
+- **You expected a returned scroll after imbuement:** unversioned documentation provisionally warns otherwise; candidate behavior remains unverified. Stop before taking the result if reversibility matters. No recovery is established. [I07]
+- **Material names match but the local recipe differs:** record the recipe ID and displayed inputs/output and use the in-game recipe as a player-side check; do not infer the cause from a hash difference. This manuscript does not authorize changing the installation. [I00]
+- **You found a video with another recipe:** this reference did not view or vet any video. Prefer the retained candidate recipe objects for version-labelled construction facts, without treating a recipe-object match as whole-archive or gameplay equivalence.
+
+## Tips with trade-offs
+
+- **Separate a trial scroll from a keeper.** Prerequisite: at least one scroll whose loss you can accept. Benefit: learning consumption versus inscription need not destroy your only desired spell. Trade-off: you may delay testing until another scroll is available. The consumption/inscription distinction and retrieval with uninscription are documented in the retained Early Game entry; unique-book spells are not editable. Actual UI recovery remains untested. [I08] [I03]
+- **Check ink rarity before searching for a rare focus.** Prerequisite: a specific target spell and Forge access. Benefit: avoids gathering a school ingredient for a spell your ink cannot make. Trade-off: requires inspecting the intended spell's minimum rarity, which this reference does not catalogue. [I05]
+- **Keep sword imbuement last.** Prerequisite: a deliberately chosen sword/scroll pairing. Benefit: avoids an irreversible scroll commitment while still learning the workstation. Trade-off: postpones the imbued weapon; unversioned guidance provisionally says the scroll cannot be retrieved afterward; candidate behavior remains unverified. [I07]
+
+## Sources
+
+Candidate archive and internal-entry source citations are listed below; retained evidence is not a public navigation target. I01/I02/I04/I06 now cite actual candidate recipe objects; upstream links below are supplementary comparisons only. I03 is supported for consumption/inscription by shipped book text, but exact UI procedure remains provisional. I05 has shipped support for inputs/rarity/school; the precise lowest-level-in-each-rarity selection remains provisional. I07 sword-imbuement and upgrade-orb details remain unversioned-only and provisional. I08–I10 cite retained candidate documentation, not tested execution.
+
+- [I00] [Pinned version declaration](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/gradle.properties); identity comparison retained privately.
+- [I04] [Pinned Scroll Forge recipe](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/recipe/scroll_forge.json).
+- [I06] [Pinned Arcane Anvil recipe](https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/recipe/arcane_anvil.json).
+- [I03, I05, I07] Official [Getting Started, Ink, Scroll Forge and Arcane Anvil documentation](https://iron.wiki/), unversioned.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/lang/en_us.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/early_game.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/scrolls.json`.
+- [I03] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/uncraftable_spell_books.json`.
+- [I04] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/recipe/scroll_forge.json`.
+- [I05] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/lang/en_us.json`.
+- [I05] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/ink.json`.
+- [I05] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/mid_game.json`.
+- [I06] `irons_spellbooks-1.21.1-3.16.3.jar!data/irons_spellbooks/recipe/arcane_anvil.json`.
+- [I07] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/scrolls.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/lang/en_us.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/early_game.json`.
+- [I08] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/uncraftable_spell_books.json`.
+- [I10] `irons_spellbooks-1.21.1-3.16.3.jar!assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/spell_books/scrolls.json`.
+--- END PAGE: Choose an Iron's magic workstation and avoid wasted scrolls ---
+
+--- BEGIN PAGE: Supply a Natural Altar without exhausting its surroundings ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/natures-aura-workshop/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Supply a Natural Altar without exhausting its surroundings
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Nature's Aura **41.10**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Reference and intermediate how-to from hash-matched shipped book entries and recipes. Not runtime tested. Follow [the first garden and Environmental Eye route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/) first. Structure IDs and recipe fields are verified; exact code-defined multiblock geometry, per-device operating range and effective server settings remain unresolved.
+
+## Prerequisites
+
+Keep an Environmental Eye in your hotbar and retain Gold Leaf. You need the Ritual of the Forest setup and its book structure page for the following crafts. Avoid adding passive consumers near your main garden before you can measure the surroundings. Aura is environmental; a full internal device buffer does not establish a healthy surrounding area. [N04, N05]
+
+## Steps
+
+1. **Bottle the right Aura for the first token.** The Aura Bottling entry directs you to craft a **Bottle and Cork**, then interact with the air while holding it. Use the Overworld for the first Token of Joy: the recipe specifically requires `naturesaura:aura_bottle` carrying `aura_type = naturesaura:overworld`. A generic glass bottle or the same item with Nether Aura is not that ingredient. Craft it shapelessly from one glass bottle and one plank-tag item. This is the book's `naturesaura:bottle_two_the_rebottling` recipe; the plain bottle by itself is not sufficient. [N06]
+2. **Make Tokens of Joy.** At the Forest ritual, use a central oak sapling plus six stand ingredients: the Overworld Aura bottle, one Gold Leaf, one small-flower-tag item, one apple, one torch and one iron ingot. The shipped recipe produces two `naturesaura:token_joy`. Grow the central sapling to start, as in the beginner route. [N07]
+3. **Make a Natural Altar.** Use a central oak sapling, three stone, one Gold Leaf, one gold ingot and one Token of Joy in the Forest ritual. The result is `naturesaura:nature_altar`. This crafts the block; it does not complete its surrounding multiblock. [N08]
+4. **Build the altar's separate structure from the book.** Open The Natural Altar entry and match structure `naturesaura:altar`. It uses Golden Stone Bricks among its construction materials; one Stone Bricks plus one Brilliant Fiber crafts one Golden Stone Bricks item, shapeless. An exact total and spatial placement cannot be given until the code-defined structure is independently reviewed. Do not assume the Forest ritual's powder pattern is also the altar's structure. [N08]
+5. **Infuse one ordinary iron ingot.** Once the completed altar has collected sufficient Aura, place the ingot onto it and wait. The exact recipe is iron ingot → one Infused Iron, Aura cost **15000**, serialized time **80**. The field's time unit was not independently traced, so this is not a promise of an 80-second wait. The book describes internal collection from the surroundings and a depletion limit, not an unlimited resource. [N09]
+6. **Plan replenishment rather than adding consumers indefinitely.** The Herbivorous Absorber consumes nearby small flowers to create Aura and functions only in the Overworld according to its entry. Repeating the same flower reduces its effectiveness; the guide recommends roughly six different kinds for maximum efficiency. Supply variety rather than a single flower type. [N10]
+
+## Expected result
+
+A measured first infusion, followed by a replenishment plan whose input costs you understand. This is not a fully closed automated system. The absorber's recipe uses four plank-tag ingredients, three Infused Iron, one peony and one Token of Joy. A peony is a construction ingredient here; the operating text calls for **small flowers**, not an assumption that every decorative flower works as fuel. [N10]
+
+## Common failures
+
+- **The altar block exists but will not operate:** check its separate multiblock, stored Aura and input recipe. The declared altar chapter advancement is `naturesaura:aura_bottle_overworld`; that explains book presentation, not proof of a universal block-use gate. [N08, N09]
+- **The Eye reads half full:** that is the expected default environmental level. The Eye has a display ceiling and floor and cannot quantify farther beyond them. [N04]
+- **A generator emits red sparks:** the book describes this as the production ceiling. Some generators stop; others keep behaving without producing more Aura. Do not blindly add more input material. An Aura Detector is the documented control lead; wiring and settings are not researched here. [N11]
+- **A generator seems ineffective after relocation:** new generation first repairs a depleted nearby area, and Aura can migrate. Check the Environmental Eye over time rather than expecting a local instant spike. [N05]
+- **The absorber runs poorly on the same flower:** diversify the sequence; the shipped entry explicitly describes repetition loss. In the Nether it has no effect at all. [N10]
+- **Passive consumption is becoming hazardous:** stop adding consumers and retreat from the affected area. The later Aura Imbalance Ward is documented to stop an adjacent consumer when local Aura is too low, at no operating cost; its own recipe/access chain is not completed here. [N12]
+
+## Tips with trade-offs
+
+- **Measure before building a larger consumer array.** Prerequisite: an Environmental Eye. Benefit: gives a baseline for distinguishing normal Aura from depletion. Trade-off: the basic Eye cannot measure beyond its range. [N04, N05]
+- **Rotate the absorber's flowers.** Prerequisite: the Herbivorous Absorber in the Overworld and several small flower types. Benefit: avoids the documented repetition penalty. Trade-off: a diverse supply is harder to replenish than one monoculture; no exact six-flower threshold or operating radius is asserted. [N10]
+- **Treat bottling automation as an item-collection job too.** Prerequisite: Bottle and Corks plus a dispenser. Benefit: the book describes automatic Aura bottling. Trade-off: filled bottles are expelled, not pulled back into the dispenser; add a collection route such as a hopper rather than leaving valuable outputs loose. No throughput or cross-mod item transfer was tested. [N06]
+
+## Sources
+
+- [N04–N12] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/`: `items/eye.json`, `intro/aura.json`, `practices/aura_bottle.json`, `practices/tree_ritual.json`, `using/altar.json`, `creating/flower_generator.json`, `creating/on_generating.json`, `using/lower_limiter.json`.
+- [N07–N10] Same archive, `data/naturesaura/recipe/`: `tree_ritual/token_joy.json`, `tree_ritual/nature_altar.json`, `gold_brick.json`, `altar/infused_iron.json`, `flower_generator.json`.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [N04] `NaturesAura-41.10.jar!data/naturesaura/recipe/tree_ritual/eye.json`: `witness`.
+- [N04] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/items/eye.json`: `witness`.
+- [N05] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/intro/aura.json`: `witness`.
+- [N06] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/practices/aura_bottle.json`: `witness`.
+- [N06] `NaturesAura-41.10.jar!data/naturesaura/recipe/bottle_two_the_rebottling.json`: `witness`.
+- [N06] `NaturesAura-41.10.jar!data/naturesaura/recipe/tree_ritual/token_joy.json`: `witness`.
+- [N07] `NaturesAura-41.10.jar!data/naturesaura/recipe/tree_ritual/token_joy.json`: `witness`.
+- [N07] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/practices/tree_ritual.json`: `witness`.
+- [N08] `NaturesAura-41.10.jar!data/naturesaura/recipe/tree_ritual/nature_altar.json`: `witness`.
+- [N08] `NaturesAura-41.10.jar!data/naturesaura/recipe/gold_brick.json`: `witness`.
+- [N08] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/using/altar.json`: `witness`.
+- [N09] `NaturesAura-41.10.jar!data/naturesaura/recipe/altar/infused_iron.json`: `witness`.
+- [N09] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/using/altar.json`: `witness`.
+- [N10] `NaturesAura-41.10.jar!data/naturesaura/recipe/flower_generator.json`: `witness`.
+- [N10] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/creating/flower_generator.json`: `witness`.
+- [N11] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/creating/on_generating.json`: `witness`.
+- [N12] `NaturesAura-41.10.jar!assets/naturesaura/patchouli_books/book/en_us/entries/using/lower_limiter.json`: `witness`.
+--- END PAGE: Supply a Natural Altar without exhausting its surroundings ---
+
+--- BEGIN PAGE: Diagnose an Occultism ritual and manage its books ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/occultism-workbench/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Diagnose an Occultism ritual and manage its books
+
+## Baseline
+
+Candidate **dev-0.5-20261015-r2 (unapplied)**. The versioned description below is imported from previous-baseline retained witnesses for dev-0.5-20261015; it is not a fresh candidate archive revalidation. Effective recipes, settings and gameplay remain unverified.
+
+**dev-0.5-20261015** — Occultism **1.224.5**.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+
+Reference/how-to from hash-matched Dictionary of Spirits entries, translations, recipes and conditions. Not runtime tested. Start with [the conversion work area](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/). Detailed first-summon identity, layout and discovery mechanics live on [Full-spoiler content omitted], not in this safe reference.
+
+## Prerequisites
+
+Identify the exact ritual you intend to run in the Dictionary. You need its matching pentacle, activation item and ingredients, not merely a generic chalk circle. Keep ordinary protection and an unobstructed way out. The book cautions that summoning can cause harm; this page does not certify all rituals as friendly. [O07]
+
+## Steps
+
+1. **Check the center and ingredient roles.** The golden bowl activates the ritual; ordinary sacrificial bowls hold ingredient items. Keep the ingredient bowls within eight blocks horizontally of the pentacle center. Their exact decorative positions do not matter according to the bowl entry. The first-ritual walkthrough separately describes its four bowls as within eight blocks of the central bowl; use a same-level nearby layout rather than assuming vertical freedom. [O08]
+2. **Match the drawing, not its decorative glyph shapes.** The chalk instructions say color and position matter, while repeated clicks cycle a decorative sign. Stop redrawing a correctly positioned mark merely because its symbol differs from an illustration. A higher ritual may need different chalk; basic chalk is not a universal substitute. [O09]
+3. **Check the activation book type and binding.** The shipped guide says the correct tier of Book of Binding must be bound using the Dictionary. The individual spirit name is decorative for recipe eligibility, but the book type is not. Crafting with the Dictionary does not consume that Dictionary. [O10]
+4. **Read the waiting state before adding more items.** Grey particles with no ingredient consumption mean the ritual may be waiting for a specified item use or sacrifice. Check that exact ritual's instructions; do not provide an arbitrary animal or valuable item. The golden bowl's documented redstone states are 0 inactive, 1 waiting for sacrifice, 2 waiting for item use and 8 running. These are output strengths, not seconds or progress percentages. [O11]
+5. **If you are automating, distinguish activation from output collection.** A hopper or pipe can insert the activation item into the golden bowl to start the ritual. The guide warns that automation of rituals producing tamed animals/familiars instead creates untamed ones. A down-facing sacrificial bowl above the golden bowl can hold crafted item outputs instead of leaving them on the ground, up to three blocks higher; do not treat that as guaranteed entity capture. [O12]
+
+## Expected result
+
+A fault can be separated into wrong drawing, missing ingredients, wrong/unbound activation item, an intentional waiting state or an automation-specific outcome. The checks do not establish that an unknown ritual is safe to start, cancel or leave unattended. If harm or unexpected entities appear, retreat rather than feeding further ingredients; no universal despawn/cancellation command is supplied.
+
+## Book reference
+
+| Book | Job | Important limit |
+|---|---|---|
+| Dictionary of Spirits | Guide and binding aid | Its naming behavior can affect automated item matching. [O10, O13] |
+| Book of Binding | Ritual activation after correct binding | A matching name does not replace the required spirit tier/type. [O10] |
+| Book of Calling | Instructions, capture and release for supported worker spirits | Not every summoned spirit has a corresponding calling book. [O14] |
+
+The calling-book text documents right-click air for configuration; sneak-right-click a block to apply the selected action; sneak-right-click a matching spirit to capture it; and right-click a book carrying a captured spirit to release it. If a supported spirit's book is lost, a replacement recipe exists and sneak-right-click assigns it. These are shipped interaction descriptions, not verified saved keyboard bindings or a promise that every entity is capturable. [O14]
+
+## Common failures
+
+- **An automated bound-book craft never finishes:** random spirit-name components can make the result differ from a pattern's expected item. The guide proposes naming a Dictionary in an anvil, configuring patterns with that Dictionary if needed, and using that same Dictionary in subsequent crafts so the produced names agree. This is documented advice, not a tested AE2 integration. [O13]
+- **Ingredients are present but ignored:** check ordinary versus golden bowl roles and the eight-block horizontal limit before changing the ritual. [O08]
+- **The drawing looks different:** position and chalk color matter, not the decorative symbol. [O09]
+- **Grey particles persist:** consult the explicit sacrifice/item-use conditions; adding more ordinary ingredients does not answer a different waiting requirement. [O11]
+- **A calling book does not capture something:** it needs the same supported spirit type. Do not infer boss/player capture or use a main-world entity as a probe. [O14]
+
+## Tips with trade-offs
+
+- **Use repeatable book names for planned automation.** Prerequisite: an anvil, Dictionary and a pattern-based crafting system. Benefit: removes one documented source of component mismatch. Trade-off: existing random-name patterns may need reconfiguration; no integration was tested here. [O13]
+- **Use redstone state as a question, not a success certificate.** Prerequisite: a way to read the bowl's signal. Benefit: distinguishes waiting from running without supplying random items. Trade-off: it does not identify the missing sacrifice/item; the exact recipe still must be read. [O11]
+- **Keep crafted item outputs off the floor.** Prerequisite: an appropriate sacrificial bowl mounted facing down above the center. Benefit: the documented output catcher reduces loose item handling. Trade-off: it applies to crafted items, not a general creature-containment system. [O12]
+
+## Sources
+
+- [O07–O14] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `book.occultism.dictionary_of_spirits.getting_started.` prefixes `intro`, `ritual_prep_bowl`, `ritual_prep_chalk`, `books_of_binding`, `grey_particles`, `first_ritual`, `books_of_binding_automation`, `books_of_calling`.
+- Same archive, corresponding `data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/*.json`; per-page conditions are retained privately. Navigation-parent edges are not claimed as hard gameplay gates.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [O07] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O08] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O09] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O10] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O11] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O12] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O13] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+- [O14] `occultism-1.21.1-neoforge-1.224.5.jar!assets/occultism/lang/en_us.json`: `witness`.
+--- END PAGE: Diagnose an Occultism ritual and manage its books ---

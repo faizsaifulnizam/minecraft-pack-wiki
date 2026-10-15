@@ -2,12 +2,12 @@
 layout: default
 title: "Mod reference"
 permalink: /mods/
-baseline: dev-0.5-20261015
+baseline: dev-0.5-20261015-r2
 ---
 
 # Mod reference
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 This is an installed-file snapshot, not the list reported by a running game. Library roles and broad categories are navigation aids, not compatibility claims. Exact archive hashes and safe identities are also in the reviewed baseline JSON in the source repository.
 

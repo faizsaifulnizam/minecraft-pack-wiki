@@ -1,0 +1,368 @@
+<!-- wiki.py managed group export schema=1 -->
+# FULL SPOILERS group bundle
+
+--- BEGIN PAGE: Make your first MI bronze ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Make your first MI bronze
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Baseline
+Modern Industrialization **2.5.10** in `dev-0.5-20261015-r2`.
+
+## Evidence status
+**Shipped documentation.** The installed Forge Hammer and bronze pages support this sequence. Effective recipes, tag substitutions and machine operation have not been tested in-game for this handbook.
+
+## Prerequisites
+Ingredients for the Forge Hammer and access to copper/tin materials. Use [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) for exact recipes. This page deliberately does not invent a copper-to-tin ratio or a complete first-boiler build.
+
+## Steps
+1. Find the Forge Hammer recipe in the current viewer and gather its ingredients. The installed guide puts it before bronze processing.
+2. Make the Forge Hammer, then use it to process copper/tin ingots into dusts, or nuggets into tiny dusts, following the current recipe display.
+3. Combine the matching copper and tin dusts into bronze dust. Keep dust and tiny-dust recipes separate; the guide states that nine tiny dusts make one dust.
+4. Smelt bronze dust to get bronze ingots.
+5. Before moving to steam automation, read the next shipped guide pages and verify the boiler, pipes, fuel/water and machine recipes. That full operational setup is not yet mapped here.
+
+## Expected result
+Bronze ingots for the next MI stage, if the current recipes and processing UI match the shipped guide. The guide also describes Forge Hammer ore processing and a hand-held Steam Mining Drill, but those are separate from a validated steam-machine network.
+
+## Common failures
+- Similar dusts from different mods may not substitute unless the actual recipe tags/unification allow it. Check the viewer rather than assuming.
+- Dust and tiny dust are different quantities. Do not use the same ingredient count blindly.
+- The hand-held Steam Mining Drill needs both water and solid fuel according to the installed guide. That does not establish how a boiler or steam pipe is operated.
+- No MI-to-AE2 power bridge is verified by this starter page.
+
+## Sources
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/forge_hammer.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/making_bronze.md`
+
+[Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) lists the next systems without imposing a shared progression gate.
+--- END PAGE: Make your first MI bronze ---
+
+--- BEGIN PAGE: Plan the coke-to-steel continuation ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-steel-workshop/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Plan the coke-to-steel continuation
+
+## Baseline
+Private candidate **dev-0.5-20261015-r2**, unapplied; canonical baseline unchanged. Modern Industrialization 2.5.10 and AlmostUnified 1.21.1-1.4.2. This is a bounded static curriculum, not pack-wide or runtime acceptance.
+
+## Evidence status
+Selected exact-archive recipes and shipped prose, supplemented only where explicitly identified by pinned primary source. Recipes below describe shipped defaults, not resolved runtime recipes. Effective tags, resource precedence, generated recipes and active server configuration remain unverified. Reviewed against retained static evidence; not runtime-tested.
+
+## Prerequisites
+A functioning [steam workcell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/), coal, iron, macerator, mixer access and resources for two multiblocks. Use the in-game structure preview for exact block placement; the retained prose does not encode every coordinate or orientation.
+
+## Steps
+These are advanced conditional planning/reference notes, not a completed executable production tutorial. The whole-wiki/tutorial goal remains unchanged and incomplete.
+
+1. **STOP before construction:** retain exact controller/hatch/component bills and coordinate/orientation-complete structure proof first. The following are shipped reference counts, not a costed construction tutorial. Build a Coke Oven controller, **21 Bricks** and three mandatory bronze hatches: item input, item output, fluid input. The guide counts 24 replaceable structure blocks, three occupied by these hatches. An optional fluid output hatch collects creosote; do not treat adding it as permission to increase the shape size.
+2. Place the structure using its preview. Hold a wrench to see missing blocks/errors, or a hatch to see allowed positions. Proceed when the controller reports **Shape Valid**, not merely when its outer silhouette looks right.
+3. Send steam to the fluid input hatch and coal to the item input hatch. Retrieve coke from item output. Controllers generally are not the material I/O interface; the guide directs all inputs and outputs through hatches. Creosote is a chanced output and is voided without room, so fit fluid output/storage before the run if collecting it matters.
+4. **STOP before preparing a steel batch:** exact coke-to-dust, uncooked-steel mixture, selected machine recipe and output quantities must be proved first. Macerate coke into Coke Dust; combine that with iron into Uncooked Steel Dust. The guide says the mixer improves the ratio, but this packet does not retain the exact mixture recipe. Read its current quantities before batching; do not infer them from ordinary bronze ratios.
+5. Craft a Steam Blast Furnace controller, **29 Fire Clay Bricks** and the same three mandatory hatch types. Its structure follows the Coke Oven with fire clay replacing brick and an extra hollow layer on top. Use the preview and missing-block diagnostics for actual placement.
+6. **STOP before feeding the furnace:** require the exact named steel recipe ID, input/output quantities, steam amount, duration and validated hatch/control procedure. A viewer request is remaining evidence work, not a supplied recipe. Feed the valid furnace through its input hatches with steam and the uncooked steel recipe, and check its output for steel before scheduling more coke. Exact steam amount, duration and steel output count are unresolved, so first process only the viewer's single batch.
+7. After obtaining steel, optionally craft a Steel Upgrade: the guide supports applying it in a crafting table or sneaking/right-clicking a placed bronze machine with the upgrade. Upgraded machines support up to 4 EU/t and speed recipes up only within that ceiling. Recheck supply before upgrading the workcell.
+8. Continue to [MI electricity](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-lv-production/), or keep a steel Packer for simple repeated crafts such as double ingots and pipes. Its available recipes must be checked in the current viewer; this is not universal crafting automation.
+
+## Expected result
+An advanced planning/reference continuation with shipped structure counts and blocked batch checkpoints, not evidence of constructed multiblocks or a delivered first steel batch. It is not a coordinate-complete multiblock schematic or a fully costed steel production line.
+
+## Common failures
+- Shape invalid: check mandatory hatches and preview positions. Sending steam into the controller is not the documented input route.
+- Coke works, steel does not: verify uncooked steel preparation, fire-clay structure and extra hollow layer independently before changing fuel infrastructure.
+- Lost creosote: the source describes voiding the chanced output without room. Do not promise recovery of previously voided fluid.
+- Tip: one steel hatch upgrades a multiblock to steel tier according to the guide; higher speed also raises supply demand. A steel boiler's maximum doubles to 16 EU/t, not unlimited steam.
+- Keep an Automatic Trash Can away from this first line: the guide says piped items/fluids are destroyed. It is not a safe diagnostic sink.
+
+## Sources
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/coke_oven.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/steel.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/steel_machines.md`
+--- END PAGE: Plan the coke-to-steel continuation ---
+
+--- BEGIN PAGE: Plan an MI low-voltage production route ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-lv-production/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Plan an MI low-voltage production route
+
+## Baseline
+Private candidate **dev-0.5-20261015-r2**, unapplied; canonical baseline unchanged. Modern Industrialization 2.5.10 and AlmostUnified 1.21.1-1.4.2. This is a bounded static curriculum, not pack-wide or runtime acceptance.
+
+## Evidence status
+Selected exact-archive recipes and shipped prose, supplemented only where explicitly identified by pinned primary source. Recipes below describe shipped defaults, not resolved runtime recipes. Effective tags, resource precedence, generated recipes and active server configuration remain unverified. Reviewed against retained static evidence; not runtime-tested.
+
+## Prerequisites
+The [steel workshop](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-steel-workshop/), mixer, Steam Blast Furnace, Wiremill access and the current recipes for cables, turbine and electric machines. This is **MI electricity**, not an AE2 network. Analog Circuits and machine component recipes are prerequisites, not silently supplied by this page.
+
+## Steps
+These are advanced conditional planning/reference notes, not a completed executable production tutorial. The whole-wiki/tutorial goal remains unchanged and incomplete.
+
+1. **STOP before insulation production:** retain the selected oil/rubber/wire/cable recipe IDs, quantities and complete component bills first. Prepare cable insulation using the guide's chain: mix Coke Dust with water for Raw Synthetic Oil; process that in a Steam Blast Furnace for Synthetic Oil; mix the oil with paper for rubber sheets. Paper can come from wood through wood pulp. Quantities and intermediate recipe selection are not retained, so follow each current recipe and keep fluids separated.
+2. Make wires using the Wiremill, then combine wires with rubber sheets into cables. Copper, silver and tin cables are LV according to the guide; select an LV route for the first single-block electrical machines.
+3. **STOP before turbine assembly/wiring:** require its complete component bill, steam-input and electricity-output controls and cable connection proof first. Craft the LV Steam Turbine and route steam to it. The turbine converts **one mB steam to one EU**, up to **32 mB/t**. Its electricity output goes only toward its output side: direct-connected machines or cables on that side. Do not use an arbitrary adjacent cable as proof of an energy connection.
+4. **STOP before an electric-machine test:** name one exact machine and recipe ID, its complete circuit/component/insulation bill, input/output quantities, energy and controls first. No such test task is supplied here. Only after this gate passes, plan to attach that LV machine and test that recipe. Electric machines use electricity instead of steam and progressively overclock up to 32 EU/t. A turbine's maximum is not guaranteed from a bronze boiler: supply, not the turbine label, bounds the small line.
+5. **STOP before Assembler construction/automation:** retain exact Assembler and chosen recurring-component recipe chains, quantities and slot/control proof first. Build one Assembler after satisfying its actual component recipe. Dedicate it to one displayed recurring component, lock the slots and feed it with the validated item-pipe method from [the workcell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/). The guide permits up to three recipes per Assembler using slot locking; start with one to make faults attributable. Suggested later components are Machine Hulls, Analog Circuits, Motors, Pistons, Robot Arms and Conveyor Belts—not a proof that their entire dependency graph is automated.
+6. Where Analog Circuits are available, a Configurable Chest offers **27 configurable slots** and auto-eject. Use an ordinary output inventory or that chest as the stock endpoint. No MI-to-AE2 power conversion, import wiring, autocrafting pattern or machine integration is proved here. See the existing [AE2 starter](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/) for its separately evidenced starting point.
+7. Expand only after the single-machine check. The guide limits LV network intake to **256 EU/t**, not every individual machine's draw or an absolute transient output ceiling. Single-block electric machines connect only to LV cables; larger distribution uses separate networks or transformers with tier-appropriate inputs/outputs.
+
+## Expected result
+An advanced conditional planning/reference route with energy-limit context; no named electric-machine recipe task or executable Assembler production line is delivered. Circuit recipes, rubber quantities and complete automation remain open, not filled by generic technology-mod assumptions.
+
+## Common failures
+- Turbine has steam but machine lacks power: inspect the turbine output side and LV connection before adding generators.
+- Speed does not reach the headline: distinguish boiler supply, turbine conversion ceiling, machine overclock and network intake. They are different limits.
+- Tip: lubricant from creosote plus redstone can manually improve electric-machine overclock efficiency; the guide gives 25 mB per efficiency tick. This is optional and not a substitute for sufficient energy.
+- Redstone Control Modules are documented as configured in hand then inserted into a machine/controller. Their mode meanings are not traced here; do not activate an unknown setting as a diagnostic.
+- A Portable Storage Unit initially has zero capacity until batteries are inserted. Removing batteries can lose excess energy. It is inventory-carried MI energy storage, not an established AE2 power bridge.
+
+## Sources
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/electric_age/making_cables.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/electric_age/electricity.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/electric_age/basic_machines.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/electric_age/portable_storage_unit.md`
+--- END PAGE: Plan an MI low-voltage production route ---
+
+--- BEGIN PAGE: Check transformed recipes before scaling a batch ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/unification-workbench/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Check transformed recipes before scaling a batch
+
+## Baseline
+Private candidate **dev-0.5-20261015-r2**, unapplied; canonical baseline unchanged. Modern Industrialization 2.5.10 and AlmostUnified 1.21.1-1.4.2. This is a bounded static curriculum, not pack-wide or runtime acceptance.
+
+## Evidence status
+Selected exact-archive recipes and shipped prose, supplemented only where explicitly identified by pinned primary source. Recipes below describe shipped defaults, not resolved runtime recipes. Effective tags, resource precedence, generated recipes and active server configuration remain unverified. Reviewed against retained static evidence; not runtime-tested.
+
+## Prerequisites
+A specific recipe and ingredient/output identity, preferably the [first bronze batch](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-first-steam-batch/), plus its current viewer display. AlmostUnified metadata identifies this installed release as 1.21.1-1.4.2. No saved preference order or effective configuration was inspected for this packet.
+
+## Steps
+1. Write down the exact recipe ID, machine/type, ingredient IDs or tags, and displayed result ID/count. For the retained shipped bronze recipe, the inputs are three `c:dusts/copper` tags and one `c:dusts/tin` tag; its result is three `modern_industrialization:bronze_dust`. This is the pre-transformation object, not the final pack outcome.
+2. Compare the current display with that shipped object before creating a large supply line. The installed English strings include “Modified by Almost Unified!”, “Unified” and “Had Duplicates”. If the viewer exposes those markers, preserve their state alongside the ID/count. The strings alone do not prove every viewer or recipe category actually displays them.
+3. Interpret differences narrowly. At exact-version upstream commit `8c2c6b0ec41a3eb6c31e39061b1c189b31cf45a4` (tag `v1.21.1-1.4.2`), GenericRecipeUnifier calls both input and output unification helpers for common keys. This is recipe-data processing, not evidence that similarly named items already in your inventory convert automatically.
+4. The pinned RecipeTransformer copies recipe JSON, applies settings only when `shouldIncludeRecipe` permits, and replaces changed recipes in the map. Its duplicate handling removes non-master recipes when the type is not ignored; recipe-ID ignore checks also apply. Therefore a missing duplicate or changed result can be intended processing, but this source does not identify this pack's master or preferred material.
+5. Test the current intended recipe with one batch and observe the actual output identity before changing item-pipe filters. Only whitelist the observed target after confirming it is the intended product; do not globally blacklist every other mod's bronze because one recipe changed.
+6. For a discrepancy, retain the original recipe ID, current result, relevant markers and one-batch observation for review. The installed warning says not to report recipe issues to the original author. Investigate transformation/configuration first; neither that warning nor metadata establishes that AlmostUnified caused this particular fault.
+
+## Expected result
+A recipe-specific diagnosis separating shipped data, possible unification/duplicate processing, displayed results and observed production. There is no asserted preferred namespace, inventory conversion rule, universal tag equivalence or exact effective MI recipe rewrite.
+
+## Common failures
+- Same name, rejected input: spelling is not a tag-membership proof. Check the actual recipe and exact item identity.
+- Shipped output differs from display: do not overwrite the source claim or assume the viewer is wrong; effective data can differ after transforms and overrides.
+- No marker visible: optional viewer dependencies in metadata do not prove category coverage or loaded integration.
+- Tip: retain a small sample of the actual output before setting long-lived pipe filters. This costs a test batch but avoids encoding an unverified namespace preference.
+- Unresolved routes: preferred-mod order, configured exclusions, effective tags, duplicate master selection, runtime rewrite results and existing-inventory behavior. None is reconstructed from generic mod descriptions.
+
+## Sources
+- `almostunified-neoforge-1.21.1-1.4.2.jar!META-INF/neoforge.mods.toml`
+- `almostunified-neoforge-1.21.1-1.4.2.jar!assets/almostunified/lang/en_us.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze_dust.json`
+- `https://raw.githubusercontent.com/AlmostReliable/almostunified/8c2c6b0ec41a3eb6c31e39061b1c189b31cf45a4/Common/src/main/java/com/almostreliable/unified/api/unification/bundled/GenericRecipeUnifier.java`
+- `https://raw.githubusercontent.com/AlmostReliable/almostunified/8c2c6b0ec41a3eb6c31e39061b1c189b31cf45a4/Common/src/main/java/com/almostreliable/unified/unification/recipe/RecipeTransformer.java`
+--- END PAGE: Check transformed recipes before scaling a batch ---
+
+--- BEGIN PAGE: Make a first bronze plate with steam ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-first-steam-batch/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Make a first bronze plate with steam
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation. Modern Industrialization 2.5.10. This is a static task using shipped recipes and the pinned 2.5.10 release source, not a gameplay-tested result.
+
+## Evidence status
+The fire-clay conversion and component quantities below come from the exact archive. Container and output gestures come from release-tag source, commit `2d2b25dc45043375de1126e703b96ace950d8324`. Release-tag correspondence is stronger than an unversioned tutorial but is **not compiled-method parity or effective-runtime proof**. Effective tags, recipe overrides, permissions and NeoForge fluid-container integration are untested. Check each named recipe and checkpoint; stop on disagreement rather than guessing another gesture.
+
+## Prerequisites
+Have [first bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/), a crafting table, a working ordinary furnace, a pickaxe, fuel and room in inventory for emptied containers. Starting stock below is refined ingots and supplied vanilla components, not a mining/fuel-production bill. Do not use the optional hand-held Hammer: these quantities use the less-efficient **tool slot empty** Forge Hammer recipes.
+
+Choose before crafting:
+- **Bucket bootstrap:** only if the current recipe viewer actually offers water bucket → steam bucket. The shipped recipe is disabled when `dehydration` is loaded. Cookingtime is 500 ticks. A historical roster or this recipe object does not prove effective availability.
+- **Boiler-first fallback:** does not depend on that conditional recipe. Make all boiler and wrench plates in the Forge Hammer **before** crafting the compressor. It costs more ingots but avoids the circular plan “use the compressor to make its own initial steam supply.” Its fuel requirement is checkpoint-based, not an exact coal-count promise.
+
+### Complete compressor construction bill
+One compressor consumes **1 Forge Hammer workstation, 2 copper rods, 2 copper gears, 1 bronze machine casing, 3 fluid pipes** (`rFr / GCG / ppp`). The workstation itself costs **3 heavy weighted pressure plates + 4 iron ingots** (`___ / .i. / iii`). Supplied vanilla plates are not MI bronze/copper plates.
+
+For the no-hand-tool route, prepare these exact intermediate batches:
+
+| Component | Craft / conversion | Stock consumed |
+|---|---|---|
+| 1 bronze machine casing | 8 bronze plates around 1 bronze gear | 12 bronze plates + 1 bronze ring + 4 bronze bolts after expanding the gear |
+| 1 bronze gear | `PbP / bRb / PbP` | 4 bronze plates, 1 bronze ring, 4 bronze bolts |
+| 2 copper gears | same gear pattern | 8 copper plates, 2 copper rings, 8 copper bolts |
+| 2 copper rotors | `bBb / BRB / bBb` each | 8 copper blades, 2 copper rings, 8 copper bolts |
+| 8 copper blades | two `P / P / I` crafts, 4 blades each | 4 copper curved plates, 2 copper rods |
+| 16 fluid pipes | `CCC / rPr / CCC` | 6 bronze curved plates, 2 copper rotors, 1 glass pane |
+| Compressor rods | direct Forge Hammer conversion | 2 more copper rods |
+
+Forge Hammer conversion rates: **2 ingots → 1 plate or curved plate; 1 ingot → 1 rod or ring; 1 ingot → 2 bolts** for the copper/bronze recipes used here. Thus the compressor plus its unavoidable 16-pipe batch consumes **39 bronze ingots + 40 copper ingots + 1 glass pane + the workstation**; 13 pipes remain. Gear expansion is included, not an extra charge. Tooling, vanilla furnace/fuel and a steam container are separate.
+
+For one test plate, reserve **1 additional bronze ingot**: total **40 bronze ingots + 40 copper ingots**. If making that bronze with the shipped hand-mix recipe, 14 batches use **42 copper dust + 14 tin dust → 42 bronze dust → 42 bronze ingots**, leaving 2 bronze ingots. With the retained 1 ingot → 1 dust recipes, starting metal stock is **82 copper ingots + 14 tin ingots**, plus workstation materials and, for the mandatory pre-consumption fire-clay reserve below, **24 brick items + 8 clay balls**. The hand-mix recipe yields **3**, not 4, bronze dust.
+
+### Full fire-clay bill for one boiler
+Do this while the workstation still exists, even if choosing bucket bootstrap and saving the boiler for later:
+
+| Stage | Exact no-tool quantity |
+|---|---|
+| Hammer ordinary brick items | 24 `minecraft:brick` → 72 `brick_tiny_dust` (3 per brick) |
+| Aggregate tiny dust | eight 3×3 crafts → 8 `brick_dust` (9 tiny dust per dust; centre is the exact MI tiny-dust item) |
+| Mix fire clay | four `TC / TC` crafts: 8 clay balls + 8 brick dust → 12 `fire_clay_dust` |
+| Smelt | 12 dust → 12 `fire_clay_brick` items, cookingtime 200 each |
+| Build blocks | three `TT / TT` crafts → 3 `fire_clay_bricks` blocks |
+
+**Three dust are not three blocks.** This bill starts with 24 ordinary brick items and 8 additional clay balls; obtaining/smelting those ordinary bricks and fuel is outside the supplied-stock bill. Before consuming the hammer, count all **72 tiny dust / 8 full dust / 12 fire-clay dust** at the appropriate stage, then all **3 finished blocks**. Do not substitute ordinary brick blocks.
+
+### Boiler-first additions
+One boiler is `#T# / #F# / BBB`: **4 bronze plates + 1 bronze tank + 1 supplied furnace + 3 fire-clay blocks**. The tank is `### / #G# / ###`: **8 bronze plates + 1 tagged glass block**. A wrench is `b.b / bbb / .b.`: **6 bronze plates**. Make those **18 additional bronze plates from 36 bronze ingots before the workstation is consumed**. This is one tank consumed by construction, not a spare transfer tank.
+
+Including the compressor and one test ingot, the boiler-first route needs **76 bronze ingots + 40 copper ingots**, the workstation materials, **24 brick items + 8 clay balls**, **1 glass pane + 1 glass block**, **1 furnace consumed in the boiler**, an additional working smelting furnace, **1 water bucket**, and fuel. Hand-mixing 26 batches gives 78 bronze ingots from 78 copper dust and 26 tin dust, leaving 2 bronze ingots: total starting metals **118 copper ingots + 26 tin ingots** plus the workstation's vanilla components. Fuel is not included in this exact construction total; warm-up depends on operation and supply. Do not confuse a construction bill with a proven finite-fuel runtime run.
+
+## Steps
+1. Craft and place the Forge Hammer. Open it. Leave its optional hand-tool slot empty. Put the relevant ingots/bricks in the input, select the desired visible recipe, and take the output; inserting input alone does not craft it. Confirm each output name and quantity. The release source selects a recipe button and consumes inputs when its result is taken.
+2. Make the full fire-clay chain above **before consuming the workstation**. Also finish the casing, copper gears, rods, blade/rotor batches and all 16 fluid pipes. For boiler-first, make the 18 extra plates, tank and wrench now. Keep the test ingot separate. If anything is short, do not assemble the compressor yet.
+3. Empty the workstation's input/tool slots and recover it with the appropriate pickaxe; keep it as the `F` ingredient. Craft the compressor with `rFr / GCG / ppp`. Count 13 spare pipes. The Forge Hammer is consumed; it is not a reusable crafting remainder.
+4. **Bucket branch, only with the effective recipe present:** smelt one water bucket into one steam bucket in the ordinary furnace. Retrieve the result. Do not use/right-click that bucket into the world to try to power a machine. Open the placed compressor with an empty hand. Leave lock mode OFF. Pick up the single steam bucket onto the cursor and **ordinary left-click the compressor's steam fluid slot**, then put the returned container in inventory. This is a GUI fluid-slot operation, not a world tank-click or an item-input placement. The source calls `tryEmptyContainerAndStow` on the carried item and updates the actual fluid slot only on success. **Checkpoint:** steam visible in that slot, at least 200 mB available, and the container/result accounted for. A nominal bucket is 1000 mB, but verify the displayed transfer; this packet did not run the NeoForge container implementation. If it fails, put the unchanged bucket away, close the GUI and stop this branch; do not scatter trial world clicks.
+5. **Conditional transfer test — output-only eligibility unresolved:** MIInventory/TransferHelper establish neighbour selection and transfer order, but the required MIStorage extraction predicate is not retained. Do not treat the following control settings as proof of which fluids can leave storage. Proceed only as an isolated checkpoint test; stop additional fuel input if delivery disagrees. **Boiler-first branch / fallback:** use the prepared three fire-clay blocks, tank, furnace and four plates to craft the boiler. Place it with its east side initially clear. With the wrench in hand, **sneak + right-click the centre of the boiler's east face** to select east as its output. In its GUI, hover the fluid-auto-extract control and enable it; the source control toggles `extractFluids`, which defaults false for a new machine. Verify its ON tooltip rather than assuming adjacency alone enables delivery. Place the compressor immediately east of the boiler, touching that face. Open the boiler; with lock mode OFF, carry a water bucket and ordinary left-click its water input fluid slot. Account for the returned empty bucket and check visible water. Add valid fuel to its item input and wait for heat/steam production. **Checkpoint:** boiler water exists, fuel is being used/temperature changes, then compressor steam increases. Keep water supplied manually. The source boiler is output-side/auto-extract gated: do not read the book's “automatically sends” as unconditional all-side output.
+6. Only after observing the steam checkpoint (the boiler branch remains subject to step 5’s unresolved output-only eligibility), put **exactly 1 bronze ingot** in the compressor item input, leaving output space empty and no overclock catalysts installed. The shipped `materials/bronze/compressor/main` recipe is **1 ingot → 1 bronze plate, 2 EU/t, duration 100**, nominal energy **200 EU = 200 mB steam**. Wait for completion, take the plate and check no extra ingots were queued. Do not use the distinct `compressor/plate` recipe, which consumes an existing plate to make a curved plate.
+7. Stop with the plate and container inventory accounted for. For a sustained water supply, use the separately qualified [pump feed procedure](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/). Do not attach a large mixed-fluid network to this first test.
+
+The inspected auto-extract callee queries only the adjacent selected-output neighbour, on its opposite face, and delegates simulated drain/fill followed by execution. However, output-only eligibility still depends on the storage extraction chain: retained MIFluidStorage delegates to extract, while its MIStorage implementation is not retained. **Downstream gate:** output-only filtering is not fully established by this packet; the closed-feed path remains a conditional test, not a complete static transfer trace. Stop at any failed steam/water checkpoint; adjacency alone is not acceptance.
+
+## Expected result
+A source-supported **conditional static first-plate procedure**, with complete MI construction quantities and two explicitly distinct bootstrap branches. The required in-game checkpoint is one collected bronze plate and visible steam consumption, **not observed here**. The boiler-first fallback remains conditional on step 5’s unresolved output-only eligibility and removes only the dehydration recipe dependency, but does not prove effective tags, valid fuel availability or actual production. If either branch disagrees with the current recipe viewer or GUI, this task remains blocked at that checkpoint.
+
+## Common failures
+- Only tiny brick dust: intended. Nine tiny dust make one full dust; do not feed tiny dust directly to the fire-clay craft.
+- No brick dust after consuming the hammer: build another workstation from 3 pressure plates + 4 iron ingots, or return to a separately evidenced machine route; no refund/remainder is promised. Prevent this by finishing all preparation first.
+- No steam-bucket smelting recipe: use boiler-first **only if its plates/tool were prepared**, otherwise build a replacement workstation. This is an honest higher-cost fallback, not an invented recipe.
+- Fluid click only locks a slot: exit lock mode, restore the carried container to inventory, recheck the identified fluid input. No successful transfer means no permission to continue the test.
+- Boiler hot but compressor empty: step 5’s output-only eligibility remains unresolved; these checks cannot establish the missing storage policy. Stop additional fuel input if delivery remains unproved. check water, actual steam output, east output marking and the fluid-auto-extract ON tooltip. The compressor accepts steam input from any side according to the shipped guide; rotating its front is not the repair.
+- Avoid breaking running machines to “reset” them. Stored-fluid recovery on break is not proved here. The book warns that breaking a machine with a wrench does not drop it; use a pickaxe for empty-machine relocation.
+- Trade-off: bucket bootstrap saves pre-steam boiler plate work but depends on a conditional smelting recipe/container integration. Boiler-first costs 36 extra bronze ingots for the boiler plates plus output-setting wrench, but has no dependence on steam-bucket smelting.
+
+## Sources
+Exact archive recipe witnesses:
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/forge_hammer.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/forge_hammer/brick_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/brick/craft/dust_from_tiny_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/fire_clay_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/fire_clay/smelting/dust_to_ingot_smelting.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/fire_clay_bricks.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/bronze/compressor_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/bronze/machine_casing_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/craft/gear.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/craft/gear.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/craft/rotor.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/craft/blade.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/fluid_pipe_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_plate.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_curved_plate.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_rod.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_ring.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_bolt.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/forge_hammer/ingot_to_plate.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/forge_hammer/ingot_to_curved_plate.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/forge_hammer/ingot_to_ring.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/forge_hammer/ingot_to_bolt.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/forge_hammer/ingot_to_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/tin/forge_hammer/ingot_to_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze_dust.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/smelting/dust_to_ingot_smelting.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/bronze/boiler_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/craft/tank.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/tools/wrench.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/vanilla_recipes/steam_bucket.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/compressor/main.json`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/steam_machines.md`
+
+Pinned primary source: [Forge Hammer recipe selection and consumption](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/blocks/forgehammer/ForgeHammerScreenHandler.java#L253-L344); [GUI carried-container click](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/ConfigurableScreenHandler.java#L109-L144); [fluid transfer and result](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/ConfigurableFluidStack.java#L280-L324); [boiler water and output tick](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/blockentities/BoilerMachineBlockEntity.java#L73-L143); [output direction](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/components/OrientationComponent.java#L95-L110); [auto-extract click](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/client/java/aztech/modern_industrialization/client/machines/guicomponents/AutoExtractClient.java#L60-L111); [server toggle](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/network/machines/SetAutoExtractPacket.java#L45-L63); [steam conversion](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/helper/SteamHelper.java#L33-L53).
+
+
+Pinned transfer supplement: [selected neighbour callee](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/MIInventory.java#L104-L110); [delegated simulated and executed transfer](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/util/TransferHelper.java#L152-L178); [overlay dispatch to orientation](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/MachineBlockEntity.java#L171-L181).
+--- END PAGE: Make a first bronze plate with steam ---
+
+--- BEGIN PAGE: Feed a steam water pump and return water ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Feed a steam water pump and return water
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation. Modern Industrialization 2.5.10. This revises the existing workcell route with a bounded **two-machine feed/return test**, not an automatic whole factory.
+
+## Evidence status
+Exact archive recipes/shipped prose plus primary release source at commit `2d2b25dc45043375de1126e703b96ace950d8324`. Source establishes steam input, water output, both auto-extract gates and the output gesture. It does not prove compiled-method parity, effective tags/container capabilities, permissions, or observed pumping. All expected checkpoints below are requirements, not recorded gameplay results. A recipe viewer mismatch blocks the relevant craft.
+
+## Prerequisites
+Finish the boiler-first construction in [first steam and fire clay](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-first-steam-batch/), or otherwise have one source-compatible Bronze Boiler and wrench. Keep a water bucket and fuel. Reserve a clear, supported 3×3 water basin with access around and above it. This test intentionally **does not power a compressor at the same time**: the boiler has one selected output face, and here it points at the pump.
+
+One pump is `rTr / GCG / ppp`: **2 copper rotors, 1 bronze tank, 2 copper gears, 1 bronze machine casing, 3 fluid pipes**. The companion page expands all component crafts and no-tool rates. If using its 13 spare pipes, the pump's additional MI material bill is **43 bronze ingots + 38 copper ingots + 1 glass block + 3 spare pipes**: casing 27 bronze ingots, tank 16; two rotors 16 copper ingots, two gears 22. These counts assume the Forge Hammer's hand-tool slot is empty and start with refined ingots. If the original workstation was consumed, **another Forge Hammer (3 heavy weighted pressure plates + 4 iron ingots) is required** to make those additional parts unless they were reserved before assembly. Do not silently assume the consumed hammer is still available. Alternatively prepare the pump's parts during the companion page's preparation stage.
+
+If you have no spare pipes, add one 16-pipe batch: **12 bronze ingots + 16 copper ingots + 1 glass pane**, using the same rotor/curved-plate path; 13 pipes then remain. The wrench itself costs 6 bronze plates (12 no-tool bronze ingots) if not already supplied. Bronze hand-mixing remains 3 copper dust + 1 tin dust → 3 bronze dust, not four; these pump totals are ingot-stock bills, not a new mining or fuel budget.
+
+## Steps
+**Transfer gate for steps 3–9 and all transfer diagnostics below:** MIInventory/TransferHelper establish neighbour selection and transfer order, not output-only storage eligibility: the required MIStorage extraction predicate is not retained. This is an isolated conditional test, not a proved closed loop. ON tooltips prove the toggle state only. Stop additional fuel input on a failed checkpoint; do not leave the setup unattended.
+
+1. With machines empty and the basin still dry, put the pump at a chosen centre `(0,0,0)` on a solid floor. These are relative construction coordinates, not world/map coordinates. Keep its upper face exposed. Hold the wrench, **sneak + right-click the centre of the pump's top face**. Its output should now point UP. Ordinary non-sneaking wrench use changes the front, not the output. The primary event handler recognizes a tagged wrench, then the orientation handler sets output to the selected face.
+2. Place the boiler directly above it at `(0,1,0)`. To select the boiler's now-hidden DOWN face, aim at a **corner of its exposed top face** (within the outer quarter on both horizontal axes), then sneak + right-click with the wrench. Source `MachineOverlay.findHitSide` maps a corner to the opposite face; a top-centre click selects UP and is wrong here. **Checkpoint:** the boiler output marking points DOWN toward the pump, while the pump output points UP toward the boiler. If you cannot establish the selected directions from the markings, stop before adding fuel/water. Do not repeatedly rotate a running network to discover the result.
+3. **Subject to the transfer gate above**, open each machine's GUI with an empty hand. Hover the **fluid auto-extract** control. Click only if its tooltip says OFF, then require its ON tooltip. The client sends the toggle to the server; the server stores `orientation.extractFluids`. Both boiler and pump ticks test that flag before sending fluid. There is no proved requirement for item auto-extract, no pump intake-face selector, and no need to rotate its front to accept steam. Do not interpret the book's “automatically transfers” as default-ON output.
+4. Fill the **eight surrounding cells at the pump's own height** with water source blocks: `(-1,0,-1)`, `(0,0,-1)`, `(1,0,-1)`, `(1,0,0)`, `(1,0,1)`, `(0,0,1)`, `(-1,0,1)`, `(-1,0,0)`. Use contained sources, not just flowing water. The boiler above leaves all eight cells available. Source also requires a diagonal source to have at least one neighbouring cardinal source before it counts; this full ring satisfies that condition.
+5. **Prime the boiler manually.** Open its GUI, leave lock mode OFF, carry one water bucket and ordinary left-click the water input fluid slot. Return the empty container to inventory and confirm visible water. Add valid fuel. Do not expect the pump to start from a dry boiler: it requires steam first. Wait through heating and check boiler steam is actually produced; supply more water/fuel as needed, rather than changing orientation to treat warm-up as a wiring fault.
+6. **Conditional steam-input checkpoint, under the transfer gate:** open the pump and require steam in its input slot (source position 21,30 relative to the GUI background; identify by fluid tooltip, not a screen-resolution pixel). The source constructs a steam-locked input and water-locked output. Steam may be consumed as it arrives; progress/activity plus input changes are better than demanding a full reservoir. If there is no progress or input, check boiler output DOWN, its fluid-auto-extract ON, water/fuel and production before touching the pump output.
+7. **Conditional water-output checkpoint, under the transfer gate:** the pump consumes at most **1 EU/t**, spending 100 powered ticks per operation. For bronze, output is **125 mB per counted source per operation**, up to **1000 mB** for the full ring. The water slot is source position 110,30. At 20 TPS with continuous power, 100 ticks is nominally 5 seconds; starvation or server lag lengthens it. Require pump progress and water production, then evidence that water is reaching the boiler. A constantly empty pump output alone is not failure: UP auto-extract may send water immediately.
+8. **Under the same unresolved eligibility gate**, if output is too transient to inspect, use the proved control rather than breaking anything: turn **only the pump's fluid-auto-extract OFF**, leave steam feed intact, and observe water accumulate after an operation. Then restore ON and require water to fall/transfer and boiler water to rise or remain supplied while steam continues. This is an optional isolated-test diagnostic, not permission to turn off a shared factory's supply. Stop fuel expansion if return remains unproved; no unattended operation is accepted here.
+9. **Only if the conditional checkpoints succeeded**, finish with both fluid-auto-extract controls ON, directions unchanged, manual container accounted for and a source ring still present. This proves nothing about an attached compressor, filters, storage overflow or restart persistence. Those are separate acceptance tasks.
+
+The inspected auto-extract callee queries only the adjacent selected-output neighbour, on its opposite face, and delegates simulated drain/fill followed by execution. However, output-only eligibility still depends on the storage extraction chain: retained MIFluidStorage delegates to extract, while its MIStorage implementation is not retained. **Downstream gate:** output-only filtering is not fully established by this packet; the closed-feed path remains a conditional test, not a complete static transfer trace. Stop at any failed steam/water checkpoint; adjacency alone is not acceptance.
+
+## Expected result
+A conditional feed/return test, with downstream output-only eligibility still gated: **boiler steam DOWN → pump steam input; pump water UP → boiler water input**, after manual priming. Required observations are pump power/progress, demonstrable water output, and return to the boiler. None has been exercised in-game in this packet. There are **no placed pipes** in this test, so no invented extraction/filter setting is hidden in the procedure.
+
+## Common failures
+All transfer checks below remain subject to the unresolved output-only eligibility gate before step 3. Directions and ON state cannot prove that missing storage policy. Stop additional fuel input if delivery remains unproved.
+
+- Dry-loop recovery: if boiler water and available steam are exhausted, first restore the source ring and return controls, then **manually refill the boiler using step 5 and supply fuel**. Repeat the steam-input and water-output checkpoints (steps 6–8); do not expect the pump to self-start from water adjacency alone.
+- Pump is surrounded by water but idle: water is not its energy input. It requires steam; follow the separate boiler-to-pump route.
+- Pump progresses but water stays zero: inspect source blocks at the same height, not water above/below; corners alone do not necessarily count. Use the full eight-source ring.
+- Pump water fills but boiler dries: output UP and fluid-auto-extract ON are both required. Do not rotate the boiler's front as a substitute.
+- Boiler's steam never reaches pump: its one output is DOWN in this test. If you left it pointing east toward a compressor, that is a different topology, not proof the pump needs a special intake face.
+- Water gauge barely changes: pump output may be transferred immediately and boiler water is simultaneously consumed. Use the bounded OFF→accumulate→ON test rather than claiming success from a single empty gauge.
+- Do not dismantle a fluid-filled machine for recovery: this packet does not establish fluid preservation on break. Stop additional fuel input and leave the isolated setup intact while diagnosing. The source/book does not justify voiding, purge buttons or a special “pump mode.”
+- Tip/trade-off: vertical stacking preserves all eight surrounding source positions and avoids pipe-side controls, but uses the boiler's sole output for pump power. Powering another machine simultaneously needs a separately evidenced split/pipe layout; do not call this test a complete processing base.
+- Optional tank reference: the shipped tank guide says a Bronze Tank stores 4 buckets and a placed tank can be right-clicked with buckets/tanks. Primary `TankBlockEntity.onPlayerUse` uses **MAIN_HAND** fluid interaction. That does not prove a filled tank item's behavior when right-clicked against a crafting machine; this procedure instead uses the explicitly traced GUI carried-container operation.
+
+## Sources
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/bronze/water_pump_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/bronze/machine_casing_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/bronze/craft/tank.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/craft/gear.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/materials/copper/craft/rotor.json`
+- `Modern-Industrialization-2.5.10.jar!data/modern_industrialization/recipe/steam_age/fluid_pipe_asbl.json`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/water_pump.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/steam_machines.md`
+- `Modern-Industrialization-2.5.10.jar!assets/modern_industrialization/mi_guidebook/steam_age/tanks.md`
+
+Pinned source: [steam/water slots](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/blockentities/SteamWaterPumpBlockEntity.java#L47-L79); [pump tick and eight-source eligibility](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/blockentities/AbstractWaterPumpBlockEntity.java#L79-L129); [output selection](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/components/OrientationComponent.java#L95-L110); [hidden-face corner selection](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/MachineOverlay.java#L86-L106); [wrench event](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/MI.java#L154-L174); [boiler output gate](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/blockentities/BoilerMachineBlockEntity.java#L107-L142); [client toggle and tooltip state](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/client/java/aztech/modern_industrialization/client/machines/guicomponents/AutoExtractClient.java#L60-L111); [server toggle](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/network/machines/SetAutoExtractPacket.java#L45-L63); [GUI click dispatch](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/ConfigurableScreenHandler.java#L109-L144); [fluid/container update](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/ConfigurableFluidStack.java#L280-L324); [placed tank interaction](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/blocks/storage/tank/TankBlockEntity.java#L36-L45).
+
+
+Pinned transfer supplement: [selected neighbour callee](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/inventory/MIInventory.java#L104-L110); [delegated simulated and executed transfer](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/util/TransferHelper.java#L152-L178); [overlay dispatch to orientation](https://github.com/AztechMC/Modern-Industrialization/blob/2d2b25dc45043375de1126e703b96ace950d8324/src/main/java/aztech/modern_industrialization/machines/MachineBlockEntity.java#L171-L181).
+--- END PAGE: Feed a steam water pump and return water ---

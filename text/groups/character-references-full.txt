@@ -1,0 +1,307 @@
+<!-- wiki.py managed group export schema=1 -->
+# FULL SPOILERS group bundle
+
+--- BEGIN PAGE: Character notes A ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/full/character-notes-a/
+Baseline: dev-0.5-20261015-r2
+Spoiler: full
+WARNING: FULL SPOILERS. This text may reveal progression and outcomes.
+
+# Character notes A
+
+> **FULL SPOILERS** — this page reveals skill behavior, evolution wording and reset consequences. [Return to the safe character-helper route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-tools/).
+
+## Baseline
+This is an bounded statically reviewed revision for candidate **dev-0.5-20261015-r2**, not an applied replacement for dev-0.5-20261015. New core text corresponds only to Tensura archive SHA-256 `2309a22ceb7e423e2f3212ea87686ccc510fe0003595500037e0b6c64baef213`. The original baseline/pins remain unchanged. Static descriptions and feedback are not runtime or award-handler proof.
+
+foxablazeaqzl_wiki 1.0.2.3, tensura_trepu 1.0.0.2 and Tensura-Leveling 1.0.14. Reference with conditional how-to techniques.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+New candidate-core text independently establishes skill/mode names, learning feedback, evolution requirement vocabulary, awakening refusal messages and reset warnings. Imported addon numerical descriptions still have no pinned core correspondence; their ranges, probabilities and learning bonuses below remain **addon-shipped documentation**, not verified candidate implementation. No acquisition route for Great Sage or Sage is established. Do not consume rare resources or reset solely from these notes.
+
+## Read entry and race selection without forcing reincarnation
+1. If **Reincarnation** is already open, read its candidate-core information box: Difficulty, Aura Range, Magicule Range and Intrinsic Skills. Compare those fields before choosing. These are displayed ranges, not a promised starting roll or power conversion.
+2. **Random** explicitly selects from a configurable list. Do not treat all displayed or tagged races as its pool. The live list was not read; a fixed best-race recommendation is unsupported.
+3. **Select Race** is the submit label. Do not submit as a harmless preview. First-join access, repeat selection, confirmation and persistence are not encoded by these translation strings.
+4. If you cannot reach the screen, stop at [the safe control check](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-tools/). No deliberate-death or reset route is authorized by this evidence.
+
+The separate `tensura:reincarnation` magic description says it sacrifices a portion of the caster’s power to reincarnate. It does not state the fraction, target eligibility or that casting it is the normal first-life route. The reincarnated advancement listens for `tensura:reincarnated`; its icon is a Race Reset Scroll, not a recipe or requirement to use one. The retained resource has no emitter implementation. **Do not infer entry from its icon or title.** (REV-03; core `tensura.reincarnation.*`, `tensura.skill.reincarnation.description`; reincarnated.json.)
+
+## Distinguish learning progress from an acquired ability
+1. In an available **Ability Selection** view, record **Learn Points**, **Mastery** and **[Mod: …]** for the intended ability. Origin matters when reading addon entries.
+2. If feedback says **now available to learn**, that is availability, not acquisition. **You have become closer to acquiring …** likewise indicates progress. Do not claim ownership yet.
+3. If feedback says **currently unable to be learnt**, stop the attempted route. If it says **requires mastery over … to be learnt**, record the named prerequisite and inspect that ability’s Mastery; do not substitute an unrelated advancement parent.
+4. Treat **has been acquired through learning** and the owned ability list as the acquisition checkpoint; treat **You have mastered the usage of …** and the Mastery display as a separate checkpoint. Actual point thresholds and the action that adds points remain untraced.
+5. For an already-owned active skill, select the intended mode using **Next Ability Mode / Previous Ability Mode** and your assigned **Ability 1/2/3 Activation** control. These names do not prove slot placement, mode entitlement or the default keys. Do not test a combat mode against an unknown target.
+
+The candidate core independently names Great Sage / Analysis / Analytical Appraisal / Refining and describes Sage as increasing learning/mastery speed. It does **not** corroborate the addon’s +2/+9, 20/30-block, EP ratio or success-rate figures. Keep those conditional techniques separate from exact implementation proof.
+
+Learning data has real restrictions but is not an award algorithm: `copiable_magic.json` includes aspectual and summoning magic and removes the medium/greater elemental summoning entries. `found_in_tome.json` includes the magic tag and removes the tome-copy-excluded tag. `unlearnt_cast_excluded.json` explicitly includes Reincarnation among exclusions. These declarations do not prove effective tag resolution, tome loot, use requirements or copying success in this pack. (REV-04/05; core language keys above and the four retained tag files.)
+
+## Read evolution eligibility by requirement type
+If **Select Evolution** is offered, inspect **Requirements** before **Evolve**. The candidate core supplies distinct templates: **Reach Existence Points of …**, **Be named**, **Acquire …**, **Master …**, **Obtain a Spirit**, **Have a physical body**, **Carrying … of …**, **Consume … of …**, **Battle …**, **Defeat …**, **Kill … bosses**, **Awaken […/…]**, and **Get cured with Weakness and Enchanted Golden Apple**. None maps a specific template/value to every race.
+
+**Carrying is not Consume.** Do not infer spending, refunds or completed eligibility from inventory presence. Record the exact current target, quantity and requirement text; use **Track / TRACKED** only as named vocabulary, since its interaction was not exercised. **Evolution Available**, percentage progress and **No Evolutions** are distinct display states, not proof of a completed transition.
+
+The retained text supports requirement interpretation but contains no complete per-race evaluator, AND/OR rule, effect/consumption ordering or failed-transition rollback. The addon’s Wastelander and Angel strings below remain separate display documentation, not a repaired candidate-core gate. (REV-06; core `tensura.evolution_menu.*`, `tensura.main_menu.evolution_progress.*`.)
+
+## Read awakening refusal and state messages
+The core provides **Become Demon Lord** and **Become Chosen Hero** labels; their presence does not prove availability for this character.
+
+| Candidate-core message | What it establishes | Safe next check |
+|---|---|---|
+| Not a Demon Lord Seed / not enough soul points | Those are distinct refusal messages | Record displayed state and Souls; no numeric threshold supplied here |
+| Already a True Demon Lord / You are a True Hero | Distinct state/conflict vocabulary | Do not retry assuming more souls solve every refusal |
+| Not a Hero Egg / correct situation requirement not met | Different eligibility failures exist | Record exact message; no boss, timing or situation is inferred |
+| Lost Seed due to Naming / lost Egg due to Naming or evolution | Shipped warnings name progress-loss paths | Do not name/evolve as a recovery experiment |
+| Awakened into a True Demon Lord / True Hero | Success feedback vocabulary | Inspect actual resulting state, not merely the button |
+
+`demonLordAwaken.description` says a gamerule controls the Soul Points needed for True Demon Lord. It supplies no live value or complete gate. The text also names subordinate evolution thanks to a master’s Harvest Festival; this is a description, not proof every subordinate qualifies. No boss-kill prescription, seed/egg acquisition route or exact awakening handler follows from these strings. (REV-07; `tensura.evolve.demon_lord.*`, `tensura.evolve.hero.*`, `gamerule.demonLordAwaken.description`.)
+
+## Avoid using resets as recovery
+Before any reset, stop if feedback says **not allowed to reset at this state** or **not safe to reset here**. The text does not define a safe location, permitted state or a bypass; do not move elsewhere and assume authorization.
+
+The candidate core now independently documents:
+- Race Reset: Statistic, Naming status, Awakening status, Spirits, Resistances, Race and its Intrinsic Skills.
+- Character Reset: everything from the user. The addon separately mentions achievements; that narrower assertion is still addon description, not an independently traced core effect.
+- Skill Reset: every skill of every type except race Intrinsic Skills. Its warning says the scroll will not cover Unique Skill MP cost and may leave you with **no Unique Skills**.
+- Incomplete Reset Counter requirements can lose the displayed number of reset points when `resetIncompletePenalty` is enabled. No live rule value was inspected.
+
+Counter-check messages name Awakening Status, Final Race Evolution and defeated-boss checks; they do not encode which boss or evaluator. Skill-lock messages and configurable bonuses do not establish a guaranteed preservation procedure. No five-second cooldown is a rollback window. Safe recovery here means **stop further destructive actions and record the exact feedback**, not restoration of lost state. (REV-08; `tooltip.tensura.reset_scroll.*`, counter-check strings and reset gamerule descriptions.)
+
+## Advancement criteria are not ability-award recipes
+The retained objects establish exact serialized event subscriptions:
+
+| Resource | Criterion | Declared reward |
+|---|---|---|
+| reincarnated | `tensura:reincarnated` | No rewards field |
+| higher_form | `tensura:awaken_race` | 30 experience |
+| fast_learner | one group containing battlewill/magic/skill learnt | No rewards field |
+| master_skill | one group containing battlewill/magic/skill mastered | No rewards field |
+| master_unique_skill | `tensura:unique_skill_mastered` | 20 experience |
+
+The single inner group in fast_learner/master_skill is the serialized alternative criterion group, not three mandatory achievements. Custom trigger IDs still need their emitter/conditions traced. `higher_form`’s parent `s_rank` does not prove S rank is an awakening gate. Experience fields are actual declarations, not proof rewards executed or extra skills granted. (REV-09; exact retained advancement JSON.)
+
+## Prerequisites
+For the techniques below, you must already own the relevant skill, know your actual skill control, and have the applicable mode available. This chapter supplies no skill-award command or reincarnation recipe.
+
+## Steps
+### Inspect with Great Sage before trying to copy
+1. Select **Analytical Appraisal** and aim at the intended entity. The bundled entry says the base distance is **20 blocks**, or **30 with Mastery**.
+2. If you see only Name, HP, SHP and Armor, do not assume the reference is broken. It describes that restricted display when the target exceeds **five times your EP**, or **ten times with Mastery**. Those thresholds remain documentation-only, not a measured effective rule.
+3. If you already have **Analysis**, use it only with a target in line of sight and within its documented **20-block** reach. The entry excludes Unique Skills and Resistances, spirit-related magic, and Ultimate Skill users; it is not a method to obtain every ability.
+4. A failed copy is not proof of a broken skill: the entry describes **25% success**, **50% with Mastery**, a **10-second** cooldown on success and **5 seconds** after failure. Wait for the actual UI to allow another action; do not spam a control based only on a stopwatch.
+5. Check your owned skill/magic list for a new entry before calling the attempt successful. Displaying a reference description is not the acquisition checkpoint.
+
+### Compare a learning toggle with ownership
+The bundled **Sage** entry says its passive toggle increases points gained by two, for three total. **Great Sage / Parallel Processing** says plus nine, ten total, for skill/magic/Battlewill/Arts learning and mastery. These are descriptions of already-owned toggles, not evidence of how to award either skill or a promise that both bonuses stack. A conditional tip: read whether your owned learning passive is toggled before diagnosing slow mastery. Prerequisite: ownership and accessible toggle; benefit: catches a disabled documented passive; trade-off: no verified combined multiplier or resource cost is supplied here.
+
+## Evolution reference, not complete gates
+The evolution UI's selected translation says **Consume Heaven Cleansing Elixir**, **Win the Dream Realm challenge after sleeping at night**, and **Use Break and Rebuild Manual** for Wastelander-to-Human wording. Another label says **Possess an Okami** for Angel-to-Tengu. These four strings do not establish whether the first three are alternatives or cumulative requirements, how to acquire the named items, or how the base mod authorizes a transition. Do not turn them into an AND checklist.
+
+The built-in item reference separately says **ten Daemon Essence** are used for Enlightened Ogre/Kijin-to-Wicked Oni evolution, and **ten Royal Blood** for High Orc-to-Orc Lord evolution. It also describes feeding Royal Blood to a Royal Orc. These are addon-shipped descriptions with unresolved core-version correspondence. No exact consumption handler, naming cost, resource refund or failed-evolution recovery was read.
+
+## Reset and reincarnation risks
+The bundled **Race Reset Scroll** entry says it resets Stats, Name, Awakening Status, Spirits, Resistances, Race and race Intrinsic Skills, with a five-second cooldown. The **Character Reset Scroll** entry describes resetting everything, including obtained achievements, and calls it like reincarnating from scratch. Its crafting text is incomplete, so no recipe is supplied here.
+
+Neither entry proves a reversible retry. Do not use either scroll as a fix for an unavailable menu. The five-second cooldown is not a recovery window, and a reset description does not establish the normal first-life reincarnation route.
+
+## Integration skill classification
+The exact bridge tags append **tensuraleveling:system** to the **unique_skills** and **no_plundering** tags, with replace=false. Its English description calls System a passive mark of recognition for someone bound to the System. These are real declarations, not evidence of the binding/recognition award condition. Do not infer that killing, plundering, reaching a particular level, or awakening in one system grants it.
+
+## Expected result
+You can read the bundled restrictions and avoid treating a UI label, reset cooldown or tag as a completed unlock route. The conditional skill technique provides observable checkpoints, but requires independent gameplay validation.
+
+## Common failures
+- Appraisal shows limited information: compare the documentation's EP restriction before diagnosing a UI failure; actual transformed behavior remains untested.
+- Analysis does not grant the desired skill: check the documented exclusions and eligibility, and do not confuse a random-copy chance with a guaranteed targeted award.
+- An evolution option remains unavailable after gathering an item: only selected display text was captured. Do not invent an absent extra gate or assume that resource consumption succeeded.
+- A reset lost progress: no restore procedure was established. Stop before further resets and report the action; this documentation cannot promise recovery.
+
+## Sources
+foxablazeaqzl_wiki-1.0.2.3.jar: assets/foxablazeaqzl_wiki/wiki/skill_descriptions.json, entries great_sage and sage; item_descriptions.json, entries daemon_essence, royal_blood, race_reset_scroll and character_reset_scroll. tensura_trepu-1.0.0.2.jar: assets/tensura_trepu/lang/en_us.json, four requirement strings. tensuraleveling-1.0.14.jar: data/tensura/tags/manascore_skill/skills/unique_skills.json, no_plundering.json and assets/tensuraleveling/lang/en_us.json. Claims CHAR-016 through CHAR-020.
+
+
+Candidate-core additions: assets/tensura/lang/en_us.json and the exact selected advancement/tag objects cited in the revision sections. Archive/internal-entry citations below identify the documented source without exposing retained-evidence storage. No trigger emitter or runtime path was read.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [CHAR-016] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/wiki/skill_descriptions.json`: `entries[id=great_sage].description.en_us`.
+- [CHAR-017] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/wiki/skill_descriptions.json`: `entries[id=sage].description.en_us; entries[id=great_sage].description.en_us`.
+- [CHAR-018] `tensura_trepu-1.0.0.2.jar!assets/tensura_trepu/lang/en_us.json`: `gui.tensura_trepu.evolution_requirements.wastelander_to_human.*; gui.tensura_trepu.evolution_requirements.angel_to_tengu`.
+- [CHAR-019] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/wiki/item_descriptions.json`: `entries[id=daemon_essence,royal_blood,race_reset_scroll,character_reset_scroll].description.en_us`.
+- [CHAR-020] `tensuraleveling-1.0.14.jar!data/tensura/tags/manascore_skill/skills/unique_skills.json`: `$`.
+- [CHAR-020] `tensuraleveling-1.0.14.jar!data/tensura/tags/manascore_skill/skills/no_plundering.json`: `$`.
+- [CHAR-020] `tensuraleveling-1.0.14.jar!assets/tensuraleveling/lang/en_us.json`: `tensuraleveling.skill.system.description`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!assets/tensura/lang/en_us.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/reincarnated.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/higher_form.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/fast_learner.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/master_skill.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/master_unique_skill.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/tags/manascore_skill/skills/copiable_magic.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/tags/manascore_skill/skills/found_in_tome.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/tags/manascore_skill/skills/tome_copy_excluded.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/tags/manascore_skill/skills/unlearnt_cast_excluded.json`.
+--- END PAGE: Character notes A ---
+
+--- BEGIN PAGE: Character notes B ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/full/character-notes-b/
+Baseline: dev-0.5-20261015-r2
+Spoiler: full
+WARNING: FULL SPOILERS. This text may reveal progression and outcomes.
+
+# Character notes B
+
+> **FULL SPOILERS** — subordinate commands and addon skill interactions follow. [Return to the safe character-helper route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-tools/).
+
+## Baseline
+This is an bounded statically reviewed revision for candidate **dev-0.5-20261015-r2**, not an applied replacement for dev-0.5-20261015. New core text corresponds only to Tensura archive SHA-256 `2309a22ceb7e423e2f3212ea87686ccc510fe0003595500037e0b6c64baef213`. The original baseline/pins remain unchanged. Static descriptions and feedback are not runtime or award-handler proof.
+
+foxablazeaqzl_wiki 1.0.2.3 and Tensura: Better Subordinates 1.2.4. Conditional how-to for an existing subordinate, not a recruitment or naming tutorial.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+New exact candidate-core translations independently establish Thought Communication and its Movement Behaviour/Targeting Behaviour mode names, naming refusal messages, and reached-subordinate command feedback. The bundled wiki’s numeric ranges/cycle descriptions still lack pinned core correspondence. Acquisition, naming cost, eligibility and server ownership checks were not traced; no command was tested.
+
+## Inspect selection and naming failure before spending
+1. If a naming interface is already open, read its displayed target context without submitting a name or activating **Naming**. Until invocation is traced, do not invoke Naming as an inspection or recovery test. The core names **Name**, **Subdue the target**, **Endow the target** and **Evolve the target** as different labels, not a mandatory sequence.
+2. If feedback says **already named**, **cannot be named**, **faithful with its current owner**, **not sane enough**, **does not want to submit**, **cannot name your master** or **Not enough EP**, preserve that exact reason. Do not replace an ownership refusal with an EP-farming recommendation.
+3. A naming success message identifies the bestowed name/namer. It does not establish the cost, a refund, future obedience or universal tameability. Naming can also affect awakening states; consult [Character notes A — FULL SPOILERS](https://faizsaifulnizam.github.io/minecraft-pack-wiki/full/character-notes-a/) before committing.
+4. If Thought Communication feedback says **look at a subordinate or a pet**, check the intended target rather than repeatedly issuing group actions. **Can not find any subordinate reachable from your place** identifies a reachability failure, not a numeric radius proof.
+5. Follow / Stay / Wander feedback is different from Neutral / Passive / Aggressive / Protect. The core also names Rampage and Meat Shield. Do not interpret an addon’s selected subordinate or **successfully used** skill message as proof a movement mode or combat policy changed.
+
+The core corroborates base mode names, not the imported wiki’s 30-block reach, 50-block wander boundary, crouch scope or mode cycle order. Better Subordinates adds Status Menu / Select Subordinate / Use Skill labels; neither retained language file defines the combined mode order, ownership predicate or cost/refund. Inspect one already-owned target, avoid group activation, and stop on explicit failure. This reduces the scope of a test but is not a proven undo. (REV-10; `tensura.naming.*`, `tensura.telepathy.*`, base mode keys; unchanged Better Subordinates translation witness.)
+
+## Keep taming evidence separate from recruitment instructions
+`monster_tamer.json` requires `minecraft:tame_animal` with entity type matching `#tensura:monster`; this is an actual criterion predicate, not a list of bait or a naming prerequisite. `name_a_mob.json` listens for custom `tensura:name`; its monster_tamer parent is not proof naming requires that advancement.
+
+`ruler_of_monster.json` has five separate requirement groups: tame-event predicates for direwolf, goblin, lizardman, orc and slime. All five groups are represented, unlike the single alternative learning group in notes A. It declares loot table `tensura:advancement_reward/ruler_of_monster`, but this revision does not resolve its contents or claim a particular item payout. No player taming method or ability award follows from those criteria. (REV-11; three exact retained advancement objects.)
+
+## Prerequisites
+An already-owned subordinate and already-owned **Thought Communication**, an available skill mode, a safe area and your actual assigned activation control. If you have none of these, do not interpret the following as a start-from-zero recruitment route.
+
+## Steps
+### Command one subordinate before issuing a group order
+1. Select **Movement Behaviour**, stand within the entry's documented **30-block** reach and aim at the owned subordinate, not a non-ally.
+2. Activate without crouching. The bundled entry says this cycles **stay / follow / wander** on the selected subordinate. Check its observable behavior after one activation before using the control again.
+3. If it wanders, the entry describes movement within **50 blocks of the position where Wander was set**. Do not assume that it will follow you indefinitely while in that mode. Cycle back toward the intended movement mode and verify what the subordinate actually does.
+4. Do not crouch for this first single-target check. The bundled description says shifted activation changes all subordinates in a **30×30×30** range; its use of the word radius is geometrically ambiguous, so this is not a measured spherical targeting guarantee.
+5. Avoid aiming at a non-ally as a harmless movement test: the same documented mode orders nearby subordinates to attack that target. A command-side effect is not safely reversible merely because you can switch movement afterward.
+
+### Understand targeting separately from movement
+The bundled **Targeting Behavior** mode requires Mastery and cycles neutral / passive / aggressive / protect. The entry describes neutral as defensive, passive as targeting nothing even when hit, aggressive as targeting non-allies, and protect as targeting threats to the owner or ally. Read this as a separate combat policy, not a stay/follow toggle. A conditional tip: for a single-subordinate check, avoid shifted group activation; prerequisite is the mastered mode and one known-owned subordinate, benefit is a smaller unintended-command scope, trade-off is that each subordinate must be checked individually.
+
+### Read the Better Subordinates extension
+1. If your humanoid subordinate menu shows **Open Skills**, inspect its skill view. The addon also names Thought Communication modes **Status Menu**, **Select Subordinate** and **Use Skill**; screen location and mode order were not disassembled.
+2. Before requesting a skill, verify that the selected subordinate is the intended one. The addon has an explicit **%s selected** message, not proof that any nearby creature can be commanded.
+3. Inspect **Magicule Cost** if shown, then use the exact success/failure feedback to tell a request from a successful action. The addon translates separate messages for **failed to use** and **successfully used**. No cost formula or spend/refund condition is established here.
+4. If **Skill Granting** is offered, do not assume every owned skill is transferable. Metadata says the addon expands obtainable subordinate skills, while the selected translations name acquisition sources **learning** and **Food Chain**. Eligibility and grant prerequisites remain unknown.
+
+## Expected result
+You distinguish single-target movement, group commands, targeting policy, and an addon skill request. A displayed cost or request button is not evidence that the subordinate acquired or executed a skill.
+
+## Common failures
+- Targeting mode is unavailable: the bundled reference specifies Mastery; the selected code's eligibility and mastery-award route remain unverified.
+- A different creature acts: stop repeated activation and verify the target and crouch state before another command. No guaranteed mass-order undo was established.
+- A requested skill fails: preserve the selected subordinate, skill name and explicit failure feedback. Do not interpret failure as a grant or repeatedly spend resources.
+- The base movement description differs from the addon screen: Better Subordinates modifies the interaction surface. Do not silently merge both mode sets into a single sequence without an exact handler trace.
+
+## Sources
+foxablazeaqzl_wiki-1.0.2.3.jar, assets/foxablazeaqzl_wiki/wiki/skill_descriptions.json, thought_communication. tensura_better_subs-neoforge-1.2.4.jar, META-INF/neoforge.mods.toml and assets/tensura_better_subs/lang/en_us.json, all selected menu/cost/acquisition/result keys. Claims CHAR-021 and CHAR-022.
+
+
+Candidate-core additions: assets/tensura/lang/en_us.json and the exact selected advancement/tag objects cited in the revision sections. Archive/internal-entry citations below identify the documented source without exposing retained-evidence storage. No trigger emitter or runtime path was read.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [CHAR-021] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/wiki/skill_descriptions.json`: `entries[id=thought_communication].description.en_us`.
+- [CHAR-022] `tensura_better_subs-neoforge-1.2.4.jar!META-INF/neoforge.mods.toml`: `mods[0].description`.
+- [CHAR-022] `tensura_better_subs-neoforge-1.2.4.jar!assets/tensura_better_subs/lang/en_us.json`: `$`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!assets/tensura/lang/en_us.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/monster_tamer.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/name_a_mob.json`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!data/tensura/advancement/ruler_of_monster.json`.
+--- END PAGE: Character notes B ---
+
+--- BEGIN PAGE: Character notes C ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/full/character-notes-c/
+Baseline: dev-0.5-20261015-r2
+Spoiler: full
+WARNING: FULL SPOILERS. This text may reveal progression and outcomes.
+
+# Character notes C
+
+> **FULL SPOILERS** — encounter identities, abilities and structure IDs follow. [Return to the safe character-helper route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-tools/).
+
+## Baseline
+This is an bounded statically reviewed revision for candidate **dev-0.5-20261015-r2**, not an applied replacement for dev-0.5-20261015. New core text corresponds only to Tensura archive SHA-256 `2309a22ceb7e423e2f3212ea87686ccc510fe0003595500037e0b6c64baef213`. The original baseline/pins remain unchanged. Static descriptions and feedback are not runtime or award-handler proof.
+
+Tensura Boss Structure 1.0.3.3 and TenSura: Not Enough Bosses 2.0.0.3. Reference for planning exploration, not a boss-clear or reward tutorial.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+Documented-static resource declarations. Structure generation, actual encounters, kill credit, loot resolution and progression awards were not tested. Spawn templates and boss AI were not executed or fully traced. New candidate-core advancement resources identify some event criteria, but not their emitters; no encounter-to-awakening award route has been established.
+
+## Separate the addons' jobs
+Boss Structure metadata says it adds custom boss structures. NEB metadata says it adds bosses. Structure IDs and NEB entities are not interchangeable award conditions; their co-presence does not prove that a particular structure spawns a particular boss or grants an evolution reward.
+
+## Placement lookup
+The selected structure-set objects use minecraft:random_spread. These are spacing/separation parameters in the serialized placement definition, not a guaranteed distance from you, a waypoint, or proof that a structure exists in already generated terrain.
+
+| Structure ID | Spacing | Separation |
+|---|---|---|
+| `tensura_boss_structure:beast_kingdom_of_eurazania` | 200 | 50 |
+| `tensura_boss_structure:hinata_church` | 200 | 50 |
+| `tensura_boss_structure:night_rose` | 200 | 50 |
+| `tensura_boss_structure:orc_disaster_temple` | 200 | 50 |
+| `tensura_boss_structure:rimuru_ogre_fight` | 200 | 50 |
+| `tensura_boss_structure:shizhu_school` | 200 | 50 |
+
+For **tensura_boss_structure:hinata_church**, the structure object declares minecraft:jigsaw, start pool tensura_boss_structure:hinata_church/start_pool, size 1, maximum distance from center 80, WORLD_SURFACE_WG height projection and biome tag #forge:has_structure/hinata_church. The set's salt is 87654321. This identifies a resource accurately; it is not a natural-spawn guarantee or a player instruction to use administrator locate/teleport commands.
+
+## Read a threat profile without inventing a strategy
+The exact NEB Carrion entity-existence object declares **minimum Aura 500,000**, **maximum Aura 525,000**, **minimum Magicules 100,000**, **maximum Magicules 125,000** and **Spiritual Health 3,000**. Its abilities include Royal Beast, Magic Sense, physical-attack resistance, magic resistance, multiple elemental resistances, Elephant Stampede, Roaring Lion Punch and Aura Slash. These are declared resource values; no HP conversion, actual initialized values or resist multiplier was measured. Do not turn them into a recommended character level or promise that an unlisted damage type bypasses the encounter.
+
+## Steps for a returning explorer
+1. Use the table to identify the exact resource name relevant to an encounter report, not to infer an awakening gate.
+2. Before entering an unfamiliar structure, keep an ordinary route back outside and avoid testing an unverified transport, skill, or reset as your only exit. This is general safety advice, not a claim that a named structure traps you.
+3. If you encounter a named boss, separate what you observe from what the resource declares. Record the identity and available retreat route before attempting a fight; this chapter supplies no safe-clear strategy or validated power threshold.
+4. After any fight, inspect actual inventory and progression messages rather than treating an advancement's display relationship or a boss identity as guaranteed loot, kill credit or an evolution award.
+
+## Expected result
+You can identify the selected structures and one concrete threat declaration without fabricating spawn, combat, loot or progression outcomes. First entry, survival and successful retreat remain runtime checks.
+
+## Common failures
+- Nothing appears where a spacing value suggests: the table is not a coordinate map. Biome eligibility, generation, template completion and existing terrain are unresolved here.
+- Defeating a boss gives no expected awakening: this lane has not established such an award. Do not assume a missing parent advancement is the cause.
+- Your character dies or a subordinate receives credit: death recovery and integration kill-credit semantics were not traced. Do not claim a fixed recovery or reward rerun from this resource table.
+
+## Sources
+Tensura Boss Structure 1.0.3.3: META-INF/neoforge.mods.toml; six selected data/tensura_boss_structure/worldgen/structure_set objects and worldgen/structure/hinata_church.json. NEB 2.0.0.3: META-INF/neoforge.mods.toml and data/tensura_neb/entity_existence/carrion.json. Claims CHAR-023, CHAR-024 and CHAR-025.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [CHAR-023] `tensura_boss_structure-1.0.3.3.jar!META-INF/neoforge.mods.toml`: `mods[0].description`.
+- [CHAR-023] `tensura_neb-neoforge-2.0.0.3.jar!META-INF/neoforge.mods.toml`: `mods[0].description`.
+- [CHAR-024] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure_set/beast_kingdom_of_eurazania.json`: `placement; structures`.
+- [CHAR-024 / REV-12 (corrected)] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure/hinata_church.json`.
+- [CHAR-024] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure_set/night_rose.json`: `placement; structures`.
+- [CHAR-024] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure_set/orc_disaster_temple.json`: `placement; structures`.
+- [CHAR-024] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure_set/rimuru_ogre_fight.json`: `placement; structures`.
+- [CHAR-024] `tensura_boss_structure-1.0.3.3.jar!data/tensura_boss_structure/worldgen/structure_set/shizhu_school.json`: `placement; structures`.
+- [CHAR-025] `tensura_neb-neoforge-2.0.0.3.jar!data/tensura_neb/entity_existence/carrion.json`: `$`.
+--- END PAGE: Character notes C ---

@@ -1,0 +1,533 @@
+<!-- wiki.py managed group export schema=1 -->
+# FULL SPOILERS group bundle
+
+--- BEGIN PAGE: Minecraft pack handbook ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Minecraft pack handbook
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+Find the system you want to investigate, check what is known for this version, then follow its guide. This handbook does not establish or impose a shared technology-to-magic or character-progression order. Starting and awarding paths remain partly unmapped.
+
+## Start here
+- [Getting started](https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/): recipes, controls and choosing your first system.
+- [Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/): what is installed and what still needs investigation.
+- [Mod reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/): exact versions and disabled mods.
+- [Troubleshooting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/): symptoms, saved settings and limits.
+
+## First guides
+- [Find a recipe or an item's uses](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/).
+- [Prepare your first AE2 storage system](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/).
+- [Make your first MI bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/).
+
+These are saved-settings or shipped-documentation guides. They have not been gameplay-tested as complete tutorials in this pack. Awakening, reincarnation, evolution and dimension-access instructions are not ready yet.
+
+## Ask your own LLM
+Give your model the handbook link and the specific question. Ask it to check the baseline and cite the page it used. If it cannot open links or follow the index, attach the combined text edition linked in the site navigation. Model access, context limits and answers vary, so a link alone is not a guarantee.
+
+Suggested request:
+
+```text
+Use this handbook for my Minecraft pack. Check its baseline and evidence status before answering. Cite the relevant page. Do not fill missing progression steps with guesses from other versions. If the answer is not documented, tell me what is missing.
+```
+
+## What this edition proves
+Installed files and selected saved settings were inspected. Every active archive was indexed, but only nine archives received representative gameplay-data reading. This is not a full mechanics reference or a compatibility certificate.
+
+[Sources and evidence](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) explain the limits. [Changes](https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/) records the snapshot.
+
+
+## Candidate snapshot scope
+
+This is a proposed documentation snapshot, not an applied wiki release or a tested pack release.
+
+Four named archives were freshly hashed and their shipped metadata/text inspected: Dungeons and Taverns, Iron's Spellbooks, Tensura and Twilight Forest. Their declared mod identities and dependency tables match the retained earlier declarations; their archive hashes differ. This does not establish why they differ or that their gameplay is unchanged.
+
+The remaining roster identities are imported from the earlier snapshot. A separate named-file hash audit matched the other 118 existing archive filenames, but did not enumerate newly added filenames. The roster counts—120 active archives, two disabled archives and 121 active declared IDs—describe this candidate roster, not a fresh complete installed-population audit.
+
+The snapshot timestamp records the four-archive documentation observation. It is not a new observation of saved settings, effective server/world rules, tag resolution, recipe overrides or gameplay. Saved-setting descriptions remain historical evidence unless explicitly refreshed. No game launch, recipe craft, progression award, persistence or compatibility test is implied.
+
+Only this sanitized roster is a public-baseline candidate. Private witnesses, impact ledgers, local paths, raw archive content and lifecycle receipts must remain outside the public wiki. Guides retain claim-specific evidence and unknowns; a new snapshot label alone does not validate their instructions.
+--- END PAGE: Minecraft pack handbook ---
+
+--- BEGIN PAGE: Pack map ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Pack map
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Choose a direction
+| System | Installed examples | Start here / current limit |
+|---|---|---|
+| Machines and processing | Modern Industrialization | Forge Hammer to bronze is documented; full steam automation is not yet mapped. |
+| Searchable storage | Applied Energistics 2 | Meteorite materials and the small network are documented; MI power compatibility is Unknown. |
+| Portable and bulk storage | Sophisticated Backpacks, Storage Drawers | Installed; upgrade rules and capacities still need mapping. |
+| Spellcraft and rituals | Ars Nouveau, Iron's Spells 'n Spellbooks, Occultism, Nature's Aura | [Ars](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/), [Iron's](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/), [Occultism](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/) and [Nature's Aura](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/) have independent bounded starters; advanced curricula and effective gameplay remain incomplete. |
+| Character progression | Tensura, SoloCraft: Reawakening, Tensura-Leveling | Installed; awakening, reincarnation and evolution entry paths are Unknown here. |
+| Bosses and dimensions | Twilight Forest, Bosses of Mass Destruction, Tensura boss addons | Installed; encounters, entry/exit and death recovery are not tutorial-ready. |
+| Exploration | Dungeons and Taverns, YUNG's Better Dungeons, Tectonic | Shipped resources indexed; this does not prove encounter placement. |
+| Loot and equipment | Lootr, Artifacts, Relics, Reliquified Twilight Forest | Installed; acquisition and levelling need further checks. |
+| Farming and building | Farmer's Delight, Chipped, Supplementaries | [Cooking pot](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/), [rice/cutting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/), [Chipped](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/) and [Supplementaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-supplementaries-devices/) have bounded guides; broader farming/building loops remain incomplete. |
+| Everyday tools | EMI/JEI, Jade, IPN, Xaero, FTB Chunks/Teams | Selected saved settings mapped; key contexts and multiplayer policies need testing. |
+
+For an independent rest project, read [Comforts rest](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/): rest is not a new respawn guarantee. These links do not certify completed curricula or gameplay.
+
+## Connections we can and cannot claim
+- Reliquified Twilight Forest ships recipes referencing Twilight Forest items. That is concrete cross-mod recipe data, not a successful craft or a tested progression shortcut.
+- AE2 and MI are both installed. Their power/automation interface has not been established by this mapping, so do not assume their cables or energy units connect directly.
+- Tensura-Leveling and SoloCraft have separate declared IDs. Similar names do not prove shared levels, skills or awakening.
+- An advancement's parent can position it in the UI. It does not automatically impose a gameplay gate. Some criteria do contain explicit checks; those need to be read individually.
+
+## Coverage
+All **120 active top-level JARs** are indexed: nine have representative gameplay data read, 93 have resource-path classification only, and 18 are metadata-only/unmapped. The **121 declared top-level mod IDs** are a different count. Two JARs are disabled. Nested libraries are not additional active top-level mods.
+
+The active archives contain 9,950 recipe JSON entries, 4,498 advancement JSON entries and 2,626 loot-table JSON entries. These are shipped files, not final runtime IDs or working recipes. Conditions, tags, overrides, generated data and server settings can change what is available.
+
+## Customization boundary
+The saved enabled resource-pack list includes an icon pack and local client-resource repair packs. Static inspection found assets rather than server data in those selected ZIPs. This does not prove a live reload or a repaired gameplay feature. Global Moonlight datapack and coremods directories were empty when inspected. Generated resource providers, final override precedence and world/server configuration remain unresolved.
+
+## Questions still open
+- How is SoloCraft awakening awarded, and what does Tensura reincarnation/evolution require?
+- Which documented magic starter steps resolve under effective recipes/settings, and which advanced paths still need evidence?
+- How do dimension entry, exit and death recovery work in this exact build?
+- Which key overlaps are harmless contexts versus real conflicts?
+- Which claims, team permissions and force-loading settings are enforced in multiplayer?
+
+[First guides](https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/) cover only the evidence-backed starting points. [Sources](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) explains the status labels.
+--- END PAGE: Pack map ---
+
+--- BEGIN PAGE: Mod reference ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Mod reference
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+This is an installed-file snapshot, not the list reported by a running game. Library roles and broad categories are navigation aids, not compatibility claims. Exact archive hashes and safe identities are also in the reviewed baseline JSON in the source repository.
+
+## Active files
+
+| Archive | Declared name / ID / version | Role |
+|---|---|---|
+| `aco1.5.33_1.21.1.jar` | AE2 Crafting Optimizer / ae2_crafting_optimizer / 1.5.33 | technology/storage, QoL |
+| `almostunified-neoforge-1.21.1-1.4.2.jar` | AlmostUnified / almostunified / 1.21.1-1.4.2 | technology/storage |
+| `appleskin-neoforge-mc1.21-3.0.9.jar` | AppleSkin / appleskin / 3.0.9+mc1.21 | QoL |
+| `appliedenergistics2-19.2.18.jar` | Applied Energistics 2 / ae2 / 19.2.18 | technology/storage |
+| `architectury-13.0.11-neoforge.jar` | Architectury / architectury / 13.0.11 | libraries/performance |
+| `ars_nouveau-1.21.1-5.13.3.jar` | Ars Nouveau / ars_nouveau / 5.13.3 | magic |
+| `artifacts-neoforge-13.2.5.jar` | Artifacts / artifacts / 13.2.5 | dimensions/bosses/exploration |
+| `athena-neoforge-1.21.1-4.0.6.jar` | Athena / athena / 4.0.6 | libraries/performance |
+| `BadOptimizations-2.4.1-1.21.1.jar` | BadOptimizations / badoptimizations / 2.4.1 | libraries/performance |
+| `balm-neoforge-1.21.1-21.0.66.jar` | Balm / balm / 21.0.66 | libraries/performance |
+| `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | Better Advancements / betteradvancements / 0.4.3.21 | QoL |
+| `BetterF3-11.0.3-NeoForge-1.21.1.jar` | BetterF3 / betterf3 / 11.0.3 | QoL |
+| `BOMD-NeoForge-1.21-1.3.3.jar` | Bosses of Mass Destruction / bosses_of_mass_destruction / 1.3.3 | dimensions/bosses/exploration |
+| `bookshelf-neoforge-1.21.1-21.1.81.jar` | Bookshelf / bookshelf / 21.1.81 | libraries/performance |
+| `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.123.jar` | Concurrent Chunk Management Engine / c2me / 0.4.0-alpha.0.123+1.21.1 | libraries/performance |
+| `CerbonsAPI-NeoForge-1.21-1.2.0.jar` | Cerbons API / cerbons_api / 1.2.0 | libraries/performance |
+| `chat_heads-0.15.7-neoforge-1.21.jar` | Chat Heads / chat_heads / 0.15.7 | QoL |
+| `chipped-neoforge-1.21.1-4.0.2.jar` | Chipped / chipped / 4.0.2 | farming/building |
+| `cloth-config-15.0.140-neoforge.jar` | Cloth Config v15 API / cloth_config / 15.0.140 | libraries/performance |
+| `comforts-neoforge-9.0.5+1.21.1.jar` | Comforts / comforts / 9.0.5+1.21.1 | QoL |
+| `Controlling-neoforge-1.21.1-19.0.5.jar` | Controlling / controlling / 19.0.5 | QoL |
+| `craftingtweaks-neoforge-1.21.1-21.1.11.jar` | Crafting Tweaks / craftingtweaks / 21.1.11 | QoL |
+| `curios-neoforge-9.5.1+1.21.1.jar` | Curios API / curios / 9.5.1+1.21.1 | libraries/performance |
+| `DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar` | Distant Horizons / distanthorizons / 3.3.3 | libraries/performance |
+| `dungeons-and-taverns-v4.4.4.jar` | Dungeons and Taverns / mr_dungeons_andtaverns / 1-v4.4.4 | dimensions/bosses/exploration |
+| `dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar` | Dynamic FPS / dynamic_fps / 3.11.4 | libraries/performance |
+| `e4mc-neoforge-6.1.0.jar` | e4mc / e4mc / 6.1.0 | libraries/performance |
+| `emi-1.1.24+1.21.1+neoforge.jar` | EMI / emi / 1.1.24+1.21.1+neoforge | QoL |
+| `emi_enchanting-0.1.2+1.21+neoforge.jar` | EMI Enchanting / emi_enchanting / 0.1.2+1.21+neoforge | QoL |
+| `enchdesc-neoforge-1.21.1-21.1.11.jar` | EnchantmentDescriptions / enchdesc / 21.1.11 | libraries/performance |
+| `entity_model_features-3.2.4-1.21-neoforge.jar` | Entity Model Features / entity_model_features / 3.2.4 | libraries/performance |
+| `entity_texture_features_1.21-neoforge-7.1.jar` | Entity Texture Features / entity_texture_features / 7.1 | libraries/performance |
+| `entityculling-neoforge-1.10.2-mc1.21.1.jar` | EntityCulling / entityculling / 1.10.2 | libraries/performance |
+| `FarmersDelight-1.21.1-1.3.4.jar` | Farmer's Delight / farmersdelight / 1.3.4 | farming/building |
+| `ferritecore-7.0.3-neoforge.jar` | Ferrite Core / ferritecore / 7.0.3 | libraries/performance |
+| `foxablazeaqzl_wiki-1.0.2.3.jar` | foxablazeaqzl's Built-in Tensura Skill Wiki / foxablazeaqzl_wiki / 1.0.2.3 | Tensura/Solo progression |
+| `framegen-1.3-neoforge-1.21.1.jar` | FrameGen / framegen / 1.3 | libraries/performance |
+| `ftb-chunks-neoforge-2101.1.22.jar` | FTB Chunks / ftbchunks / 2101.1.22 | QoL |
+| `ftb-library-neoforge-2101.1.37.jar` | FTB Library / ftblibrary / 2101.1.37 | libraries/performance |
+| `ftb-teams-neoforge-2101.1.10.jar` | FTB Teams / ftbteams / 2101.1.10 | QoL |
+| `fusion-1.2.12-neoforge-mc1.21.1.jar` | Fusion / fusion / 1.2.12 | libraries/performance |
+| `fzzy_config-0.7.7+1.21+neoforge.jar` | Fzzy Config / fzzy_config / 0.7.7+1.21+neoforge | libraries/performance |
+| `geckolib-neoforge-1.21.1-4.9.3.jar` | GeckoLib 4 / geckolib / 4.9.3 | libraries/performance |
+| `guideme-21.1.19.jar` | GuideME / guideme / 21.1.19 | libraries/performance |
+| `Iceberg-1.21.1-neoforge-1.3.2.jar` | Iceberg / iceberg / 1.3.2 | libraries/performance |
+| `ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar` | ImmediatelyFast / immediatelyfast / 1.6.10+1.21.1 | libraries/performance |
+| `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | Inventory Profiles Next / inventoryprofilesnext / 2.2.5 | QoL |
+| `iris-neoforge-1.8.12+mc1.21.1.jar` | Iris / iris / 1.8.12-snapshot+mc1.21.1-local | libraries/performance |
+| `irons_lib-1.21.1-2.2.0.jar` | Iron's Lib / irons_lib / 1.21.1-2.2.0 | libraries/performance |
+| `irons_spellbooks-1.21.1-3.16.3.jar` | Iron's Spells 'n Spellbooks / irons_spellbooks / 1.21.1-3.16.3 | magic |
+| `Jade-1.21.1-NeoForge-15.10.6.jar` | Jade / jade / 15.10.6+neoforge | QoL |
+| `jei-1.21.1-neoforge-19.32.0.359.jar` | Just Enough Items / jei / 19.32.0.359 | QoL |
+| `Kerria-1.3.2+1.21.1-neoforge.jar` | Kerria / kerria / 1.3.2+1.21.1-neoforge | libraries/performance |
+| `konkrete_neoforge_1.9.9_MC_1.21.jar` | Konkrete / konkrete / 1.9.9 | libraries/performance |
+| `kotlinforforge-5.12.0-all.jar` | No recognized top-level mod metadata; retained as an installed archive | libraries/performance |
+| `LeavesBeGone-v21.1.1-1.21.1-NeoForge.jar` | Leaves Be Gone / leavesbegone / 21.1.1 | QoL |
+| `LegendaryTooltips-1.21.1-neoforge-1.5.5.jar` | Legendary Tooltips / legendarytooltips / 1.5.5 | QoL |
+| `libIPN-neoforge-1.21.1-6.6.3.jar` | libIPN / libipn / 6.6.3 | libraries/performance |
+| `lithium-neoforge-0.15.3+mc1.21.1.jar` | Lithium / lithium / 0.15.3+mc1.21.1 | libraries/performance |
+| `lithostitched-1.8.1-neoforge-21.1.jar` | Lithostitched / lithostitched / 1.8.1 | libraries/performance |
+| `lootr-neoforge-1.21.1-1.11.38.127.jar` | Lootr / lootr / 1.21.1-1.11.38.127 | dimensions/bosses/exploration |
+| `manascore-neoforge-4.0.0.2.jar` | ManasCore / manascore / 4.0.0.2 | libraries/performance |
+| `Modern-Industrialization-2.5.10.jar` | Modern Industrialization / modern_industrialization / 2.5.10 | technology/storage |
+| `modernfix-neoforge-5.27.8+mc1.21.1.jar` | ModernFix / modernfix / 5.27.8+mc1.21.1 | libraries/performance |
+| `modonomicon-1.21.1-neoforge-1.120.7.jar` | Modonomicon / modonomicon / 1.120.7 | libraries/performance |
+| `moonlight-1.21.1-3.7.2-neoforge.jar` | Moonlight Lib / moonlight / 1.21.1-3.7.2 | libraries/performance |
+| `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | Mouse Tweaks / mousetweaks / 2.26.1 | QoL |
+| `NaturesAura-41.10.jar` | NaturesAura / naturesaura / 41.10 | magic |
+| `netherportalfix-neoforge-1.21.1-21.1.1.jar` | NetherPortalFix / netherportalfix / 21.1.1 | QoL |
+| `NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar` | No Chat Reports / nochatreports / 1.21.1-v2.9.1 | QoL |
+| `noisium-neoforge-2.3.0+mc1.21-1.21.1.jar` | Noisium / noisium / 2.3.0+mc1.21-1.21.1 | libraries/performance |
+| `obe+1.21.1-neoforge-1.1.52.jar` | Optimized Block Entities / obe / 1.1.52 | libraries/performance |
+| `observable-5.4.4.jar` | Observable / observable / 5.4.4 | libraries/performance |
+| `occultism-1.21.1-neoforge-1.224.5.jar` | Occultism / occultism / 1.224.5 | magic |
+| `OctoLib-NEOFORGE-0.6.0.4+1.21.jar` | OctoLib / octolib / 0.6.0.4 | libraries/performance |
+| `ok_zoomer-neo-10.0.0-beta.13.jar` | Ok Zoomer / ok_zoomer / 10.0.0-beta.13 | QoL |
+| `particle_core-0.3.3+1.21+neoforge.jar` | Particle Core / particle_core / 0.3.3+1.21+neoforge | libraries/performance |
+| `Patchouli-1.21.1-93-NEOFORGE.jar` | Patchouli / patchouli / 1.21.1-93-NEOFORGE | libraries/performance |
+| `player-animation-lib-forge-2.0.4+1.21.1.jar` | Player Animator / playeranimator / 2.0.4+1.21.1 | libraries/performance |
+| `polymorph-neoforge-1.1.0+1.21.1.jar` | Polymorph / polymorph / 1.1.0+1.21.1 | QoL |
+| `polytone-1.21-3.6.7-neoforge.jar` | Polytone / polytone / 1.21-3.6.7 | libraries/performance |
+| `prickle-neoforge-1.21.1-21.1.11.jar` | PrickleMC / prickle / 21.1.11 | libraries/performance |
+| `Prism-1.21.1-neoforge-1.0.11.jar` | Prism / prism / 1.0.11 | libraries/performance |
+| `puzzleslib-v21.1.64-mc1.21.1+neoforge.jar` | Puzzles Lib / puzzleslib / 21.1.64 | libraries/performance |
+| `reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar` | Reese's Sodium Options / reeses_sodium_options / 1.8.3+mc1.21.4 | libraries/performance |
+| `relics-1.21.1-0.10.7.8.jar` | Relics / relics / 0.10.7.8 | dimensions/bosses/exploration |
+| `reliquified_twilight_forest-1.21.1-0.5.3.jar` | Reliquified Twilight Forest / reliquified_twilight_forest / 0.5.3 | dimensions/bosses/exploration |
+| `resourcefulconfig-neoforge-1.21-3.0.11.jar` | Resourcefulconfig / resourcefulconfig / 3.0.11 | libraries/performance |
+| `resourcefullib-neoforge-1.21-3.0.12.jar` | Resourceful Lib / resourcefullib / 3.0.12 | libraries/performance |
+| `rrls-5.0.10+mc1.21.1-forge.jar` | Remove Reloading Screen / rrls / 5.0.10+mc1.21.1-forge | libraries/performance |
+| `Searchables-neoforge-1.21.1-1.0.2.jar` | Searchables / searchables / 1.0.2 | QoL |
+| `shulkerboxtooltip-neoforge-5.1.9+1.21.1.jar` | ShulkerBoxTooltip / shulkerboxtooltip / 5.1.9+1.21.1 | QoL |
+| `SimpleBackups-1.21-4.0.21.jar` | Simple Backups / simplebackups / 1.21-4.0.21 | QoL |
+| `SLR1.3.3.jar` | SoloCraft: Reawakening / sololeveling / 1.3.3 | Tensura/Solo progression |
+| `SmartBrainLib-neoforge-1.21.1-1.16.11.jar` | SmartBrainLib / smartbrainlib / 1.16.11 | libraries/performance |
+| `sodium-extra-neoforge-0.6.0+mc1.21.1.jar` | Sodium Extra / sodium_extra / 0.6.0+mc1.21.1 | libraries/performance |
+| `sodium-neoforge-0.6.13+mc1.21.1.jar` | Sodium / sodium / 0.6.13+mc1.21.1 | libraries/performance |
+| `solder-1.0.0+neoforge-1.21.1.jar` | Solder: Sodium & Iris Optimization Fix / solder / 1.0.0 | libraries/performance |
+| `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar` | Sophisticated Backpacks / sophisticatedbackpacks / 3.26.9 | technology/storage |
+| `sophisticatedcore-1.21.1-1.5.7.2381.jar` | Sophisticated Core / sophisticatedcore / 1.5.7 | libraries/performance |
+| `spark-1.10.124-neoforge.jar` | spark / spark / 1.10.124 | libraries/performance |
+| `steady_sight-0.3.0+neoforge-1.21.1.jar` | Steady Sight / steady_sight / 0.3.0 | QoL |
+| `StorageDrawers-neoforge-1.21.1-13.11.4.jar` | Storage Drawers / storagedrawers / 13.11.4 | technology/storage |
+| `structure_layout_optimizer-neoforge-1.0.12.jar` | Structure Layout Optimizer / structure_layout_optimizer / 1.0.12 | libraries/performance |
+| `supplementaries-neoforge-1.21.1-3.6.7.jar` | Supplementaries / supplementaries / 1.21.1-3.6.7 | farming/building |
+| `tectonic-3.0.28-neoforge-21.1.jar` | Tectonic / tectonic / 3.0.28 | dimensions/bosses/exploration |
+| `tensura-neoforge-2.0.1.3.jar` | Tensura: Reincarnated / tensura / 2.0.1.3 | Tensura/Solo progression |
+| `tensura_better_subs-neoforge-1.2.4.jar` | Tensura: Better Subordinates / tensura_better_subs / 1.2.4 | Tensura/Solo progression |
+| `tensura_boss_structure-1.0.3.3.jar` | Tensura Boss Structure / tensura_boss_structure / 1.0.3.3 | Tensura/Solo progression, dimensions/bosses/exploration |
+| `tensura_neb-neoforge-2.0.0.3.jar` | TenSura: Not Enough Bosses / tensura_neb / 2.0.0.3 | Tensura/Solo progression, dimensions/bosses/exploration |
+| `tensura_trepu-1.0.0.2.jar` | tensura evolution ui / tensura_trepu / 1.0.0.2 | Tensura/Solo progression |
+| `tensuraleveling-1.0.14.jar` | Tensura-Leveling / tensuraleveling / 1.0.14; TL-Debug / tldebug / 1.0.14; Tensura Levelling: Addons / tladdons / 1.0.14 | Tensura/Solo progression |
+| `TerraBlender-neoforge-1.21.1-4.1.0.8.jar` | TerraBlender / terrablender / 4.1.0.8 | libraries/performance |
+| `trashslot-neoforge-1.21.1-21.1.11.jar` | TrashSlot / trashslot / 21.1.11 | QoL |
+| `twilightforest-1.21.1-4.8.3345-universal.jar` | The Twilight Forest / twilightforest / 4.8.3345 | dimensions/bosses/exploration |
+| `xaerominimap-neoforge-1.21.1-26.6.0.jar` | Xaero's Minimap / xaerominimap / 26.6.0 | QoL |
+| `xaeroworldmap-neoforge-1.21.1-1.47.0.jar` | Xaero's World Map / xaeroworldmap / 1.47.0 | QoL |
+| `yeetusexperimentus-neoforge-87.0.0.jar` | Yeetus Experimentus / yeetusexperimentus / 87.0.0 | QoL |
+| `YungsApi-1.21.1-NeoForge-5.1.9.jar` | YUNG's API / yungsapi / 1.21.1-NeoForge-5.1.9 | libraries/performance |
+| `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` | YUNG's Better Dungeons / betterdungeons / 1.21.1-NeoForge-5.1.4 | dimensions/bosses/exploration |
+
+## Disabled files
+
+| Archive | Declared identities |
+|---|---|
+| `citresewn-neoforge-1.21.1-0.jar.disabled` | citresewn 0 |
+| `moreculling-neoforge-1.21.1-1.0.8.jar.disabled` | moreculling 1.0.8 |
+
+Do not give active-feature instructions for CIT Resewn or More Culling in this snapshot. KotlinForForge is retained even though its archive has no recognized top-level mod metadata. A single archive can declare several mod IDs.
+
+[Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) groups player systems. [Sources](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) defines the inspection boundary.
+--- END PAGE: Mod reference ---
+
+--- BEGIN PAGE: Getting started ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Getting started
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Before you start
+Use the same pack revision as your friends. This handbook describes a developing local baseline, not a released server pack or a tested import download. Do not update individual mods just to match an online tutorial.
+
+## Find things before memorising recipes
+Open an inventory screen and try [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/). The saved EMI layout places search on the right, with favourites on the left. Exact recipe ingredients and recipe-viewer categories still need runtime checks, so this handbook does not replace the current in-game viewer.
+
+## Choose your first project
+- Want searchable storage? Read [AE2 starter preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/).
+- Want machines? Read [MI Forge Hammer and bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/).
+- Want magic? Choose independently: [Ars first spell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/), [Iron's first scroll](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/), [Occultism first workbench](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/), or [Nature's Aura first garden](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/). Read each evidence status; these are bounded routes, not complete or runtime-accepted curricula.
+- Want a homestead project? Choose [Comforts rest](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/), [cooking pot](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/), [rice and cutting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/), [Chipped workstations](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/), or [Supplementaries devices](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-supplementaries-devices/). Check each prerequisite and stop condition; technology is not a prerequisite.
+- Want Tensura or SoloCraft? Use the [character route selector](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-start/); first access and awakening/award continuity remain unresolved. The [pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) retains the wider scope.
+
+## Saved controls to check
+| Action | Saved binding | Limit |
+|---|---|---|
+| EMI search | Ctrl+F | Inventory/recipe context; JEI also has overlapping actions. |
+| Recipes / uses | R / U | Item context; not a global command. |
+| Xaero minimap settings | Y | Saved, not demonstrated in this edition. |
+| New Xaero waypoint | B | No personal waypoints are included. |
+| Map | M | Both Xaero and FTB Chunks map bindings use M; resolve in Controls if necessary. |
+
+No key overlap is called a confirmed bug without testing. The saved FTB minimap is off; that does not disable claims or protection. Inventory Profiles Next has its overlay/editor/settings buttons hidden, so the lack of those buttons is expected saved UI state.
+
+## Keep comparisons consistent
+Saved settings are GUI scale 2, render distance 12, simulation distance 6, VSync off and a 120 FPS cap. Memory override is 1024–8192 MiB. These are observed settings, not minimum hardware requirements or a performance guarantee. Leave someone else's instance unchanged unless they want a setting changed.
+
+[Display and recipe troubleshooting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/) lists what to check without changing the mod stack.
+--- END PAGE: Getting started ---
+
+--- BEGIN PAGE: Troubleshooting ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Troubleshooting
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Recipe search is missing or in the wrong place
+The saved EMI search sidebar is right and Center Search Bar is off. Ctrl+O toggles EMI visibility in its context. JEI also has overlapping bindings, so verify what actually responds before changing mods. A missing category or transfer is not proof that the recipe itself is broken.
+
+JEI's optional synthetic tag-recipe browsing is saved off. Normal JEI integrations and EMI recipe import have not been exhaustively tested by this mapping. Do not describe all JEI features as disabled.
+
+## Map and inventory controls overlap
+M is saved for both Xaero's map and FTB Chunks' map. C, Z and right bracket also have contextual overlaps among installed features. Check the relevant Controls entries and the screen you are in. The overlap alone does not establish a broken binding.
+
+## Shadows are missing
+Iris is saved enabled with MakeUp Ultra Fast 9.5g selected, but the shader override explicitly saves shadow casting off. That explains the saved intent, not a live rendering result. Older notes about keeping shadows do not override the current saved value. No setting has been silently corrected by this handbook.
+
+## An optimiser appears disabled
+AE2 Crafting Optimizer has its compiled graph and authoritative planner saved off, while other optimisation domains and execution features remain on. That is not an all-off state. Saved switches do not prove compatibility, active runtime use or a speed gain.
+
+## Claims or force-loading differ from this handbook
+FTB global files contain templates and defaults. Existing worlds, teams, permissions or server configuration may override them. This edition does not establish effective quotas, protection rules or operator access. Do not rely on a claim as tested protection of valuables until the server policy is checked.
+
+## Terrain or distant rendering behaves strangely
+Distant Horizons is installed. Saved generation mode is FEATURES with SURFACE_THEN_CHUNKS, eight threads and runtime ratio 1.0. Those are observations, not a recommended fix or a hard CPU cap. Rendering distant terrain does not keep distant machines simulated.
+
+Do not transplant a separate trial's configuration or patch into this baseline. A static inspection or menu startup is not proof that generation, boss encounters, reloads or save/reopen work correctly.
+
+## Reporting a problem
+Give the pack revision, relevant mod/system, action, expected result and what happened. Redact account data, addresses and world locations before sharing any diagnostic material. This wiki does not collect logs or private saves.
+
+[Sources and evidence](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) explain what is verified and what remains Unknown.
+--- END PAGE: Troubleshooting ---
+
+--- BEGIN PAGE: Sources and evidence ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Sources and evidence
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Status labels
+| Label | Meaning |
+|---|---|
+| Installed | Exact top-level archive bytes were found and fingerprinted. Not proof they loaded successfully. |
+| Saved configuration | A selected global setting was read. Not proof of effective runtime/server state. |
+| Shipped documentation/data | The exact installed archive contains the cited text or resource. Conditions/overrides may still change gameplay. |
+| Runtime tested | Reserved for an explicitly described exercise in the exact pack. The starter tutorials in this edition do not have this status. |
+| Unknown | Evidence is missing or a mechanism remains unresolved. Do not replace it with a guess. |
+
+## Baseline and reproducibility
+Baseline ID: `dev-0.5-20261015-r2`. The UTC inventory was captured late on 14 October; the snapshot ID uses its 15 October Singapore date. Exact versions and SHA-256 identities are retained in the safe baseline payload. Public content does not include local absolute paths, raw configs, logs, saves or mod binaries.
+
+Archive citations use `archive.jar!internal/path`. They point inside the installed version, not to a claim about the newest upstream release. They are not downloadable JAR links and do not grant redistribution rights.
+
+The first map independently rechecked all 120 active archive hashes, 112 sampled data/text records and 19 selected-settings source hashes. It did not test a game session, final recipe registry, multiplayer compatibility, performance or complete progression. A snapshot can become stale as development continues.
+
+## Where the first guides come from
+- AE2 19.2.18: its shipped `assets/ae2/ae2guide/getting-started.md` and selected charger/inscriber recipe data.
+- Modern Industrialization 2.5.10: its shipped Forge Hammer and first-bronze guide pages.
+- Recipe navigation: saved EMI 1.1.24 configuration, cross-checked against the saved JEI controls context.
+- Pack/system map: top-level mod metadata and counted resource paths. Recognised namespaces can include compatibility assets for absent mods, so a namespace alone is not an installed-mod list.
+
+## Attribution
+Minecraft belongs to its respective rights holders. Mod names and identifiers belong to their authors. The handbook is an unofficial pack-specific summary, not official support for Minecraft or any included mod. It includes original concise explanations and exact source pointers rather than republishing full mod guidebooks.
+
+## Updating safely
+Capture a new private inventory after approved pack changes, compare added/removed/changed archives and selected settings, then review affected pages. Never overwrite curated guides just because a file hash changed. Re-export the text editions after an accepted content change. An unreviewed automated refresh is not part of this edition.
+
+[Changes](https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/) records accepted snapshots. [Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) lists unanswered player questions.
+--- END PAGE: Sources and evidence ---
+
+--- BEGIN PAGE: Changes ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Changes
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## dev-0.5-20261015-r2
+Proposed documentation snapshot of the developing Solo–Tensura pack on Minecraft 1.21.1 / NeoForge 21.1.250. Candidate **dev-0.5-20261015-r2 remains unapplied and not canonically adopted**; the earlier canonical documentation baseline remains **dev-0.5-20261015**. Separately, the preceding 66-page r2 integration received bounded local documentary acceptance only; this 69-page cross-cutting preview remains under review. Neither is canonical adoption, runtime acceptance or publication. This does not announce an accepted pack update.
+
+### Four-archive impact routing
+Four named archives have different hashes from the retained earlier declarations, while declared identities and dependency tables match. Different bytes do not establish the cause or a gameplay delta. Revisit these candidate-specific guides and their evidence/unknowns before relying on older advice:
+
+| Archive family | Affected reading | Applicability boundary |
+|---|---|---|
+| Dungeons and Taverns | [Exploration preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/exploration-preparation/) | Selected surface structure declaration; placement and safety unverified. |
+| Iron's Spellbooks | [First scroll and spell book](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/) | Candidate recipes and shipped-book text; effective recipes, controls and casting unverified. |
+| Tensura | [Character route selector](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-start/) | Candidate control/requirement vocabulary; first access and award handlers unresolved. |
+| Twilight Forest | [Dimension travel and return](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/) | Candidate hint/tags versus unmatched upstream implementation; exact entry and return remain blocked. |
+
+Follow each guide's Sources for archive-internal locators and the [mod reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/) for exact archive/version identities. The [candidate scope](https://faizsaifulnizam.github.io/minecraft-pack-wiki/#candidate-snapshot-scope) explains the limited roster observation; historical saved settings were not refreshed. This routing is not runtime acceptance or baseline adoption.
+
+- Indexed 120 active top-level JARs and two disabled JARs; distinguished 121 top-level mod IDs from archive count.
+- Mapped player-facing systems and selected saved settings.
+- Added evidence-labelled recipe navigation, AE2 preparation and MI bronze guides.
+- Kept awakening, evolution, dimension access, multiplayer and cross-mod automation gaps explicit.
+
+This is a documentation milestone, not a pack release, runtime test result or performance improvement. No mod/config/world changes were made to create this snapshot.
+
+See [sources](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) for the evidence boundary and [mod reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/) for exact versions.
+--- END PAGE: Changes ---
+
+--- BEGIN PAGE: Browse handbook topics ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/topic-index/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Browse handbook topics
+
+Use this index without JavaScript, or when search is unavailable. This is a developing handbook with partial tutorial coverage, not a complete or runtime-certified modpack manual.
+
+## Start and recover
+
+- [Overview](https://faizsaifulnizam.github.io/minecraft-pack-wiki/): what this snapshot covers.
+- [Getting started](https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/): choose an independent route; storage is not a required first branch.
+- [Find recipes and uses](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/): current saved controls, with recipe-category limitations.
+- [Troubleshooting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/): evidence and safe stop points.
+
+## Everyday controls and item safety
+
+- [Find contextual controls](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/control-contexts/): saved viewer bindings, overlapping keys and reversible checks.
+- [Organize items safely](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/inventory-safety/): lock limits, refill choices, crafting-grid and deletion warnings.
+- [Choose conflicting outputs](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/conflicting-outputs/): conditional selector guidance; exact-release correspondence remains open.
+- [Read enchantment information](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/enchantment-information/): shipped descriptions versus item/exclusion evidence.
+- [Identify an unfamiliar target](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/jade-identification/): overlay modes without breaking the block.
+
+## Storage pilot
+
+- [Choose a storage direction](https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/): carrying items, workshop compartments or an ME inventory.
+- [Choose your first storage route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/): materials, declarations, preservation tips and unresolved checks.
+- [Prepare first AE2 storage](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/): shipped small-network guide; working power still needs confirmation.
+- [Storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/): deletion risks and unverified cross-system interfaces.
+
+## Technology
+
+- [Prepare first MI bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/): a separate documented route, not a requirement for magic or exploration.
+
+## Pack reference
+
+- [Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/): systems and mapping limits.
+- [Exact mod reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/): active/disabled archives and declared identities.
+- [Sources and evidence](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/): file inspection versus gameplay tests.
+- [Pack changes](https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/): applicability before reusing an older guide.
+
+## Coverage still being researched
+
+Tensura/Solo progression, four independent magic curricula, dimensions and bosses, equipment, food/building and multiplayer need deeper mechanic-specific guides. Installed presence does not mean those guides or integrations are complete. Use the pack map to identify a system; missing instructions are not proof a feature is absent.
+
+Search matches literal terms, aliases and exact identifiers. Try a short mod/item name rather than expecting semantic answers to a long question. Full-spoiler search is a separate explicit option. Ordinary topic links are spoiler-safe entry points. Optional full-spoiler documents are available through clearly labelled reveal links; full-spoiler search remains opt-in.
+
+
+## Character and independent magic routes
+
+These guides are reviewed against retained static evidence, not gameplay-tested. Candidate snapshot scope and unresolved steps remain visible on each page.
+
+- [Start a character path](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-start/)
+- [Inspect your SoloCraft character and quests](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/solo-start/)
+- [Craft documented SoloCraft equipment](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/solo-workbench/)
+- [Read character helpers without committing a change](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-tools/)
+- [Character integration boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/character-integration/)
+- [Make your first Ars Nouveau utility spell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/)
+- [Put a first scroll into an Iron's spell book](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/)
+- [Start a Nature's Aura garden and measure its Aura](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/)
+- [Prepare your first Occultism work area](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/)
+- [Run an Ars Nouveau Source workshop](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/ars-workshop/)
+- [Choose an Iron's magic workstation and avoid wasted scrolls](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/iron-workstations/)
+- [Supply a Natural Altar without exhausting its surroundings](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/natures-aura-workshop/)
+- [Diagnose an Occultism ritual and manage its books](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/occultism-workbench/)
+
+Full-spoiler references are offered through labelled neutral entry links in their related safe guides. Opening an explicit full-human destination may reveal all of its content, including on reload or history navigation.
+
+
+## Technology, homestead and exploration planning
+
+These are retained-evidence guides and references, not tested gameplay. Technology bootstrap, steel/LV operations and exact dimension travel remain incomplete where explicitly stated.
+
+- [Plan a conditional first-steam recipe route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-first-steam-batch/)
+- [Plan a conditional steam-pump feed and water return](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/)
+- [Plan the coke-to-steel continuation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-steel-workshop/)
+- [Plan an MI low-voltage production route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-lv-production/)
+- [Check transformed recipes before scaling a batch](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/unification-workbench/)
+- [Exploration preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/exploration-preparation/)
+- [Dimension travel and return](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/)
+- [Grow rice and prepare ingredients](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/)
+- [Cook and serve a small meal batch](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/)
+- [Choose a Chipped workshop for your homestead](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/)
+- [Rest with Comforts without replacing home respawn](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/)
+- [Add a faucet and bellows to the workshop](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-supplementaries-devices/)
+
+
+## Equipment and conditional technology tests
+
+These are static-evidence guides, not tested gameplay. Machine transfer policy, equipment predicates, complete encounter delivery and exact dimension entry/return remain unresolved where stated.
+
+- [Make a first bronze plate with steam](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-first-steam-batch/)
+- [Feed a steam water pump and return water](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-pipe-workcell/)
+- [Accessory slot reference and conditional UI check](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/equipment-slots/)
+- [Personal loot and the shared container](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/personal-loot/)
+- [Research an already-owned relic](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/relic-research/)
+- [Encounter readiness](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/encounter-readiness/)
+
+
+## First storage crafts, shared-play planning and support
+
+These pages provide bounded crafting, provisional access or no-change planning. They do not establish a complete storage lifecycle, live permissions, hosting, backup recovery or effective graphics behavior.
+
+- [Craft an oak drawer](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/craft-first-oak-drawer/)
+- [Craft and open a first backpack](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/)
+- [Plan shared-base access without changing permissions](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/)
+- [Check connection responsibilities before sharing a world](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/connection-preflight/)
+- [Prepare a stopped-copy backup recovery checklist](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/backup-recovery-safety/)
+- [Identify navigation controls without opening a map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/navigation-controls/)
+- [Prepare a comfort and graphics choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/comfort-settings-choice/)
+- [Prepare a privacy-safe support request](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/support-escalation/)
+- [Find the right graphics or documentation system](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/graphics-and-books/)
+
+
+## Storage mod references
+
+These references identify retained evidence and missing tasks, not completed mod curricula.
+
+- [AE2](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/ae2/)
+- [Storage Drawers](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/storagedrawers/)
+- [Sophisticated Backpacks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/sophisticatedbackpacks/)
+--- END PAGE: Browse handbook topics ---

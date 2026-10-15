@@ -2,12 +2,12 @@
 layout: default
 title: "Getting started"
 permalink: /getting-started/
-baseline: dev-0.5-20261015
+baseline: dev-0.5-20261015-r2
 ---
 
 # Getting started
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Before you start
 Use the same pack revision as your friends. This handbook describes a developing local baseline, not a released server pack or a tested import download. Do not update individual mods just to match an online tutorial.
@@ -18,7 +18,9 @@ Open an inventory screen and try [recipe search](guides/recipe-search.md). The s
 ## Choose your first project
 - Want searchable storage? Read [AE2 starter preparation](guides/ae2-starter.md).
 - Want machines? Read [MI Forge Hammer and bronze](guides/mi-starter.md).
-- Want magic, Tensura or SoloCraft? Check the [pack map](pack-map.md) first. Their complete starting flows are not yet documented here.
+- Want magic? Choose independently: [Ars first spell](guides/ars-first-spell.md), [Iron's first scroll](guides/iron-first-scroll.md), [Occultism first workbench](guides/occultism-first-workbench.md), or [Nature's Aura first garden](guides/natures-aura-first-garden.md). Read each evidence status; these are bounded routes, not complete or runtime-accepted curricula.
+- Want a homestead project? Choose [Comforts rest](guides/homestead-comforts-rest.md), [cooking pot](guides/homestead-cooking-pot.md), [rice and cutting](guides/homestead-rice-and-cutting.md), [Chipped workstations](guides/homestead-chipped-workstations.md), or [Supplementaries devices](guides/homestead-supplementaries-devices.md). Check each prerequisite and stop condition; technology is not a prerequisite.
+- Want Tensura or SoloCraft? Use the [character route selector](guides/character-start.md); first access and awakening/award continuity remain unresolved. The [pack map](pack-map.md) retains the wider scope.
 
 ## Saved controls to check
 | Action | Saved binding | Limit |

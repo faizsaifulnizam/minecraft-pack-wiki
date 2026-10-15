@@ -1,9 +1,11 @@
+<!-- wiki.py managed raw export schema=1 -->
 Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/getting-started/
-Baseline: dev-0.5-20261015
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
 
 # Getting started
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Before you start
 Use the same pack revision as your friends. This handbook describes a developing local baseline, not a released server pack or a tested import download. Do not update individual mods just to match an online tutorial.
@@ -14,7 +16,9 @@ Open an inventory screen and try [recipe search](https://faizsaifulnizam.github.
 ## Choose your first project
 - Want searchable storage? Read [AE2 starter preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/).
 - Want machines? Read [MI Forge Hammer and bronze](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/mi-starter/).
-- Want magic, Tensura or SoloCraft? Check the [pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) first. Their complete starting flows are not yet documented here.
+- Want magic? Choose independently: [Ars first spell](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ars-first-spell/), [Iron's first scroll](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/iron-first-scroll/), [Occultism first workbench](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/occultism-first-workbench/), or [Nature's Aura first garden](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/natures-aura-first-garden/). Read each evidence status; these are bounded routes, not complete or runtime-accepted curricula.
+- Want a homestead project? Choose [Comforts rest](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/), [cooking pot](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/), [rice and cutting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/), [Chipped workstations](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/), or [Supplementaries devices](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-supplementaries-devices/). Check each prerequisite and stop condition; technology is not a prerequisite.
+- Want Tensura or SoloCraft? Use the [character route selector](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/character-start/); first access and awakening/award continuity remain unresolved. The [pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) retains the wider scope.
 
 ## Saved controls to check
 | Action | Saved binding | Limit |

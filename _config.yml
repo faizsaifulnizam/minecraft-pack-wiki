@@ -8,6 +8,8 @@ kramdown:
   syntax_highlighter: rouge
 plugins:
   - jekyll-relative-links
+whitelist:
+  - jekyll-relative-links
 relative_links:
   enabled: true
   collections: false
