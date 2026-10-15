@@ -1,0 +1,57 @@
+---
+layout: default
+title: "Read character helpers without committing a change"
+permalink: /guides/character-tools/
+baseline: dev-0.5-20261015-r2
+---
+
+# Read character helpers without committing a change
+
+## Baseline
+This is an bounded statically reviewed revision for candidate **dev-0.5-20261015-r2**, not an applied replacement for dev-0.5-20261015. New core text corresponds only to Tensura archive SHA-256 `2309a22ceb7e423e2f3212ea87686ccc510fe0003595500037e0b6c64baef213`. The original baseline/pins remain unchanged. Static descriptions and feedback are not runtime or award-handler proof.
+
+foxablazeaqzl_wiki 1.0.2.3 and tensura_trepu 1.0.0.2 in dev-0.5-20261015. How-to: use available reference labels without mistaking a UI aid for an unlock.
+
+## Evidence status
+
+Bounded retained-evidence static review only; candidate dev-0.5-20261015-r2 remains unapplied. This is not runtime validation, integration approval, baseline adoption or publication.
+Documented-static retained candidate-core and unchanged helper translations. The core names Status Menu, Ability 1/2/3 Activation, Next Ability Mode and Previous Ability Mode. These establish exact control vocabulary, not physical default keys, entitlement or screen placement. Screen injection, unlock filtering and interaction remain untested.
+
+## Prerequisites
+An existing character with access to the relevant Tensura character/evolution screen. This is a returning-reader helper route, not a reincarnation tutorial. Reading an in-game archive may expose details the safe handbook omits.
+
+## Steps
+1. In Controls, find **Tensura:Reincarnated** and **Status Menu**. Use its current assigned key in a safe place. If the screen opens, record its displayed Aura, Magicule and EP separately; their translated labels do not establish a conversion formula. If it does not open, check binding/focus and stop; no first-access unlock is established. If your character screen offers **Ability Archive**, use that label for the skill reference. The same addon defines **Item Archive**, **Adventure Archive** and a sub-ability **[Wiki]** label. These are exact vocabulary to recognize, not a claim that all four are available in every screen.
+2. Look up a skill or item you already own before using it. Keep its source namespace attached to your notes. The bundled reference includes entries for other namespaces; a listed entry does not prove that another addon is installed or its ability obtainable.
+3. Compare reference prose with the selected release. The item archive declares upstream wiki imports, but does not pin those imported pages to Tensura 2.0.1.3. Treat numerical claims from it as addon-shipped documentation, not verified core implementation.
+4. If your evolution screen has the added path display, read **Evolution Requirements** before selecting an outcome. tensura_trepu describes displaying the complete race path and marks its UI as client-side; it is not evidence that every displayed branch is currently reachable.
+5. For already-owned equipment, a helper tooltip may say **Needs …EP to evolve into …**. Record the actual amount and target shown. Do not invent a universal EP threshold or treat the tooltip as proof of the awarding mechanism.
+
+## Expected result
+You can distinguish a skill/item reference, a race-path display and an equipment requirement hint. None of these observations establishes that you acquired the referenced skill or satisfied an evolution gate.
+
+## Common failures
+- Status Menu unavailable: the retained text identifies the control but not the condition that grants access. Do not deliberately die or reset to force it.
+- Missing archive button or tree: screen placement and compatibility have not passed this lane's checks. Confirm which screen you are inspecting and the selected helper version before reporting the issue; do not reinstall or modify settings from this guide.
+- A reference lists an unavailable addon ability: namespace inclusion is not installation or eligibility evidence.
+- You need details beyond the safe route: the following are full-spoiler pages, with neutral names and safe return links. Parent integration must provide explicit ordinary-entry reveal behavior before these are published.
+
+## Deeper reading
+- [Character notes A — FULL SPOILERS](../reference/character-notes-a.md): candidate text and qualified bundled reference details; numerical addon/core correspondence remains unresolved.
+- [Character notes B — FULL SPOILERS](../reference/character-notes-b.md): subordinate commands and the Better Subordinates extension.
+- [Character notes C — FULL SPOILERS](../reference/character-notes-c.md): encounter data and structure placement, not a proven combat or reward route.
+- [Integration boundaries](../reference/character-integration.md): what the bridge explicitly declares and what remains unverified.
+
+## Sources
+foxablazeaqzl_wiki-1.0.2.3.jar, META-INF/neoforge.mods.toml and assets/foxablazeaqzl_wiki/lang/en_us.json; the selected item_descriptions.json import declarations. tensura_trepu-1.0.0.2.jar, META-INF/neoforge.mods.toml and assets/tensura_trepu/lang/en_us.json. Claims CHAR-010, CHAR-011 and CHAR-012 remain helper-only. Candidate core assets/tensura/lang/en_us.json: manascore_keybind.category.tensura, tensura.keybinding.main_gui, ability.slot_1/slot_2/slot_3, next_mode, previous_mode; tensura.main_menu.aura, magicule and existence_points. Revision claims REV-01 and REV-02.
+
+### Archive and internal-entry citations
+
+These locators identify the documented archive contents, not downloadable retained evidence or a guarantee of effective gameplay.
+
+- [CHAR-010] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/lang/en_us.json`: `foxablazeaqzl_wiki.menu.*; foxablazeaqzl_wiki.sub_ability.open`.
+- [CHAR-010] `foxablazeaqzl_wiki-1.0.2.3.jar!assets/foxablazeaqzl_wiki/wiki/item_descriptions.json`: `generated_from; imported_pages; entries[*].source_page`.
+- [CHAR-011] `tensura_trepu-1.0.0.2.jar!META-INF/neoforge.mods.toml`: `mods[0].description; displayTest; client-side comment`.
+- [CHAR-011] `tensura_trepu-1.0.0.2.jar!assets/tensura_trepu/lang/en_us.json`: `gui.tensura_trepu.evolution_requirements`.
+- [CHAR-012] `tensura_trepu-1.0.0.2.jar!assets/tensura_trepu/lang/en_us.json`: `tooltip.tensura_trepu.gear_evolution_remaining`.
+- [Candidate core documentation] `tensura-neoforge-2.0.1.3.jar!assets/tensura/lang/en_us.json`.

@@ -2,15 +2,15 @@
 layout: default
 title: "Make your first MI bronze"
 permalink: /guides/mi-starter/
-baseline: dev-0.5-20261015
+baseline: dev-0.5-20261015-r2
 ---
 
 # Make your first MI bronze
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Baseline
-Modern Industrialization **2.5.10** in `dev-0.5-20261015`.
+Modern Industrialization **2.5.10** in `dev-0.5-20261015-r2`.
 
 ## Evidence status
 **Shipped documentation.** The installed Forge Hammer and bronze pages support this sequence. Effective recipes, tag substitutions and machine operation have not been tested in-game for this handbook.

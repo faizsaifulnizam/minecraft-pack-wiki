@@ -2,15 +2,15 @@
 layout: default
 title: "Find recipes and item uses"
 permalink: /guides/recipe-search/
-baseline: dev-0.5-20261015
+baseline: dev-0.5-20261015-r2
 ---
 
 # Find recipes and item uses
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Baseline
-EMI 1.1.24 and JEI 19.32.0.359 in `dev-0.5-20261015`.
+EMI 1.1.24 and JEI 19.32.0.359 in `dev-0.5-20261015-r2`.
 
 ## Evidence status
 **Saved configuration.** These bindings/layout values were read from global files. Recipe categories, contextual key handling and transfers have not been exercised as part of this documentation check.

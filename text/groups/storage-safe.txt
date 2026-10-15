@@ -1,0 +1,378 @@
+<!-- wiki.py managed group export schema=1 -->
+# Safe group bundle
+
+--- BEGIN PAGE: Prepare your first AE2 storage system ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Prepare your first AE2 storage system
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Baseline
+Applied Energistics 2 **19.2.18** in `dev-0.5-20261015-r2`.
+
+## Evidence status
+**Shipped documentation/data.** The installed guide supports this route. This is a preparation/build outline, not a gameplay-tested end-to-end network tutorial. A working power source and this pack's cross-mod power compatibility are not established here.
+
+## Prerequisites
+Access to meteorite materials, a way to make the listed AE2 components, and a power supply compatible with the energy acceptor. Check each current recipe in [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/). Do not assume MI cables are compatible merely because MI is installed.
+
+## Steps
+1. Find an AE2 meteorite. The shipped guide suggests a Meteorite Compass if needed; check its actual recipe before crafting.
+2. Collect certus material and the Mysterious Cube's four inscriber presses. **Do not break flawless budding certus with a pickaxe, even Silk Touch**: the guide says it degrades and cannot be restored to flawless.
+3. Use the Charger to obtain charged certus as needed. The guide makes Fluix from charged certus, redstone and nether quartz in water.
+4. Use the Inscriber and presses to prepare processors. Consult the current recipe view for each processor rather than mixing up printed circuits and completed processors.
+5. Prepare one ME Drive, one Terminal or Crafting Terminal, one Energy Acceptor, a few ordinary glass/covered/smart cables and storage cells. The shipped small-network list does not require a controller.
+6. Place the cube Energy Acceptor beside the ME Drive, or place the flat Energy Acceptor on a cable attached to the drive, as described in the shipped guide. Connect the terminal through cable, insert the cells, and supply compatible energy. Stop here if the power interface is unresolved rather than adding random power mods.
+
+## Expected result
+The shipped guide's target is a small searchable ME inventory, without autocrafting. Whether it works with the chosen power source and current pack configuration still needs a real build check.
+
+## Common failures
+- Breaking flawless budding certus loses its flawless form according to the installed guide. Preserve the source in place.
+- A storage cell outside a drive/chest is not the network storage setup described here.
+- A dark terminal can have several causes; this handbook has not validated your energy, channels or connections. Do not infer a missing controller as the default cause.
+- A later network expansion needs a separate channels/devices check; this guide does not certify a large network or optimiser correctness.
+
+## Sources
+- `appliedenergistics2-19.2.18.jar!assets/ae2/ae2guide/getting-started.md`
+- `appliedenergistics2-19.2.18.jar!data/ae2/recipe/charger/guide.json`
+- `appliedenergistics2-19.2.18.jar!data/ae2/recipe/inscriber/calculation_processor_print.json`
+- `appliedenergistics2-19.2.18.jar!data/ae2/recipe/inscriber/calculation_processor.json`
+
+[Pack map](https://faizsaifulnizam.github.io/minecraft-pack-wiki/pack-map/) separates this storage route from unverified cross-mod automation.
+--- END PAGE: Prepare your first AE2 storage system ---
+
+--- BEGIN PAGE: Choose a storage direction ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Choose a storage direction
+
+## Baseline
+Development snapshot **dev-0.5-20261015-r2**, Minecraft 1.21.1 / NeoForge 21.1.250. AE2 19.2.18, Storage Drawers 13.11.4 and Sophisticated Backpacks 3.26.9 are installed.
+
+## Evidence status
+Shipped guide, translations and selected recipes were read. No storage interaction, transfer or persistence test was run. This hub helps you choose a route; it does not certify a working combined network.
+
+## Prerequisites
+Decide whether your immediate problem is carrying loot, organizing workshop materials or searching a base inventory. Use [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to check the chosen item's current recipe. Those saved bindings are not a guarantee of custom-category coverage.
+
+## Steps
+1. If you need a portable option, examine the Backpack candidate in [choose your first storage route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/). Its shipped recipe uses leather, string and a wooden-chest tag, with an item-enabled condition.
+2. If you want workshop compartments, examine the oak 1x1 drawer recipe in the same guide. Do not infer effective capacity from the item's name.
+3. If your goal is a searchable ME inventory, follow [AE2 preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/), which separates materials, processors and the small network. Compatible power is still a blocker, not an assumed MI prerequisite.
+4. Before joining systems, read [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/). Treat each as a separate route until its interface has evidence.
+
+## Expected result
+A chosen first route and a short list of unresolved prerequisites. You have not yet proved a successful craft or safe migration of existing stock.
+
+## Common failures
+- Planning a searchable inventory does not provide power. Stop at the AE2 power boundary rather than crafting a controller as a universal fix.
+- A backpack's filter and void upgrades are different tools: the shipped text describes pipe filtering versus item deletion. Keep voiding out of your initial route. See the [deletion boundary](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/#deletion-is-not-capacity).
+- Do not make this route a mandatory gate for magic or exploration; no such pack-wide ordering is established.
+
+## Sources
+- `appliedenergistics2-19.2.18.jar!assets/ae2/ae2guide/getting-started.md`
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!data/storagedrawers/recipe/oak_full_drawers_1.json`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/backpack.json`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!assets/sophisticatedbackpacks/lang/en_us.json`
+--- END PAGE: Choose a storage direction ---
+
+--- BEGIN PAGE: Choose your first storage route ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Choose your first storage route
+
+## Baseline
+Development snapshot **dev-0.5-20261015-r2**: Storage Drawers 13.11.4, Sophisticated Backpacks 3.26.9 and AE2 19.2.18.
+
+## Evidence status
+Static decision how-to, not a tested crafting or migration tutorial. The recipes below are shipped declarations; enabled conditions, resolved tags, overrides and recipe-viewer coverage still need confirmation.
+
+## Prerequisites
+A clear goal and access to [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/). Do not move valuable stock or install deletion upgrades as part of choosing a route. The [storage hub](https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/) keeps the alternatives separate.
+
+## Steps
+1. Write down one immediate outcome: carry items, use workshop compartments, or search an ME inventory. Choose only the matching route below; these are alternatives, not a progression sequence.
+2. For carrying items, look up `sophisticatedbackpacks:backpack`. Its shipped pattern is `SLS / SCS / LLL`: S is the string tag, L the leather tag, C the wooden-chest tag. The declared output is one Backpack. The recipe uses the custom `sophisticatedbackpacks:basic_backpack` type and an item-enabled condition; if the viewer has no entry, stop rather than assume the pattern is currently craftable.
+3. For workshop compartments, look up `storagedrawers:oak_full_drawers_1`. The shipped pattern has three oak planks across the top and bottom rows and a wooden-chest-tag ingredient in the middle slot. It declares one drawer. Keep capacities, locks and item removal as unresolved interaction checks, not guessed instructions.
+4. For searchable storage, use [AE2 preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/). Its material and processor route is documented, but working power must be established before you treat it as usable storage. MI installation alone does not close that prerequisite.
+5. Record the chosen item, the recipe you actually see and the first unresolved boundary. Use [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/) before any later transfer or upgrade work.
+
+## Expected result
+You can name the route and its next prerequisite without buying into an unverified cross-system dependency. This how-to completes a choice, not a working in-game build.
+
+## Common failures
+- Missing backpack recipe: its enabled condition and custom serializer need checking. Do not remove mods or rewrite configs to force the declaration to load.
+- Conflicting output: stop before taking the result. Polymorph is installed, but this pilot has not established its exact controls or supported containers. Record the displayed output ID and context; do not repeatedly consume ingredients.
+- No recipe transfer: check the current item/container/category and ingredients as described in [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/#common-failures); failed transfer does not prove a recipe impossible.
+
+## Tips with trade-offs
+- Before preparing an AE2 expansion, preserve flawless budding certus in place. The shipped guide says a pickaxe degrades it even with Silk Touch, with no repair to flawless. Benefit: keep the non-degrading source; trade-off: travel to it until a separately evidenced relocation route is available. This is resource preservation, not an instruction to attempt advanced transport.
+- When selecting backpack automation, start by investigating the Filter Upgrade rather than a Void Upgrade. The translation describes filtering piped input/output, while voiding deletes selected items. Benefit: frame a non-deletion design; prerequisite: verify the actual filter UI and pipe compatibility separately. Trade-off: rejected items still need an overflow plan, which is not yet verified here.
+
+## Sources
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/backpack.json`
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!data/storagedrawers/recipe/oak_full_drawers_1.json`
+- `appliedenergistics2-19.2.18.jar!assets/ae2/ae2guide/getting-started.md`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!assets/sophisticatedbackpacks/lang/en_us.json`
+--- END PAGE: Choose your first storage route ---
+
+--- BEGIN PAGE: Storage boundaries and unresolved interfaces ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Storage boundaries and unresolved interfaces
+
+## Baseline
+**dev-0.5-20261015-r2**, Minecraft 1.21.1 / NeoForge 21.1.250. Exact archive versions appear in the sources below.
+
+## Evidence status
+Static reference. A translated feature description establishes shipped intent, not active configuration, tested compatibility or item persistence.
+
+## Prerequisites
+Use [storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) to select an independent route before planning integration.
+
+## Steps
+For a proposed connection, identify the producing system, receiving system, item/fluid/energy type, direction, filter and overflow behavior. Leave any unproven field unknown. Do not move your main inventory to answer an unknown.
+
+## Expected result
+A boundary checklist that distinguishes a known declaration from an untested handoff.
+
+| Boundary | Evidence available | Not established |
+|---|---|---|
+| Drawer starter | `storagedrawers:oak_full_drawers_1` recipe declares oak planks and wooden-chest tag | Capacity, click controls, locking persistence and controller range |
+| Backpack starter | `sophisticatedbackpacks:backpack` custom recipe and enabled condition; [first backpack access](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/) supplies provisional same-version upstream held-item use evidence | Exact installed open control and build-2195 correspondence remain unknown; effective recipe, slots, Curios behavior, deposit/withdrawal, carrying lifecycle and contents through upgrades/persistence are not established |
+| ME starter | Shipped guide describes drive, cells, terminal, cables and energy acceptor; small route does not require controller | Chosen power source, effective channels and working network |
+| MI -> AE2 | Both identities are installed | Energy units/interface conversion, sided item/fluid transfers and automation safety |
+| Drawers/backpack -> ME | Candidate connection only | Interface choice, priorities, looping, filtering and overflow behavior |
+
+The access guide separates held-item Use Item from placement; it is not proof of the installed compiled behavior or an established open key. Stop if the interface differs and keep the empty Backpack; do not infer safe storage from an empty menu. J2's processing/interface handoff remains unresolved.
+
+## Deletion is not capacity
+Storage Drawers' shipped Void Upgrade description says it destroys excess items. Sophisticated Backpacks' Void Upgrade description says it deletes items selected by a filter; its recipe also carries an item-enabled condition. Neither is ordinary extra capacity. Avoid both while learning storage. If deletion is suspected, stop feeding the affected container and record the upgrade/filter context before further interaction; this reference cannot promise an undo or restore deleted items.
+
+## Common failures
+- A dark ME terminal is not evidence that you need a controller. Return to [AE2's unresolved power and connection checks](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/#common-failures).
+- Equal ingredient tags do not establish identical effective outputs or interchangeable machine interfaces.
+- No test here establishes save/reopen persistence. Keep a later authorized check limited to expendable items and an isolated world; do not test by breaking a stocked container.
+
+## Sources
+- `appliedenergistics2-19.2.18.jar!assets/ae2/ae2guide/getting-started.md`
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!data/storagedrawers/recipe/oak_full_drawers_1.json`
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!assets/storagedrawers/lang/en_us.json`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/backpack.json`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/void_upgrade.json`
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!assets/sophisticatedbackpacks/lang/en_us.json`
+--- END PAGE: Storage boundaries and unresolved interfaces ---
+
+--- BEGIN PAGE: Craft an oak drawer ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/craft-first-oak-drawer/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Craft an oak drawer
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+> Development documentation snapshot **dev-0.5-20261015-r2**. Storage Drawers **13.11.4**. Static recipe task; effective recipes and gameplay are not tested.
+
+## Prerequisites
+Prepare one `storagedrawers:oak_full_drawers_1` from its shipped recipe, if that recipe is available in your current recipe view. This page covers crafting, not drawer placement, deposit, withdrawal or persistence. Use [the route comparison](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) if you have not chosen between workshop storage and [a carried backpack](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/).
+
+You need a 3-by-3 crafting grid, six `minecraft:oak_planks` and one ingredient that your current recipe view accepts for `c:chests/wooden`. Tag membership and resource overrides are not established by the declaration. Do not substitute another wood just because its texture is similar.
+
+## Steps
+1. Use [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) for `storagedrawers:oak_full_drawers_1`. Compare the displayed output and ingredients with the declaration below before committing materials. A missing entry or different output is a boundary to resolve, not permission to change pack settings.
+2. For the matching declared recipe, fill the top and bottom rows with oak planks. Put the accepted wooden-chest-tag ingredient in the centre of the middle row; leave its other two slots empty. The exact shaped rows are `["///", " X ", "///"]`, where `/` means oak plank and `X` means the chest ingredient.
+3. Check that the output is one `storagedrawers:oak_full_drawers_1`, then take that single output. The shipped declaration specifies a yield of one, not multiple drawers.
+
+## Expected result
+The recipe-supported target is one oak full drawer item with one compartment. This is not evidence of its capacity, controls or successful storage. Keep bulk stock in its existing container until a separately supported deposit-and-withdrawal task is available; [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/) explains what remains unproved.
+
+## Common failures
+If no matching output appears, leave the output untouched and compare the exact item ID and current accepted ingredients. A recipe-viewer omission alone does not prove a recipe cannot load. If the result conflicts, do not repeatedly consume ingredients to diagnose it. Keep the ingredients rather than editing configs or installing another mod.
+
+## Tips and trade-offs
+Use a small first craft rather than converting all your chests: it limits the materials committed while access and capacity remain unresolved. This does not promise that crafting can be undone. Do not add a Void Upgrade to solve capacity: the shipped description says “Destroys excess items.” That warning establishes deletion intent, not the precise runtime overflow algorithm.
+
+## Sources
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!data/storagedrawers/recipe/oak_full_drawers_1.json` — complete shaped recipe declaration.
+- `StorageDrawers-neoforge-1.21.1-13.11.4.jar!assets/storagedrawers/lang/en_us.json` — `item.storagedrawers.void_upgrade.desc`; label evidence only.
+--- END PAGE: Craft an oak drawer ---
+
+--- BEGIN PAGE: Craft and open a first backpack ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Craft and open a first backpack
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+> Development documentation snapshot **dev-0.5-20261015-r2**. Sophisticated Backpacks **3.26.9.2195**. Recipe declaration plus provisional same-version upstream control evidence; no effective-recipe or gameplay acceptance.
+
+## Prerequisites
+Prepare one basic Backpack and, conditionally, open its held-item menu without equipping it or moving stock. Choose [an oak drawer](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/craft-first-oak-drawer/) instead for a workshop crafting route; these are independent alternatives, not prerequisites for each other. [Storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) retains the wider comparison.
+
+You need a 3-by-3 crafting grid, four ingredients accepted by `c:strings`, four accepted by `c:leathers`, and one accepted by `c:chests/wooden`. The shipped Backpack recipe uses a custom `sophisticatedbackpacks:basic_backpack` type and a `sophisticatedcore:item_enabled` condition for `sophisticatedbackpacks:backpack`. Its presence in a JAR does not prove it is enabled or displayed correctly in this pack.
+
+## Steps
+1. In [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/), compare the current recipe for `sophisticatedbackpacks:backpack` with the shipped rows `SLS`, `SCS`, `LLL`: S is the string tag, L the leather tag, C the wooden-chest tag. Confirm the output is one basic Backpack before committing ingredients. If the current recipe cannot be confirmed, retain your ingredients and resolve that uncertainty first.
+2. For the matching declaration, arrange those three rows and take one `sophisticatedbackpacks:backpack`. Do not add upgrades or put valuables inside it during this first access check.
+3. **Provisional control, not exact-build proof:** upstream source declaring `mod_version=3.26.9` opens the Backpack menu from the held item's `use` method. With the new Backpack selected in your main hand, aim into empty air and use the item (your configured Use Item control). Do not sneak-use it on a block: the same source has a separate placement route. This source has not been tied to build 2195 or the installed compiled behavior; if your interface differs, stop instead of trying guessed bindings.
+
+## Expected result
+For the provisional control in step 3, the expected result is a Backpack container menu, not equipping or placing the item. Read only its title and visible layout; leave slots and upgrade controls untouched. Menu opening is not proof of deposit/withdrawal, capacity, safe item eligibility or save/reopen persistence. A first useful carrying-and-return task remains unverified until those boundaries are established.
+
+## Common failures
+If the provisional use action does not open the expected menu, do not compensate with a Curios slot, drop action, repeated placement or forced pickup. Keep the empty Backpack and record which item and action differed. Missing recipe display can reflect conditions, custom serializer or viewer support; do not rewrite settings to force a recipe. Do not infer item loss merely from a menu failing to open.
+
+## Tips and trade-offs
+A held-item access check avoids making worn-slot eligibility a prerequisite, but does not establish worn upgrades or shortcut keys. Avoid deletion upgrades while learning: the shipped Void Upgrade tooltip says it voids items selected in its filter. The Filter Upgrade tooltip instead describes filtering items piped in/out. Those labels distinguish purposes, not proved controls, pipe compatibility or non-deleting capacity expansion. Keep [transfer and deletion boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/) open.
+
+## Sources
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/backpack.json` — full declared recipe and enabled condition.
+- `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!assets/sophisticatedbackpacks/lang/en_us.json` — selected Filter/Void Upgrade labels, not UI proof.
+- [BackpackItem.java, lines 239–253 and 327–338](https://github.com/P3pp3rF1y/SophisticatedBackpacks/blob/565bd1bfac58f5e57c56b0be9a681dc042ba07ec/src/main/java/net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackItem.java#L239-L338) — placement separation and held-item menu caller; provisional same-version source.
+- [gradle.properties, line 18](https://github.com/P3pp3rF1y/SophisticatedBackpacks/blob/565bd1bfac58f5e57c56b0be9a681dc042ba07ec/gradle.properties#L18) — source version declaration, not installed-binary correspondence.
+--- END PAGE: Craft and open a first backpack ---
+
+--- BEGIN PAGE: Applied Energistics 2 reference ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/ae2/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Applied Energistics 2 reference
+
+## Applicability and evidence
+Candidate documentation snapshot **dev-0.5-20261015-r2**, Minecraft **1.21.1**, NeoForge **21.1.250**. Candidate unapplied; not canonical adoption or release validation. Retained static documentation only; **not-runtime-tested**. No family completeness claim.
+
+Exact identity: `ae2`, version **19.2.18**, archive `appliedenergistics2-19.2.18.jar`. Identity is recorded in the [shared archive reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/); it is not a fresh instance observation.
+
+## Choose a destination
+- Beginner: [Applied Energistics 2 starting route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/). Read its prerequisites and action-local limits first.
+- Advanced planning: [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); advanced tasks below are missing, not completed tutorials.
+- Comparison: [storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/); these are independent alternatives, not a prerequisite chain.
+- Family context: [storage systems](https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/).
+
+## What the retained reference supports
+The shipped small-network outline names an ME Drive, cells, Terminal or Crafting Terminal, Energy Acceptor and ordinary cables; it does not require a controller. This is a preparation outline, not a proven powered searchable inventory.[1]
+
+Preserve flawless budding certus: the shipped guide warns that breaking it with a pickaxe, including Silk Touch, degrades it irreversibly.[1]
+
+## Missing tasks
+- Beginner: complete component/material acquisition and a compatible power bootstrap, then demonstrate searchable deposit and retrieval.
+- Advanced: channels/device expansion, autocrafting setup and recovery, and exact input/output/filter/overflow behavior.
+- Integration: MI energy conversion or item/fluid interface is unknown; co-presence is not compatibility. AE2 Crafting Optimizer is a separate identity, not an AE2 progression branch.
+- Runtime: successful craft, powered access, recovery and save/reopen remain unconfirmed.
+
+Stop before supplying unverified power or transferring stock. A dark terminal does not by itself diagnose a missing controller. Use the linked starter's common-failure checks, not random additional power mods.[1]
+
+## Sources
+- [1] `appliedenergistics2-19.2.18.jar!assets/ae2/ae2guide/getting-started.md` — Shipped guide; retained starter outline, not a new archive inspection.
+
+Claim summaries inherit the limits in [the retained task guide](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/) and [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); no new source acquisition or runtime check is implied.
+--- END PAGE: Applied Energistics 2 reference ---
+
+--- BEGIN PAGE: Storage Drawers reference ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/storagedrawers/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Storage Drawers reference
+
+## Applicability and evidence
+Candidate documentation snapshot **dev-0.5-20261015-r2**, Minecraft **1.21.1**, NeoForge **21.1.250**. Candidate unapplied; not canonical adoption or release validation. Retained static documentation only; **not-runtime-tested**. No family completeness claim.
+
+Exact identity: `storagedrawers`, version **13.11.4**, archive `StorageDrawers-neoforge-1.21.1-13.11.4.jar`. Identity is recorded in the [shared archive reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/); it is not a fresh instance observation.
+
+## Choose a destination
+- Beginner: [Storage Drawers starting route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/craft-first-oak-drawer/). Read its prerequisites and action-local limits first.
+- Advanced planning: [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); advanced tasks below are missing, not completed tutorials.
+- Comparison: [storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/); these are independent alternatives, not a prerequisite chain.
+- Family context: [storage systems](https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/).
+
+## What the retained reference supports
+`storagedrawers:oak_full_drawers_1` has a shaped recipe declaring six `minecraft:oak_planks` and one `c:chests/wooden` ingredient, yielding one drawer. The linked beginner task gives exact arrangement and a current-recipe comparison stop.[1]
+
+This proves a recipe declaration, not current tag membership, effective recipe or a usable storage lifecycle. Keep bulk stock where it is until placement, deposit and withdrawal are supported.[1]
+
+The Void Upgrade description says “Destroys excess items.” Deletion intent is not extra capacity or proof of the runtime overflow algorithm. Avoid it while learning; no undo is established.[2]
+
+## Missing tasks
+- Beginner: exact 13.11.4 placement/deposit/withdrawal callers and helpers, then a recoverable nonvaluable-item lifecycle.
+- Advanced: capacities, locking, upgrades, controller range, filtering and safe automation.
+- Integration: a named Drawers-to-ME interface with direction, priority, loops and overflow remains unknown.
+- Runtime: actual craft, item recovery and save/reopen persistence remain unconfirmed.
+
+Stop if the displayed recipe differs. Keep ingredients rather than editing settings. If deletion is suspected, stop feeding the container; do not break stocked storage as a recovery experiment.[1][2]
+
+## Sources
+- [1] `StorageDrawers-neoforge-1.21.1-13.11.4.jar!data/storagedrawers/recipe/oak_full_drawers_1.json` — Complete recipe declaration as retained in the beginner guide.
+- [2] `StorageDrawers-neoforge-1.21.1-13.11.4.jar!assets/storagedrawers/lang/en_us.json` — item.storagedrawers.void_upgrade.desc; label evidence only.
+
+Claim summaries inherit the limits in [the retained task guide](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/craft-first-oak-drawer/) and [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); no new source acquisition or runtime check is implied.
+--- END PAGE: Storage Drawers reference ---
+
+--- BEGIN PAGE: Sophisticated Backpacks reference ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/mods/sophisticatedbackpacks/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Sophisticated Backpacks reference
+
+## Applicability and evidence
+Candidate documentation snapshot **dev-0.5-20261015-r2**, Minecraft **1.21.1**, NeoForge **21.1.250**. Candidate unapplied; not canonical adoption or release validation. Retained static documentation only; **not-runtime-tested**. No family completeness claim.
+
+Exact identity: `sophisticatedbackpacks`, version **3.26.9.2195**, archive `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar`. Identity is recorded in the [shared archive reference](https://faizsaifulnizam.github.io/minecraft-pack-wiki/mods/); it is not a fresh instance observation.
+
+## Choose a destination
+- Beginner: [Sophisticated Backpacks starting route](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/). Read its prerequisites and action-local limits first.
+- Advanced planning: [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); advanced tasks below are missing, not completed tutorials.
+- Comparison: [storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/); these are independent alternatives, not a prerequisite chain.
+- Family context: [storage systems](https://faizsaifulnizam.github.io/minecraft-pack-wiki/systems/storage/).
+
+## What the retained reference supports
+`sophisticatedbackpacks:backpack` declares rows `SLS`, `SCS`, `LLL`: S is `c:strings`, L is `c:leathers`, C is `c:chests/wooden`. Its custom `sophisticatedbackpacks:basic_backpack` recipe carries a `sophisticatedcore:item_enabled` condition. Presence is not proof that the effective recipe is enabled.[1]
+
+The linked beginner route's held-item menu action is provisional: upstream source declares `mod_version=3.26.9` but is not tied to installed build 2195 or compiled behavior. Menu opening does not prove slot eligibility, insert/remove safety or useful carrying-and-return storage. Do not infer Curios controls or use a worn slot to compensate.[2][3]
+
+Filter/Void Upgrade labels distinguish piped-item filtering from filtered deletion intent, not proved controls, compatibility or capacity. Avoid deletion upgrades and leave menu slots untouched during the provisional first-access check.[4]
+
+## Missing tasks
+- Beginner: build2195 source/binary correspondence; container/helper/slot predicates; safe deposit, retrieval and return.
+- Advanced: capacities, upgrade transitions/content retention, filters, shortcuts and safe worn-slot removal.
+- Integration: backpack-to-ME direction, priorities, filtering and overflow remain unknown.
+- Runtime: effective recipe, successful opening, recovery, death and save/reopen persistence remain unconfirmed.
+
+Stop if the provisional interface differs. Keep the empty Backpack; do not try forced pickup, dropping, repeated placement or valuables to diagnose access.[2]
+
+## Sources
+- [1] `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!data/sophisticatedbackpacks/recipe/backpack.json` — Recipe and enabled condition; retained declaration.
+- [2] `https://github.com/P3pp3rF1y/SophisticatedBackpacks/blob/565bd1bfac58f5e57c56b0be9a681dc042ba07ec/src/main/java/net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackItem.java#L239-L338` — Retained source; placement separation and held-item caller, provisional same-version only.
+- [3] `https://github.com/P3pp3rF1y/SophisticatedBackpacks/blob/565bd1bfac58f5e57c56b0be9a681dc042ba07ec/gradle.properties#L18` — Retained version declaration, not build2195 correspondence.
+- [4] `sophisticatedbackpacks-1.21.1-3.26.9.2195.jar!assets/sophisticatedbackpacks/lang/en_us.json` — Selected Filter/Void labels only.
+
+Claim summaries inherit the limits in [the retained task guide](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/) and [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/); no new source acquisition or runtime check is implied.
+--- END PAGE: Sophisticated Backpacks reference ---

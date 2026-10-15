@@ -1,9 +1,11 @@
+<!-- wiki.py managed raw export schema=1 -->
 Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/
-Baseline: dev-0.5-20261015
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
 
 # Troubleshooting
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Recipe search is missing or in the wrong place
 The saved EMI search sidebar is right and Center Search Bar is off. Ctrl+O toggles EMI visibility in its context. JEI also has overlapping bindings, so verify what actually responds before changing mods. A missing category or transfer is not proof that the recipe itself is broken.

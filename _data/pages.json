@@ -1,0 +1,1019 @@
+{
+  "schema": 1,
+  "pages": [
+    {
+      "source": "index.md",
+      "id": "index",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "pack-map.md",
+      "id": "pack-map",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "mods.md",
+      "id": "mods",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "getting-started.md",
+      "id": "getting-started",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "troubleshooting.md",
+      "id": "troubleshooting",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "sources.md",
+      "id": "sources",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "changes.md",
+      "id": "changes",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/recipe-search.md",
+      "id": "guides-recipe-search",
+      "group": "everyday-play",
+      "kind": "guide",
+      "mods": [
+        "emi",
+        "jei"
+      ],
+      "aliases": [
+        "EMI",
+        "JEI",
+        "recipes",
+        "uses"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/ae2-starter.md",
+      "id": "guides-ae2-starter",
+      "group": "storage",
+      "kind": "guide",
+      "mods": [
+        "ae2"
+      ],
+      "aliases": [
+        "AE2",
+        "Applied Energistics 2",
+        "ME storage"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/mi-starter.md",
+      "id": "guides-mi-starter",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "modern_industrialization"
+      ],
+      "aliases": [
+        "MI",
+        "Modern Industrialization",
+        "bronze"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "systems/storage.md",
+      "id": "storage",
+      "group": "storage",
+      "kind": "hub",
+      "mods": [
+        "ae2",
+        "storagedrawers",
+        "sophisticatedbackpacks"
+      ],
+      "aliases": [
+        "storage systems"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/storage-choice.md",
+      "id": "storage-choice",
+      "group": "storage",
+      "kind": "how-to",
+      "mods": [
+        "ae2",
+        "storagedrawers",
+        "sophisticatedbackpacks"
+      ],
+      "aliases": [
+        "backpack",
+        "drawer",
+        "first storage"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/storage-boundaries.md",
+      "id": "storage-boundaries",
+      "group": "storage",
+      "kind": "reference",
+      "mods": [
+        "ae2",
+        "modern_industrialization",
+        "storagedrawers",
+        "sophisticatedbackpacks"
+      ],
+      "aliases": [
+        "power interface",
+        "void upgrade",
+        "item deletion"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "topic-index.md",
+      "id": "topic-index",
+      "group": "handbook",
+      "kind": "reference",
+      "mods": [],
+      "aliases": [
+        "topics",
+        "all guides"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/control-contexts.md",
+      "id": "control-contexts",
+      "group": "everyday",
+      "kind": "how-to",
+      "mods": [
+        "emi",
+        "jei",
+        "controlling"
+      ],
+      "aliases": [
+        "key conflict",
+        "Show Unbound",
+        "Ctrl+F"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/inventory-safety.md",
+      "id": "inventory-safety",
+      "group": "everyday",
+      "kind": "how-to",
+      "mods": [
+        "inventoryprofilesnext",
+        "mousetweaks",
+        "craftingtweaks",
+        "trashslot"
+      ],
+      "aliases": [
+        "locked slots",
+        "auto refill",
+        "Force Clear Grid",
+        "deletion"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/conflicting-outputs.md",
+      "id": "conflicting-outputs",
+      "group": "everyday",
+      "kind": "how-to",
+      "mods": [
+        "polymorph",
+        "emi",
+        "jei"
+      ],
+      "aliases": [
+        "recipe conflict",
+        "wrong output",
+        "Polymorph"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/enchantment-information.md",
+      "id": "enchantment-information",
+      "group": "everyday",
+      "kind": "how-to",
+      "mods": [
+        "emi_enchanting",
+        "enchdesc",
+        "emi"
+      ],
+      "aliases": [
+        "Enchantment Info",
+        "Mending",
+        "Binding Curse",
+        "enchantment description"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/jade-identification.md",
+      "id": "jade-identification",
+      "group": "everyday",
+      "kind": "how-to",
+      "mods": [
+        "jade"
+      ],
+      "aliases": [
+        "Show Overlay",
+        "Show Details",
+        "Jade"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/character-start.md",
+      "id": "character-start",
+      "group": "character-routes",
+      "kind": "explanation",
+      "mods": [
+        "tensura",
+        "sololeveling",
+        "tensuraleveling"
+      ],
+      "aliases": [
+        "character",
+        "progression"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/solo-start.md",
+      "id": "solo-start",
+      "group": "solocraft",
+      "kind": "guide",
+      "mods": [
+        "sololeveling"
+      ],
+      "aliases": [
+        "SoloCraft",
+        "Open Panel",
+        "quests"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/solo-workbench.md",
+      "id": "solo-workbench",
+      "group": "solocraft",
+      "kind": "guide",
+      "mods": [
+        "sololeveling"
+      ],
+      "aliases": [
+        "Magic Reader",
+        "E Rank Sword"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/character-tools.md",
+      "id": "character-tools",
+      "group": "character-helpers",
+      "kind": "guide",
+      "mods": [
+        "foxablazeaqzl_wiki",
+        "tensura_trepu"
+      ],
+      "aliases": [
+        "Ability Archive",
+        "Evolution Requirements"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/character-integration.md",
+      "id": "character-integration",
+      "group": "integration",
+      "kind": "reference",
+      "mods": [
+        "tensuraleveling",
+        "tldebug",
+        "tladdons"
+      ],
+      "aliases": [
+        "tensuraleveling",
+        "tldebug",
+        "tladdons"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/character-notes-a.md",
+      "id": "character-notes-a",
+      "group": "character-references",
+      "kind": "reference",
+      "mods": [
+        "foxablazeaqzl_wiki",
+        "tensura_trepu",
+        "tensuraleveling"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/character-notes-b.md",
+      "id": "character-notes-b",
+      "group": "character-references",
+      "kind": "guide",
+      "mods": [
+        "tensura_better_subs",
+        "foxablazeaqzl_wiki"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/character-notes-c.md",
+      "id": "character-notes-c",
+      "group": "character-references",
+      "kind": "reference",
+      "mods": [
+        "tensura_neb",
+        "tensura_boss_structure"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/ars-first-spell.md",
+      "id": "ars-first-spell",
+      "group": "magic",
+      "kind": "tutorial",
+      "mods": [
+        "ars_nouveau"
+      ],
+      "aliases": [
+        "ars_nouveau"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/iron-first-scroll.md",
+      "id": "iron-first-scroll",
+      "group": "magic",
+      "kind": "tutorial",
+      "mods": [
+        "irons_spellbooks"
+      ],
+      "aliases": [
+        "irons_spellbooks"
+      ],
+      "spoiler": "safe",
+      "evidence": "unknown",
+      "reviewed": true
+    },
+    {
+      "source": "guides/natures-aura-first-garden.md",
+      "id": "natures-aura-first-garden",
+      "group": "magic",
+      "kind": "tutorial",
+      "mods": [
+        "naturesaura"
+      ],
+      "aliases": [
+        "naturesaura"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/occultism-first-workbench.md",
+      "id": "occultism-first-workbench",
+      "group": "magic",
+      "kind": "tutorial",
+      "mods": [
+        "occultism"
+      ],
+      "aliases": [
+        "occultism"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/ars-workshop.md",
+      "id": "ars-workshop",
+      "group": "magic",
+      "kind": "reference",
+      "mods": [
+        "ars_nouveau"
+      ],
+      "aliases": [
+        "ars_nouveau"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/iron-workstations.md",
+      "id": "iron-workstations",
+      "group": "magic",
+      "kind": "reference",
+      "mods": [
+        "irons_spellbooks"
+      ],
+      "aliases": [
+        "irons_spellbooks"
+      ],
+      "spoiler": "safe",
+      "evidence": "unknown",
+      "reviewed": true
+    },
+    {
+      "source": "reference/natures-aura-workshop.md",
+      "id": "natures-aura-workshop",
+      "group": "magic",
+      "kind": "reference",
+      "mods": [
+        "naturesaura"
+      ],
+      "aliases": [
+        "naturesaura"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/occultism-procedures.md",
+      "id": "occultism-procedures",
+      "group": "magic",
+      "kind": "how-to",
+      "mods": [
+        "occultism"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "reference/occultism-workbench.md",
+      "id": "occultism-workbench",
+      "group": "magic",
+      "kind": "reference",
+      "mods": [
+        "occultism"
+      ],
+      "aliases": [
+        "occultism"
+      ],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/mi-steel-workshop.md",
+      "id": "mi-steel-workshop",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "modern_industrialization"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/mi-lv-production.md",
+      "id": "mi-lv-production",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "modern_industrialization"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/unification-workbench.md",
+      "id": "unification-workbench",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "almostunified"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/exploration-preparation.md",
+      "id": "exploration-preparation",
+      "group": "exploration",
+      "kind": "guide",
+      "mods": [
+        "twilightforest",
+        "dnt"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/dimension-travel.md",
+      "id": "dimension-travel",
+      "group": "exploration",
+      "kind": "guide",
+      "mods": [
+        "twilightforest"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/exploration-reference-a.md",
+      "id": "exploration-reference-a",
+      "group": "exploration",
+      "kind": "reference",
+      "mods": [
+        "twilightforest"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/exploration-reference-b.md",
+      "id": "exploration-reference-b",
+      "group": "exploration",
+      "kind": "reference",
+      "mods": [
+        "twilightforest"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/overworld-exploration.md",
+      "id": "overworld-exploration",
+      "group": "exploration",
+      "kind": "reference",
+      "mods": [
+        "dnt"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "guides/homestead-rice-and-cutting.md",
+      "id": "homestead-rice-and-cutting",
+      "group": "homestead",
+      "kind": "guide",
+      "mods": [
+        "farmersdelight"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/homestead-cooking-pot.md",
+      "id": "homestead-cooking-pot",
+      "group": "homestead",
+      "kind": "guide",
+      "mods": [
+        "farmersdelight"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/homestead-chipped-workstations.md",
+      "id": "homestead-chipped-workstations",
+      "group": "homestead",
+      "kind": "guide",
+      "mods": [
+        "chipped"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/homestead-comforts-rest.md",
+      "id": "homestead-comforts-rest",
+      "group": "homestead",
+      "kind": "guide",
+      "mods": [
+        "comforts"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/homestead-supplementaries-devices.md",
+      "id": "homestead-supplementaries-devices",
+      "group": "homestead",
+      "kind": "guide",
+      "mods": [
+        "supplementaries"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/mi-first-steam-batch.md",
+      "id": "mi-first-steam-batch",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "modern_industrialization"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/mi-pipe-workcell.md",
+      "id": "mi-pipe-workcell",
+      "group": "technology",
+      "kind": "guide",
+      "mods": [
+        "modern_industrialization"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/equipment-slots.md",
+      "id": "equipment-slots",
+      "group": "equipment",
+      "kind": "guide",
+      "mods": [
+        "curios",
+        "artifacts",
+        "relics"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/personal-loot.md",
+      "id": "personal-loot",
+      "group": "equipment",
+      "kind": "guide",
+      "mods": [
+        "lootr"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/relic-research.md",
+      "id": "relic-research",
+      "group": "equipment",
+      "kind": "guide",
+      "mods": [
+        "relics"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/equipment-workshop.md",
+      "id": "equipment-workshop",
+      "group": "equipment",
+      "kind": "guide",
+      "mods": [
+        "artifacts",
+        "reliquified_twilight_forest"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "source": "guides/encounter-readiness.md",
+      "id": "encounter-readiness",
+      "group": "exploration",
+      "kind": "guide",
+      "mods": [
+        "bosses_of_mass_destruction"
+      ],
+      "aliases": [],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/encounter-reference-c.md",
+      "id": "encounter-reference-c",
+      "group": "exploration",
+      "kind": "reference",
+      "mods": [
+        "bosses_of_mass_destruction"
+      ],
+      "aliases": [],
+      "spoiler": "full",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "craft-first-oak-drawer",
+      "source": "guides/craft-first-oak-drawer.md",
+      "group": "storage",
+      "mods": [
+        "storagedrawers"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "id": "first-backpack-access",
+      "source": "guides/first-backpack-access.md",
+      "group": "storage",
+      "mods": [
+        "sophisticatedbackpacks"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "documented-static",
+      "reviewed": true
+    },
+    {
+      "id": "guides-shared-base-preflight",
+      "source": "guides/shared-base-preflight.md",
+      "group": "everyday-play",
+      "mods": [
+        "ftbteams",
+        "ftbchunks"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "guides-connection-preflight",
+      "source": "guides/connection-preflight.md",
+      "group": "everyday-play",
+      "mods": [
+        "e4mc"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "guides-backup-recovery-safety",
+      "source": "guides/backup-recovery-safety.md",
+      "group": "everyday-play",
+      "mods": [
+        "simplebackups"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "guides-navigation-controls",
+      "source": "guides/navigation-controls.md",
+      "group": "everyday-play",
+      "mods": [
+        "xaerominimap",
+        "xaeroworldmap",
+        "ftbchunks"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "guides-comfort-settings-choice",
+      "source": "guides/comfort-settings-choice.md",
+      "group": "support",
+      "mods": [
+        "steady_sight",
+        "iris",
+        "framegen"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "guides-support-escalation",
+      "source": "guides/support-escalation.md",
+      "group": "support",
+      "mods": [
+        "spark"
+      ],
+      "spoiler": "safe",
+      "kind": "guide",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "id": "reference-graphics-and-books",
+      "source": "reference/graphics-and-books.md",
+      "group": "support",
+      "mods": [
+        "sodium",
+        "iris",
+        "distanthorizons",
+        "framegen",
+        "steady_sight",
+        "patchouli",
+        "modonomicon",
+        "guideme"
+      ],
+      "spoiler": "safe",
+      "kind": "reference",
+      "aliases": [],
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/mods/ae2.md",
+      "id": "mod-ae2",
+      "group": "storage",
+      "kind": "reference",
+      "mods": [
+        "ae2"
+      ],
+      "aliases": [
+        "AE2",
+        "Applied Energistics 2",
+        "ME storage"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/mods/storagedrawers.md",
+      "id": "mod-storagedrawers",
+      "group": "storage",
+      "kind": "reference",
+      "mods": [
+        "storagedrawers"
+      ],
+      "aliases": [
+        "Storage Drawers",
+        "oak drawer"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    },
+    {
+      "source": "reference/mods/sophisticatedbackpacks.md",
+      "id": "mod-sophisticatedbackpacks",
+      "group": "storage",
+      "kind": "reference",
+      "mods": [
+        "sophisticatedbackpacks"
+      ],
+      "aliases": [
+        "Sophisticated Backpacks",
+        "Backpack"
+      ],
+      "spoiler": "safe",
+      "evidence": "not-runtime-tested",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+<!-- wiki.py managed group export schema=1 -->
+# Safe group bundle
+
+--- BEGIN PAGE: Grow rice and prepare ingredients ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Grow rice and prepare ingredients
+
+## Baseline
+Candidate r2 is unapplied. This is a bounded Farmer's Delight 1.3.4 procedure, not a complete farming catalogue or proof of this pack's effective gameplay.
+
+## Evidence status
+Exact shipped recipes and English descriptions support the materials, cutting outputs and shallow-water planting below.[1][2][3][4][5] No world generation, effective tags, crop growth timings, controls or configuration were tested. References to a knife tag or item ability are recipe predicates, not proof that another mod's knife qualifies.
+
+## Prerequisites
+- A crafting interface, 1 flint, 3 sticks and 4 items accepted as `minecraft:planks`: 1 stick is for the knife; 2 are for the board.[2][3]
+- One Farmer's Delight Rice grain to plant; for a cutting demonstration, one Rice Panicle or one Cabbage. These are distinct items, not interchangeable inputs.[4][5]
+- A shallow-water planting spot. Keep at least one grain out of the cooking batch so that your next planting is not consumed; this reserve is a planning recommendation, not a growth-rate claim.
+
+## Steps
+1. Craft a Flint Knife with flint directly above a stick (`m / s` in one column). The shipped result is one knife.[3]
+2. Craft a Cutting Board with two rows of `stick, plank, plank` (`/## / /##`). The shipped result is one board; place it in your food-preparation area.[2]
+3. Start a rice plot by planting a grain in shallow water. The shipped advancement says “Plant grains of Rice in a shallow water puddle”; invalid placement reports “This seed must be planted in shallow water.” Check that placement succeeds before allocating the rest of your grains.[1] This packet does not prescribe unverified water depth, substrate, growth duration or harvest controls.
+4. When you have a Rice Panicle, put **that item** on the board and use the board with a qualifying knife/tool in hand. The shipped description says to use the board with a tool to break down an item. For one panicle the cutting recipe specifies **1 Rice and 1 Straw**; collect both before repeating.[1][4]
+5. For a second useful preparation task, place one Cabbage on the board and cut with a qualifying knife/tool. Expect **2 Cabbage Leaves**, not two whole cabbages.[5] The recipe accepts `knife_dig` item ability or `c:tools/knife`; it does not name a sword.[4][5]
+6. Put planting grains aside, then take cooking stock to [cook a small batch](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/). Start there with rice; the soup route additionally needs the specific ingredient tags displayed in the recipe. This handoff does not assume a leaf's membership in an unresolved tag.
+
+## Expected result
+You have a placed rice crop if the documented planting predicate is satisfied, a board/knife preparation station, and exact panicle or cabbage cutting outputs.[1][2][3][4][5] Growth speed and harvesting yield remain outside this static claim.
+
+## Common failures
+- **“Maybe with a different tool…”**: compare the current cutting recipe with your tool. Try the Farmer's Delight knife rather than assuming a similarly named external knife qualifies; effective ability/tag membership is unverified.[1][3][4]
+- **“This doesn't seem cuttable…”**: check the item identity. Rice Panicle is the demonstrated cutting input; Rice grain is the cooking/planting handoff. Remove the wrong input using the game's displayed interaction, whose binding is not traced here.[1][4]
+- **Planting refused**: relocate the grain to a shallow-water spot, matching the shipped error. Do not infer that a dry ordinary farmland row can substitute.[1]
+- **No wild plants nearby**: the shipped descriptions mention beach coasts for wild cabbage and ponds in wet lands such as swamps/jungles for wild rice. Those are documented search hints, not a guarantee for an existing pack world.[1]
+- **Conditional tip — separate seed and meal stocks**: if you only have a small supply, reserve a grain before cutting/cooking. Benefit: you retain a next-planting input; trade-off: one less grain in your immediate meal batch. The planting and cooking input identities are shipped; the reserve quantity is an author recommendation.[1][4]
+
+## Sources
+[1] `FarmersDelight-1.21.1-1.3.4.jar!assets/farmersdelight/lang/en_us.json` — planting, board usage/errors, wild-crop hints; exact keys `advancements.farmersdelight.plant_rice.description`, `advancements.farmersdelight.use_cutting_board.description`, `block.farmersdelight.rice.invalid_placement`, `block.farmersdelight.cutting_board.invalid_tool`, `block.farmersdelight.cutting_board.invalid_item`, `jei.farmersdelight.info.wild_rice`, `jei.farmersdelight.info.wild_cabbages`.
+[2] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cutting_board.json`.
+[3] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/flint_knife.json`.
+[4] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cutting/rice_panicle.json`.
+[5] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cutting/cabbage.json`.
+--- END PAGE: Grow rice and prepare ingredients ---
+
+--- BEGIN PAGE: Cook and serve a small meal batch ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Cook and serve a small meal batch
+
+## Baseline
+Candidate r2 is unapplied. Materials and recipe payloads are from Farmer's Delight 1.3.4. This page delivers a first cooked-rice batch and a conditional vegetable-soup extension, not the entire meal catalogue.
+
+## Evidence status
+Shipped recipes establish pot crafting, ingredient predicates and outputs; shipped UI text establishes “Needs heat from below”, “Heated” and “Served on: %s”.[1][2][3][4] Interface slot workflow supplements these with the author's latest/default-config wiki, **not release-pinned to 1.3.4**.[7] Neither local recipe shown explicitly names a serving container: use the actual result-slot/container display instead of pretending the JSON proves a bowl. Effective recipe loading, tags, container defaults and heat-state logic were not executed.
+
+## Prerequisites
+- One wooden shovel, two bricks, five inputs accepted as `c:ingots/iron`, and one accepted `c:buckets/water` item.[2]
+- One `c:crops/rice` input for the first recipe. [Prepare rice from a panicle](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/), but check that the current recipe accepts it.[3]
+- A suitable heat location: the shipped heat-source tag includes magma block, lava cauldron and the Farmer's Delight stove; its nested tray tag lists lava, campfires and fire.[5][6] This is membership evidence, not a promise that every state of those blocks heats a pot. Prefer an already-established safe cooking area; do not handle exposed lava for this tutorial.
+- Serving containers indicated by the result slot. Bowls are a common example in supplemental author documentation, not a local explicit container field for these two recipes.[7]
+
+## Steps
+1. Craft the pot with rows `brick, wooden shovel, brick`; `iron, water bucket, iron`; `iron, iron, iron` (`bSb / iWi / iii`). Check that the displayed output is **1 Cooking Pot** before taking it.[2] The recipe does not establish the returned bucket behavior; check the crafting interface rather than budgeting a guaranteed remainder.
+2. Place the pot above a suitable heat source and open it using your current game interaction. Check the heat indicator: the shipped labels distinguish **Heated** from **Needs heat from below**.[1] Supplemental documentation also describes bubbling above a suitable heat source.[7]
+3. Put **one** accepted rice input in an ingredient slot; leave unrelated ingredients out for this first batch. The shipped cooked-rice recipe has one ingredient, result **1 Cooked Rice**, `cookingtime: 100` and experience `0.35`.[3] These are recipe values, not measured wall-clock timing or guaranteed experience receipt.
+4. Wait for the meal/result indication, then read **Served on**. Following supplemental documented workflow, put the indicated container in its corresponding slot or interact with the pot while holding that container to take a serving.[1][7] Check that the serving enters your inventory and that the stored-meal indication changes. If the live GUI differs, do not move a whole ingredient stock into it.
+5. If you want a vegetable-soup extension, check the current recipe for **one carrot-tag input, one potato-tag input, one beetroot-tag input and one leafy-green-tag input**: `c:crops/carrot`, `c:crops/potato`, `c:crops/beetroot`, `c:foods/leafy_green`. Its shipped output is **1 Vegetable Soup** and experience value `1.0`; this JSON specifies neither cooking duration nor container.[4] The local leafy-green tag points to `#c:foods/cabbage`; its effective nested membership is not established here.[8] Use [the accepted recipe-search guide](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to identify currently accepted items instead of assuming every leaf works.
+6. If you will carry that meal away from home, prepare [a Comforts sleeping bag](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/) for documented portable rest without setting a new spawn; the meal is travel stock, not a sleep prerequisite or interaction requirement.
+7. Once a single serving works, repeat the same verified ingredient combination in a small batch. Keep planting stock separate and return to [rice preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-rice-and-cutting/) when grain supply is low. Store ingredients through [the accepted storage-choice guide](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) if useful; this link is organization guidance, not proof of pot automation compatibility.
+
+## Expected result
+The exact shipped first recipe produces Cooked Rice; the soup extension produces Vegetable Soup when its four predicates are met.[3][4] Serving is a documented workflow plus a live-interface checkpoint, not a claimed runtime test.[1][7]
+
+## Common failures
+- **Unheated**: check heat below the pot and the indicator, rather than blaming the rice. A listed tag member alone does not establish active state or any required placement gap.[1][5][6]
+- **Ingredients sit without progress**: remove unrelated inputs; compare with the displayed current recipe and accepted tags. Do not substitute a Rice Panicle for a `c:crops/rice` input merely because both names contain “rice”.[3]
+- **Meal exists but no takeable serving**: check the indicated serving container and corresponding slot/held item. Do not add the container as a seventh ingredient; documentation distinguishes six ingredient slots from the container slot.[1][7]
+- **Soup tag ambiguity**: this packet deliberately does not certify cabbage-leaf eligibility. Follow the current recipe's accepted-input list; tag resolution is a remaining gap.[4][8]
+- **Conditional tip — prove one recipe before scaling**: if tags or controls are unfamiliar, use one ingredient set and one serving container first. Benefit: distinguish heat, recipe and serving failures without committing your reserve. Trade-off: smaller immediate batch. This is an author technique based on the three separate documented checkpoints, not a throughput guarantee.[1][3][7]
+
+## Sources
+[1] `FarmersDelight-1.21.1-1.3.4.jar!assets/farmersdelight/lang/en_us.json` — keys `container.farmersdelight.cooking_pot.not_heated`, `.heated`, `.served_on` and `tooltip.farmersdelight.cooking_pot.many_servings`.
+[2] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cooking_pot.json`.
+[3] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cooking/cooked_rice.json`.
+[4] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/recipe/cooking/vegetable_soup.json`.
+[5] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/tags/block/heat_sources.json`.
+[6] `FarmersDelight-1.21.1-1.3.4.jar!data/farmersdelight/tags/block/tray_heat_sources.json`.
+[7] [Author's Getting Started wiki](https://github.com/vectorwing/FarmersDelight/wiki/Getting-Started) — supplemental latest/default configuration documentation, not pinned to 1.3.4; ingredient/container workflow.
+[8] `FarmersDelight-1.21.1-1.3.4.jar!data/c/tags/item/foods/leafy_green.json`.
+--- END PAGE: Cook and serve a small meal batch ---
+
+--- BEGIN PAGE: Choose a Chipped workshop for your homestead ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Choose a Chipped workshop for your homestead
+
+## Baseline
+Candidate r2 is unapplied. This is a Chipped 4.0.2 carpenter/mason starter workshop, not a full decorative catalogue.
+
+## Evidence status
+Shipped recipes establish workstation crafting and distinct tagged material families.[1][2][3][4] The author's current project description supplies the vanilla-block-to-Chipped-variant direction; it is **not release-pinned to 4.0.2**.[8] Shipped category tags contain both base items and variants, but their presence alone does **not** prove that the interface returns any variant to vanilla or that a held tool performs conversions.[5][6] No conversion code, controls, output ratios, active recipes or effective tag resolution were traced.
+
+## Prerequisites
+Choose one workshop instead of crafting every table:
+- **Carpenters Table**: 1 iron axe, 1 iron ingot, 1 crafting table, 5 plank-tag inputs.[1]
+- **Mason Table**: 3 bricks, 2 iron ingots, 1 crafting table, 3 log-tag inputs.[2]
+- One spare oak plank for a carpenter sample or one spare stone for a mason sample, not your entire building stock.[3][4][5][6]
+
+## Steps
+1. Pick a task: kitchen woodwork uses the carpenter category; a stone surface uses the mason category. The carpenter recipe lists oak planks, logs, doors, barrels, bookshelves, ladders and torches among its tags. The mason recipe lists stone, cobblestone, andesite, bricks, terracotta and other mineral families.[3][4] These are recipe categories, not a claim that every variant in the catalogue is usable in this pack.
+2. Craft the chosen table. Carpenter rows are `iron axe, empty, iron ingot`; `plank, crafting table, plank`; `plank, plank, plank` (`A I / P#P / PPP`). Mason rows are `brick, brick, brick`; `iron ingot, crafting table, iron ingot`; `log, log, log` (`BBB / I#I / LLL`). Each recipe yields one workstation.[1][2]
+3. Place it beside your homestead workspace and open its interface using the game interaction shown for you. For the carpenter, supply one oak plank; for the mason, supply one stone. Shipped item tags explicitly list `oak_planks` and `stone` alongside their Chipped families.[5][6] Those unqualified source tokens are preserved here; effective runtime names/tag merging are not established.
+4. Following the author's documented vanilla-to-variant workflow, inspect the available variant choices. Select one small sample and inspect the resulting item/count **before** converting building stock.[8] A visible appropriate output is the checkpoint; this packet does not prescribe a keyboard shortcut or guarantee a conversion ratio. If no choice appears, follow the failure checks below.
+5. Place the sample where you can compare it with the intended kitchen or rest-area surface. Decide whether the texture works before spending more material. Keep the unconverted stock in your usual [storage organization](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/); no special Chipped/storage compatibility is claimed.
+6. Treat the **Saw as a separate craft**, not a required held conversion tool: its shipped shapeless recipe is **1 Carpenters Table plus 1 iron ingot → 1 Saw**.[7] This ingredient list budgets the table as a crafting input; do not casually sacrifice your only workshop or assume a returned table. Tool usage and conversion-by-saw are unresolved, so the ordinary table path above does not ask you to craft it.
+7. When the cooking area is ready, continue with [the Cooking Pot workflow](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/). Decorative conversion does not establish heat suitability: retain the cooking page's explicit heat check instead of assuming a Chipped block heats the pot because its base material did.
+
+## Expected result
+You have one purpose-chosen workstation and a reviewed decorative sample if the documented interface workflow is available.[1][2][8] This proves neither universal return conversion nor identical functional properties of decorative replacements.
+
+## Common failures
+- **Wrong table or family**: compare the category recipe first. Carpenter planks/logs and mason stone families are different; selecting the table only by visual appearance can miss the correct category.[3][4]
+- **No variants appear**: confirm item identity and current recipe availability through [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/), then try the small base sample. Do not assume an external mod's wood/stone is a member of the shipped Chipped category.[3][4][5][6]
+- **Want to undo a conversion**: no return-to-vanilla direction is certified here. Inspect the interface with one spare sample; retain base stock until you have independent evidence of the return path. Tag co-membership is not a witnessed conversion algorithm.[5][6]
+- **Saw recipe surprises you**: the table is itself an ingredient, not merely nearby equipment. Rebuild from the carpenter pattern if you intentionally used it; table remainder behavior was not traced.[1][7]
+- **Conditional tip — sample before a wall-sized batch**: if choosing among unfamiliar textures, convert only one spare base block first. Benefit: compare placement without tying up the main building supply; trade-off: an extra preview step and no guaranteed reversal. The vanilla-to-variant direction is documented, whereas reversal and output ratio remain unproved.[8]
+
+## Sources
+[1] `chipped-neoforge-1.21.1-4.0.2.jar!data/minecraft/recipe/workbench/carpenters_table.json`.
+[2] `chipped-neoforge-1.21.1-4.0.2.jar!data/minecraft/recipe/workbench/mason_table.json`.
+[3] `chipped-neoforge-1.21.1-4.0.2.jar!data/chipped/recipe/carpenters_table.json` — workbench category, not its crafting recipe.
+[4] `chipped-neoforge-1.21.1-4.0.2.jar!data/chipped/recipe/mason_table.json` — workbench category.
+[5] `chipped-neoforge-1.21.1-4.0.2.jar!data/chipped/tags/item/oak_planks.json`.
+[6] `chipped-neoforge-1.21.1-4.0.2.jar!data/chipped/tags/item/stone.json`.
+[7] `chipped-neoforge-1.21.1-4.0.2.jar!data/chipped/recipe/saw.json`.
+[8] [Author's Chipped project page](https://modrinth.com/mod/chipped) — supplemental current description, not pinned to 4.0.2; vanilla-to-variant direction only.
+--- END PAGE: Choose a Chipped workshop for your homestead ---
+
+--- BEGIN PAGE: Rest with Comforts without replacing home respawn ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-comforts-rest/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Rest with Comforts without replacing home respawn
+
+## Baseline
+Candidate r2 is unapplied. This page uses Comforts **9.0.5+1.21.1** recipes, shipped descriptions and placement errors. It does not change your personal spawn or instruct you to use a vanilla bed to reset it.
+
+## Evidence status
+The exact-release metadata says: “Adds sleeping bags and hammocks for, respectively, portability and turning day to night, without setting new spawns.”[1] This is shipped documentation, not a runtime respawn test. The current author README describes sleeping bags as bed-like and hammocks as inverse beds; it is supplemental, not a 9.0.5 pin.[6] Use this distinction: **sleeping bag = portable bed-like night rest; hammock = documented day-to-night rest; neither sets a new personal spawn**.[1][6] Sleeping-time rules are configurable: the exact release exposes `sleepingBagUse` and `hammockUse` descriptions and multiple hammock time-denial messages.[2] No active config or default enum value was read, so “only daytime in every pack” and guaranteed night skipping are not certified facts here.
+
+## Prerequisites
+- For one white Sleeping Bag: **3 white wool**, arranged vertically.[3]
+- For one white Hammock Cloth: **1 white wool, 2 wooden-rod-tag inputs, 2 string-tag inputs**.[4]
+- For the pair of Rope and Nail used to hang it: **4 string-tag inputs and 1 iron-ingot-tag input → 2 Rope and Nail**.[5]
+- A sheltered rest spot and two suitable facing supports for the hammock. Geometry below comes from the author's unversioned wiki, not local placement code.[7] No personal coordinates, world data or existing spawn are inspected.
+
+## Steps
+1. Decide the purpose before spending materials. Take a sleeping bag for portable bed-like rest; choose a hammock only when deliberately moving the documented **day toward night**, which may expose you to nighttime hazards.[1][6] Neither item is a method to set or relocate home respawn.
+2. Craft a white sleeping bag with rows `empty, white wool, empty` repeated three times (` #  /  #  /  # `). The shipped output is one bag and its recipe has the `comforts:sleeping_bag_enabled` condition.[3] This selected-release recipe is vertical; do not replace it with an unversioned “straight line” interpretation.
+3. At a suitable rest time/location, follow the bag tooltip if it is shown: **Automatically attempts to sleep; to place, use while crouching**.[2] This is the shipped auto-use tooltip, not proof that auto-use is currently enabled. If an ordinary interaction does not match that behavior, use the current game's displayed item interaction rather than changing configs. Check whether rest begins or a denial message appears.
+4. For a hammock, craft its cloth with rows `empty, wooden rod, empty`; `string, white wool, string`; `empty, wooden rod, empty` (` X  / S#S /  X `).[4] **Only two string inputs are in the shipped 9.0.5 recipe.** Use the selected 9.0.5 recipe for quantities rather than unversioned recipe advice.[4]
+5. Craft the hanging pair with rows `string, string, empty`; `string, iron ingot, empty`; `empty, empty, string` (`AA  / AX  /   A`). This yields the needed two Rope and Nail, subject to `comforts:hammock_enabled`.[5]
+6. Following supplemental author instructions, use two supports described as “exactly four spaces apart”, place the Rope and Nail facing each other, then use the cloth on either attachment.[7] Do not infer a precise coordinate span from that wording: inspect placement feedback before building a permanent structure. The selected release specifically reports a missing pair, missing other-end rope or insufficient space.[2]
+7. Interact to rest at the supported time. The release includes both “You can only sleep during the day” and an alternate “during the day, at night, or during thunderstorms” message.[2] Which branch applies depends on unresolved effective settings; obey the actual feedback. Expect the documented hammock outcome to be **day to night**, not night to morning.[1] Exact wake tick/time is not established.
+8. Return to [your cooking batch](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/) after resting, without touching a vanilla bed or a spawn command. Do not die as a test of respawn preservation; this packet's evidence is documentary and no in-game verification was performed.
+
+## Expected result
+You have a recipe-backed portable bag or suspended hammock; successful use rests according to effective rules while the selected-release description says it does not set a new spawn.[1][2][3][4][5] Sleep, time advancement, spawn preservation, phantom behavior and respawn destination are distinct questions. This page does not assert an executed answer for any of them.
+
+## Common failures
+- **Recipe unavailable**: the shipped recipes have explicit enablement conditions; use [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to check availability. Do not edit settings to force a result.[3][4][5]
+- **No rope / missing other-end rope / insufficient space**: install the facing pair and clear the proposed hammock span, following the displayed error. Exact supported blocks/spacing logic remain untraced.[2][7]
+- **Too far away or occupied**: approach the item or wait until it is free. Those are exact shipped failure messages; do not treat them as a respawn-setting prompt.[2]
+- **“You don't feel sleepy yet”**: another rest attempt is blocked by the sleepiness mechanic; wait rather than inventing a fixed cooldown. **“This is decorative, you cannot sleep here”** means decoration is not a functioning rest place.[2]
+- **Bag breaks**: the selected release documents a configurable break chance and reports breakage; no numeric default or immunity is established. Bring a spare only if the material cost suits you.[2]
+- **Conditional tip — choose the time direction intentionally**: if you want to keep working through daylight, avoid the hammock's documented day-to-night transition. Benefit: avoid deliberately entering night; trade-off: forego that rest option. For travel, a bag's no-new-spawn documentation makes it preferable to resetting home with a bed, but effective behavior is untested.[1][6]
+
+## Sources
+[1] `comforts-neoforge-9.0.5+1.21.1.jar!META-INF/neoforge.mods.toml` — exact version and no-new-spawn/day-to-night description.
+[2] `comforts-neoforge-9.0.5+1.21.1.jar!assets/comforts/lang/en_us.json` — `item.comforts.sleeping_bag.auto_use.tooltip.0`, `.1`; `block.comforts.hammock.no_sleep`, `.no_sleep.2`, `.no_rope`, `.missing_rope`, `.no_space`; `capability.comforts.not_sleepy`; `gui.comforts.config.hammockUse.description`, `sleepingBagUse.description`, `sleepingBagBreakChance.description`; occupied/too-far/decorative/break messages.
+[3] `comforts-neoforge-9.0.5+1.21.1.jar!data/comforts/recipe/sleeping_bag_white.json`.
+[4] `comforts-neoforge-9.0.5+1.21.1.jar!data/comforts/recipe/hammock_white.json`.
+[5] `comforts-neoforge-9.0.5+1.21.1.jar!data/comforts/recipe/rope_and_nail.json`.
+[6] [Author's Comforts README](https://github.com/illusivesoulworks/comforts) — unversioned supplemental portability/bed distinction; not a selected-release recipe source.
+[7] [Author's Hammocks wiki](https://github.com/illusivesoulworks/comforts/wiki/Hammocks) — unversioned supplemental construction geometry; not a selected-release recipe or verified leisure-configuration source.
+--- END PAGE: Rest with Comforts without replacing home respawn ---
+
+--- BEGIN PAGE: Add a faucet and bellows to the workshop ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-supplementaries-devices/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Add a faucet and bellows to the workshop
+
+## Baseline
+Candidate r2 is unapplied. This Supplementaries 3.6.7 slice selects **two useful devices**: a faucet item-output task and adjacent-furnace bellows. It is not a catalogue or an automation compatibility promise.
+
+## Evidence status
+Exact-release recipes establish materials and explicit feature-flag conditions.[1][2] Local English text names the blocks and their sound subtitles but does not describe transfer or acceleration algorithms.[3] Functional procedures therefore use the author's Redstone Blocks wiki, edited October 11, 2026, **not release-pinned to 3.6.7**.[4] Treat these as documented mechanics to check on a small setup, not a tested result for this candidate. No settings, world, logs or game classes were inspected.
+
+## Prerequisites
+- Faucet: **1 wooden-rod-tag input plus 4 iron-ingot-tag inputs → 1 Faucet**.[1]
+- Bellows: **6 wooden-slab-tag inputs plus 2 leather → 1 Bellows**.[2]
+- A spare inventory with one expendable item, a clear collection area beneath the faucet nozzle, and an already usable furnace for the bellows check. These are author-recommended low-risk test fixtures, not certified cross-mod integration.
+- A controllable redstone source for bellows; its recipe and controls are not authored here. Leave the faucet unpowered for its initial handle test so that documented redstone inversion does not obscure the state.[4]
+
+## Steps
+### Output a small item sample with a faucet
+1. Craft the faucet with rows `empty, wooden rod, empty`; `iron, iron, iron`; `empty, empty, iron` (` 1  / 222 /   2`). The shipped output is one faucet and its NeoForge condition requires the `faucet` flag.[1]
+2. Set it above the spare inventory as described by the author's **item** mechanic, with its nozzle output location clear. Do not confuse that with the separate **fluid** arrangement, whose source sits behind the faucet. The wiki says items come from the inventory below and spill directly below the nozzle.[4]
+3. Put one expendable item in the source, then interact with the handle to activate. The author documents a one-second output interval; the checkpoint is the source losing the sample and the item appearing under the nozzle.[4] This interval is supplemental documentation, not a selected-release measurement. Collect the sample; leave valuable storage disconnected until this direction is confirmed.
+4. With the faucet still unpowered, interact with the handle again to request stop. Put the collected expendable item back into the source; an empty source cannot prove shutdown. Keep the setup loaded and observe that the replenished sample remains in the source and no item appears under the nozzle for at least three documented one-second output intervals (at least three seconds). This is an author-recommended checkpoint based on the unversioned wiki, not a release-pinned timing guarantee or a test performed here. If the sample leaves, or timing/loading is uncertain, the off state is not established: keep valuable storage disconnected and recover the expendable sample. If you later add redstone, note that power **inverts** active/non-active status rather than being documented here as a simple always-on switch.[4]
+
+### Apply bellows to an adjacent furnace
+5. Craft bellows with rows `slab, slab, slab`; `leather, empty, leather`; `slab, slab, slab` (`000 / 1 1 / 000`). The shipped output is one bellows and its NeoForge condition requires the `bellows` flag.[2]
+6. Place the bellows directly adjacent to the furnace with the air-facing front toward the intended target. The author documents facing any direction, blowing air when powered, and speeding furnace-like blocks right next to it.[4] No effect on the Farmer's Delight Cooking Pot is claimed; return to [the pot heat check](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-cooking-pot/) for cooking rather than borrowing a furnace claim.
+7. Use a small normal smelting batch and a controllable redstone supply. Compare the furnace progress while powered and unpowered with otherwise equivalent inputs/fuel. Expect documented acceleration if that furnace is supported; no multiplier or fuel saving is promised.[4] This is a player checkpoint, not a test this authoring session ran.
+8. Remove power after checking. Keep entities away from the front: the same wiki documents pushing entities up to five blocks away and sustaining fire in front within two blocks.[4] Do not point it at exposed fire or an occupied walkway for the homestead task.
+
+## Expected result
+The first task yields an observed item-output direction and a bounded manual-stop checkpoint only if the replenished sample remains through the observation window and the documented faucet mechanic applies. This does not prove permanent shutdown; if the checkpoint fails or cannot be completed, the off state is not established. The second yields a recipe-backed bellows and a small supported-furnace comparison.[1][2][4] Neither establishes universal inventory/fluid compatibility or integration with decorative replacement blocks. Use [storage choices](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) for organization and [Chipped sample work](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/homestead-chipped-workstations/) for appearance, not as evidence of device compatibility.
+
+## Common failures
+- **Recipe absent**: both recipes have feature-flag conditions. Check [current recipe availability](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/); do not edit configuration or assume a shipped file necessarily loads.[1][2]
+- **Faucet on/off seems reversed**: disconnect power for the initial handle check. The documented power behavior is inversion, so power and handle state need to be considered together.[4]
+- **Item fails to appear**: recheck the inventory-below/item-output-under-nozzle arrangement and your single sample. A fluid source behind is a different documented task; no universal inventory support is promised.[4]
+- **Bellows sounds but furnace does not accelerate**: recheck direct adjacency and air-facing orientation, then compare with a basic furnace before blaming fuel or spending more materials. “Furnace-like” is documentation, not a list of all compatible mod machines.[4]
+- **Conditional tip — isolate power during commissioning**: if a shared redstone line is hard to reason about, use a separate controllable supply for the first bellows test and no faucet power. Benefit: distinguish placement/compatibility from faucet inversion; trade-off: temporary extra setup. The inversion and powered blowing are documented; this isolation is an author recommendation.[4]
+- **Optional fluid extension, not delivered as a full task**: the wiki describes fluid sources behind, destination containers below, and 250 mB increments.[4] Accepted fluids, exact destination capacity, voiding behavior and pack-specific integrations need more evidence. Do not route valuable fluids based on this item-only starter.
+
+## Sources
+[1] `supplementaries-neoforge-1.21.1-3.6.7.jar!data/supplementaries/recipe/faucet.json`.
+[2] `supplementaries-neoforge-1.21.1-3.6.7.jar!data/supplementaries/recipe/bellows.json`.
+[3] `supplementaries-neoforge-1.21.1-3.6.7.jar!assets/supplementaries/lang/en_us.json` — `block.supplementaries.faucet`, `block.supplementaries.bellows`, `subtitles.supplementaries.faucet.turn`, `subtitles.supplementaries.bellows.blow`.
+[4] [Author's Redstone Blocks wiki](https://github.com/MehVahdJukaar/Supplementaries/wiki/Redstone-Blocks) — supplemental wiki edited October 11, 2026, not pinned to 3.6.7; Faucet and Bellows sections.
+--- END PAGE: Add a faucet and bellows to the workshop ---

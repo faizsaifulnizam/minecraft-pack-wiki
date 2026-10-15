@@ -1,0 +1,245 @@
+<!-- wiki.py managed group export schema=1 -->
+# FULL SPOILERS group bundle
+
+--- BEGIN PAGE: Find recipes and item uses ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Find recipes and item uses
+
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+
+## Baseline
+EMI 1.1.24 and JEI 19.32.0.359 in `dev-0.5-20261015-r2`.
+
+## Evidence status
+**Saved configuration.** These bindings/layout values were read from global files. Recipe categories, contextual key handling and transfers have not been exercised as part of this documentation check.
+
+## Prerequisites
+An open inventory/recipe-viewer context with EMI enabled. If the sidebar is hidden, check its saved visibility binding rather than reinstalling mods.
+
+## Steps
+1. In an inventory screen, look for the item sidebar on the right. Press Ctrl+F to focus EMI search in its supported context.
+2. Type an item name. The saved search includes tooltips by default; do not assume tags or mod names are included without a prefix or setting change.
+3. Hover an item and try R for recipes, or U for uses. EMI also saves left/right-click recipe/use actions in the appropriate item context.
+4. Press A on an item in the applicable context to add it to favourites. The saved favourites panel is on the left.
+5. Use Backspace to go back in EMI's supported context.
+
+## Expected result
+A matching item list and a recipe/uses view for a supported category. This is the intended UI flow from saved bindings, not a promise that every custom recipe is registered or transferable.
+
+## Common failures
+- No sidebar: Ctrl+O is the saved EMI visibility toggle; JEI has an overlapping binding, so test the actual screen response.
+- U opens a waypoint-related screen: the same key has contextual uses. Check Controls and the screen you are using.
+- An ingredient does not transfer: first check the category, inventory, container and missing ingredients. Do not treat transfer failure as proof the craft is impossible.
+
+## Sources
+Saved global `config/emi.css` binding/layout descriptions and selected `config/jei/jei-client.ini` settings. The handbook omits raw personal configuration. [Troubleshooting](https://faizsaifulnizam.github.io/minecraft-pack-wiki/troubleshooting/) covers overlaps.
+--- END PAGE: Find recipes and item uses ---
+
+--- BEGIN PAGE: Plan shared-base access without changing permissions ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Plan shared-base access without changing permissions
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+**Development documentation snapshot:** Minecraft 1.21.1 / NeoForge 21.1.250; FTB Teams 2101.1.10 and FTB Chunks 2101.1.22. Exact-version upstream declarations and command registration support this preflight; effective permissions, compiled correspondence and multiplayer behavior are not runtime verified.
+
+## Prerequisites
+
+You need the base owner's agreement on who may build, open ordinary containers, use machines and invite others. This task produces an access request, not a claim or a permission change. No world, map or team screen needs to be opened to complete it.
+
+## Steps
+
+1. Make an access-request table with four columns: person/role, intended action, target type and owner decision. Separate placing/breaking blocks from interacting with a block. FTB Chunks declares separate `block_edit_mode` and `block_interact_mode` properties; do not collapse these into one promise of “base access.” [Property declarations](https://github.com/FTBTeam/FTB-Chunks/blob/a90e58e431879f5213629373ea9cde7001ebef45/common/src/main/java/dev/ftb/mods/ftbchunks/api/FTBChunksProperties.java#L36-L44).
+2. Add separate rows for real players and automation using fake players. The source declares `allow_fake_players`, `allow_named_fake_players` and `allow_fake_players_by_id`. These are policy inputs, not evidence that a particular machine is authorized. Leave their owner decisions unresolved rather than enabling them. [Fake-player properties](https://github.com/FTBTeam/FTB-Chunks/blob/a90e58e431879f5213629373ea9cde7001ebef45/common/src/main/java/dev/ftb/mods/ftbchunks/api/FTBChunksProperties.java#L15-L20).
+3. Record which owner will confirm membership. For a later owner-authorized session, `/ftbteams info` is a documented information command: its handler sends team-info lines and invokes the `TeamEvent.INFO` extension event. Its subscribers are untraced, so it is **not proven side-effect-free**; no harmful behavior is demonstrated. This is a source reference, **not permission to execute any command, join or start a world now**. Any later invocation requires separate owner authorization before action, with the untraced INFO event explicitly considered. Treat its output as private; do not publish identities. Do not substitute `/ftbteams info server_id`. [Registration](https://github.com/FTBTeam/FTB-Teams/blob/20bc18fd15c5c71f19be530e86fd0db038e2acd4/common/src/main/java/dev/ftb/mods/ftbteams/data/FTBTeamsCommands.java#L158-L165), [information handler](https://github.com/FTBTeam/FTB-Teams/blob/20bc18fd15c5c71f19be530e86fd0db038e2acd4/common/src/main/java/dev/ftb/mods/ftbteams/data/FTBTeamsCommands.java#L347-L351).
+4. Keep ordinary shared containers separate from [personal-loot expectations](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/personal-loot/). Permission to interact is not proof that everyone sees the same loot, that a transfer succeeds, or that items persist. FTB's block-interaction policy can return `CHECK`, which explicitly means further checks are needed. It is not an allow/deny matrix for every modded container. [Interaction policy](https://github.com/FTBTeam/FTB-Chunks/blob/a90e58e431879f5213629373ea9cde7001ebef45/common/src/main/java/dev/ftb/mods/ftbchunks/api/Protection.java#L44-L56), [CHECK meaning](https://github.com/FTBTeam/FTB-Chunks/blob/a90e58e431879f5213629373ea9cde7001ebef45/common/src/main/java/dev/ftb/mods/ftbchunks/api/ProtectionPolicy.java#L3-L15).
+5. Mark all proposed changes and tests as requiring the owner. A future disposable-container test should distinguish opening, depositing, withdrawing and persistence after reconnect; it must not use valuables or personal-loot containers as a proxy for ordinary storage. This is a safety test design, not a completed test or a claim about current access.
+
+## Expected result
+
+Every requested action has an owner decision or an explicit unknown. You have not changed membership, claims, chunk loading or settings. A completed table is planning progress; shared-base operation remains unverified.
+
+## Common failures
+
+If permission is denied later, stop the attempted operation and ask the owner to compare the exact action and target with the agreed table. Do not unclaim land, disband a team, invite everyone or broaden fake-player policy to make one container work. Preserve current membership while diagnosing. Unknown effective rules cannot be repaired from these source declarations alone.
+
+## Tip and trade-off
+
+Keep build access narrower than container access when the owner wants that distinction. The separate source properties make it a meaningful policy question, but their actual values and downstream checks still require owner verification. This reduces accidental permission expansion at the cost of a longer preflight.
+
+## Next steps
+
+Check [connection responsibilities](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/connection-preflight/), [backup recovery gates](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/backup-recovery-safety/) and [navigation control attribution](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/navigation-controls/) before a separately authorized shared session. Team membership, transport connectivity, claims and personal loot are different questions; success in one does not close the others.
+
+## Sources
+The inline exact-source citations and explicitly historical observations above support only their stated boundaries; safety recommendations are not observed gameplay.
+--- END PAGE: Plan shared-base access without changing permissions ---
+
+--- BEGIN PAGE: Check connection responsibilities before sharing a world ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/connection-preflight/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Check connection responsibilities before sharing a world
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+**Development documentation snapshot:** Minecraft 1.21.1 / NeoForge 21.1.250; e4mc 6.1.0. Version-matching upstream source supports a bounded preflight, not a successful connection, authenticated access policy or service-availability guarantee. The upstream build declares 6.1.0 but uses a 1.20.2 compile target; this is source-version correspondence, not proof of installed-binary equivalence on this pack. [Build declaration](https://github.com/vgskye/e4mc-minecraft-architectury/blob/765e93282765d0d23c1f2820e56b7c96e0f1bf71/gradle.properties#L3-L8).
+
+## Prerequisites
+
+Name a host owner and invited players privately. Agree on the same pack revision and a session window. This is an offline planning task: do not open a world, choose Open to LAN, reveal an address or join a server to complete it.
+
+## Steps
+
+1. Write down who runs the world and who merely connects. Upstream's usage instruction is “Open to LAN as normal.” Treat that as the **exposure boundary**, not a harmless way to inspect options. Do not invoke it during this preflight. [Usage](https://github.com/vgskye/e4mc-minecraft-architectury/blob/765e93282765d0d23c1f2820e56b7c96e0f1bf71/README.md#L17-L19).
+2. Assign the host responsibility for the running world, saves and recovery approval. The source starts a relay session from the server TCP-listener hook when `hostEnabled` is true and stops its session from the server stop hook. A saved setting or installed mod does not establish that a relay is live. This is not unattended server rental, a promise of uptime or evidence that the external relay is available. [Listener lifecycle](https://github.com/vgskye/e4mc-minecraft-architectury/blob/765e93282765d0d23c1f2820e56b7c96e0f1bf71/common/src/main/java/link/e4mc/mixin/ServerConnectionListenerMixin.java#L37-L56).
+3. Assign guests responsibility for matching the agreed gameplay pack. Do not infer from the host-side relay hook either that every guest needs e4mc or that every gameplay mod is optional on guests. Exact guest-side requirements and full-pack join/rejoin remain unverified here. Record that question before distributing a pack; do not install or remove anything based on this page.
+4. Ask the owner for an explicit access-control decision before any later exposure. The selected source alters vanilla whitelist-command permission checks to allow the single-player owner, otherwise retaining the original predicate. That establishes a command-authorization hook, **not that a whitelist is enabled, populated or enforced for this session**. Do not issue whitelist or ban commands as an inspection shortcut. [Owner permission hook](https://github.com/vgskye/e4mc-minecraft-architectury/blob/765e93282765d0d23c1f2820e56b7c96e0f1bf71/common/src/main/java/link/e4mc/mixin/WhitelistCommandMixin.java#L15-L26).
+5. Agree on private address handling, how the host will announce session closure, and who approves a later reconnect test. Keep addresses, account identities and connection output out of public support requests. Verify [shared-base policy](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/) independently: transport access does not grant container or land permissions.
+
+## Expected result
+
+Your session note identifies host, guests, pack revision, access-control approver, private communication channel and closure/reconnect owner. Unresolved guest requirements and live access-control checks remain explicit. No connection has been opened or tested by this task.
+
+## Common failures
+
+If a later authorized session cannot connect, confirm that the owner intended the session to be live and that everyone used the agreed pack revision. Do not publish the address, disable security, forward ports or change team claims as speculative fixes. Escalate the specific failure privately. No stable-address/rejoin guarantee is established; an old address is not evidence of a current session.
+
+## Tip and trade-off
+
+Separate “can connect” from “can use the base” in your session checklist. This avoids widening [FTB permissions](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/) to solve a transport failure, at the cost of checking two distinct boundaries. Before any future recovery, use the [stopped-copy checklist](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/backup-recovery-safety/); a guest's client installation is not an identified backup of the host's world.
+
+## Sources
+The inline exact-source citations and explicitly historical observations above support only their stated boundaries; safety recommendations are not observed gameplay.
+--- END PAGE: Check connection responsibilities before sharing a world ---
+
+--- BEGIN PAGE: Prepare a stopped-copy backup recovery checklist ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/backup-recovery-safety/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Prepare a stopped-copy backup recovery checklist
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+**Development documentation snapshot:** Minecraft 1.21.1 / NeoForge 21.1.250; SimpleBackups 1.21-4.0.21. The [selected release metadata](https://api.modrinth.com/v2/version/6JQL4qSR) links the [source commit](https://github.com/ChaoticTrials/SimpleBackups/commit/b3cc8b033f042471592031c6d69297e55e36ba67) used below. This is release-linked upstream evidence, not a fresh binary audit, effective configuration check or successful restore.
+
+## Prerequisites
+
+The world owner must identify the world, backup custodian and recovery objective privately. This task prepares a checklist only. Do not create, inspect, extract, restore or delete a backup; do not open worlds or modify settings while following it. The later stopped-copy work requires separate owner authorization and verified backup inputs.
+
+## Understand what must be verified
+
+- **Mode:** `FULL_BACKUPS`, `MODIFIED_SINCE_LAST` and `MODIFIED_SINCE_FULL` are distinct modes. The default declaration is full backups; that is not the effective setting. A partial archive is not a complete world. [Mode declarations](https://github.com/ChaoticTrials/SimpleBackups/blob/b3cc8b033f042471592031c6d69297e55e36ba67/src/main/java/de/melanx/simplebackups/config/CommonConfig.java#L46-L53).
+- **Location and retention:** output path, per-world subdirectories, count and storage-size limits are configurable. Old files can be deleted by retention logic. Do not assume the default folder or an old timestamp proves a usable recovery point still exists. [Configuration](https://github.com/ChaoticTrials/SimpleBackups/blob/b3cc8b033f042471592031c6d69297e55e36ba67/src/main/java/de/melanx/simplebackups/config/CommonConfig.java#L54-L75), [retention implementation](https://github.com/ChaoticTrials/SimpleBackups/blob/b3cc8b033f042471592031c6d69297e55e36ba67/src/main/java/de/melanx/simplebackups/BackupThread.java#L117-L153).
+- **Scope:** the implementation walks the selected world tree, skips `session.lock` and `biomancy.spatial.db`, and applies configured exclusions. It does not establish that launcher settings, the whole pack or every external mod database is backed up. [Backup traversal](https://github.com/ChaoticTrials/SimpleBackups/blob/b3cc8b033f042471592031c6d69297e55e36ba67/src/main/java/de/melanx/simplebackups/BackupThread.java#L219-L280).
+- **Completion:** a ZIP filename or a started notification alone is insufficient. The source's finished notification occurs after backup creation and retention-size processing; completion still does not prove restore integrity. [Run lifecycle](https://github.com/ChaoticTrials/SimpleBackups/blob/b3cc8b033f042471592031c6d69297e55e36ba67/src/main/java/de/melanx/simplebackups/BackupThread.java#L156-L171).
+
+## Steps
+
+The following are **owner gates for a later authorized recovery**, not actions performed by this documentation task or a verified SimpleBackups restore command.
+
+1. **Authorization gate:** record who owns the world, which recovery point they approve and where the separate disposable destination will be. Require explicit approval for access to private backup/world contents. Do not request public uploads.
+2. **Stopped-state gate:** require the owner to save and stop the host/server normally and confirm it remains stopped before copy/restore work. If it cannot be confirmed, defer recovery. Do not overwrite an active world.
+3. **Rollback gate:** require a separate preserved copy of the current stopped world and the original backup set before attempting recovery. Record identities privately. Preserve originals unchanged; a rolling backup folder subject to retention is not the only copy to rely on.
+4. **Backup verification gate:** require the custodian to verify integrity, intended world, timestamp, actual backup mode and exclusions. For partial backups, require the necessary full base and dependent partial set plus a supported reconstruction procedure. That exact reconstruction procedure is **not established here**; do not extract only the newest partial ZIP and call it restored. A missing dependency blocks the attempt.
+5. **Disposable-copy gate:** require the approved procedure to target a new, separate stopped-copy location only. Verify archive root layout and the compatible pack revision before later use. Do not merge into or replace the live world. Exact extraction/reconstruction commands are deliberately not supplied without the verified inputs and owner-approved procedure.
+6. **Acceptance gate:** before any production switch, require separately authorized copy-only load, inventory/container checks, relevant dimensions, normal save/stop and save/reopen checks. Record the owner's acceptance and rollback destination. Neither authoring this checklist nor seeing a finished notification passes those checks.
+
+## Expected result
+
+The owner can say which gates are satisfied, who verifies each remaining gate and why recovery is blocked if any prerequisite is missing. The deliverable is a recovery decision checklist, **not a restored world**.
+
+## Common failures
+
+If integrity, backup mode, dependencies or target identity cannot be verified, keep both original world and backup set unchanged. Stop at the failed gate rather than trying alternate archive orders against the live world. Escalate to the custodian privately; do not “fix” a missing backup by deleting old files or changing retention.
+
+## Tip and trade-off
+
+Prefer a verified complete recovery set preserved outside the rolling retention destination before any later experiment. The cost is additional storage; the benefit is avoiding dependence on files the documented retention logic may remove. This is a safety recommendation, not a claim that any copy currently exists.
+
+For a shared world, identify the [actual host owner](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/connection-preflight/) first and keep [base permissions](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/) separate from backup custody.
+
+## Sources
+The inline exact-source citations and explicitly historical observations above support only their stated boundaries; safety recommendations are not observed gameplay.
+--- END PAGE: Prepare a stopped-copy backup recovery checklist ---
+
+--- BEGIN PAGE: Identify navigation controls without opening a map ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/navigation-controls/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Identify navigation controls without opening a map
+
+## Baseline
+Development documentation snapshot **dev-0.5-20261015-r2**; not release validation.
+
+## Evidence status
+**Development documentation snapshot:** Minecraft 1.21.1 / NeoForge 21.1.250; Xaero's Minimap 26.6.0, Xaero's World Map 1.47.0 and FTB Chunks 2101.1.22. This reference uses previously processed saved bindings, not live controls or private map data. The saved-controls observation predates this documentation snapshot and has not been refreshed. It does not prove exact-version navigation behavior or current effective bindings.
+
+## Prerequisites
+
+You want to distinguish map providers or report an overlapping control without revealing terrain, waypoints or server identity. This task needs only the reference below and your intended action; do not launch a game or open a map to complete it. For a later authorized controls review, use [control contexts](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/control-contexts/), not trial keypresses over valuables.
+
+## Read the saved-control reference
+
+These are historical **saved values**, not factory defaults or instructions to press them. The literal action identifiers let you distinguish similarly named providers.
+
+| Provider and action identifier | Previously saved value | Boundary |
+|---|---|---|
+| Xaero World Map `gui.xaero_open_map` | M | Same saved key as FTB map; do not invoke to diagnose overlap |
+| FTB Chunks `ftbchunks.map` | M | A second provider, not evidence of synchronized maps |
+| Xaero minimap settings `gui.xaero_minimap_settings` | Y | Saved settings control; no permission to change it |
+| Xaero World Map settings `gui.xaero_open_settings` | Right bracket | Also saved for Sophisticated transfer-to-inventory; context matters |
+| Xaero waypoint screen `gui.xaero_waypoints_key` | U | Also a recipe-viewer uses key; opening waypoints exposes private state |
+| Xaero new waypoint `gui.xaero_new_waypoint` | B | Creation control; not an inspection shortcut |
+| Xaero instant waypoint `gui.xaero_instant_waypoint` | Keypad add | Creation control; do not test as a harmless toggle |
+| Xaero enlarge map `gui.xaero_enlarge_map` | Z | Also saved for Twilight zoom; not a proved conflict |
+| Xaero World Map zoom `gui.xaero_map_zoom_in` / `gui.xaero_map_zoom_out` | Unbound / unbound | `key.keyboard.unknown` is the recorded value, not a key called Unknown |
+| FTB minimap zoom `ftbchunks.minimap.zoomIn` / `ftbchunks.minimap.zoomOut` | Equals / minus | Do not transfer these keys to Xaero by analogy |
+
+## Steps
+
+1. Write the desired action and provider: for example, “identify the Xaero World Map control,” not just “map broken.” Use the table to separate the two map providers without opening either.
+2. Classify the intended action as display, settings or state creation. Keep waypoint creation separate from viewing. Do not press B or Keypad add merely to discover what happens.
+3. Record the screen context in which the problem happened, without coordinates, terrain screenshots or waypoint names. A saved duplicate key is a possible overlap, not proof that both handlers run in that context.
+4. If a later controls-only inspection is authorized, compare the current action entry with this historical reference. Controlling 19.0.5 supplies Show All, Show Conflicts, Show Unbound and Available Keys. Its exact labels are documented in `Controlling-neoforge-1.21.1-19.0.5.jar!assets/controlling/lang/en_us.json` (`options.showAll`, `options.showConflicts`, `options.showNone`, `options.availableKeys`). Inspect only; this task prescribes no reset or remap. Missing/unbound entries do not establish missing map data.
+5. Produce a short support note: provider, action identifier, intended context, historical binding and whether a current value is known. Leave current values unknown if they have not been inspected. Do not attach map folders, personal settings exports or server-profile files.
+
+## Expected result
+
+You can name the map provider and action without opening a private map, creating a waypoint or changing settings. This does not establish navigation, dimension switching, waypoint sharing, teleport permission, map persistence or restoration behavior. Those mechanics need additional exact-version evidence and separately authorized acceptance.
+
+## Common failures
+
+If M selects an unexpected provider later, do not delete map caches or reset both mods. Preserve personal map state and report the provider/context mismatch first. If U opens an unexpected screen, return to the original context rather than creating a waypoint to test the key. See [inventory safety](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/inventory-safety/) before any future item-context investigation.
+
+## Tip and trade-off
+
+Use action identifiers in a support note instead of a screenshot of your world. This makes two M bindings distinguishable without exposing explored terrain; the trade-off is that a control-only report cannot diagnose the map's contents. A map display also does not prove [claim permissions](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/).
+
+## Evidence limits
+
+The binding table is a historical saved observation, not an archive-derived default table. Only the Controlling labels above have the cited exact-version archive-entry witness. Actual Xaero navigation controls, gestures and map/waypoint lifecycle remain unsupported by the available exact-version evidence; no navigation tutorial is claimed.
+
+## Sources
+The inline exact-source citations and explicitly historical observations above support only their stated boundaries; safety recommendations are not observed gameplay.
+--- END PAGE: Identify navigation controls without opening a map ---

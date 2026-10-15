@@ -1,0 +1,240 @@
+<!-- wiki.py managed group export schema=1 -->
+# FULL SPOILERS group bundle
+
+--- BEGIN PAGE: Find the control for the screen you are using ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/control-contexts/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Find the control for the screen you are using
+
+## Baseline
+Minecraft 1.21.1, NeoForge 21.1.250; Controlling 19.0.5, EMI 1.1.24 and JEI 19.32.0.359. How-to: identify a control before changing it.
+
+## Evidence status
+Saved bindings and exact-version UI labels; **not runtime tested**. The same physical key can serve different screens. A duplicate binding is a lead, not proof of a conflict. This guide does not prescribe a replacement key.
+
+## Prerequisites
+Know the screen where the unwanted action occurs and the action you intended. Start with no item on the cursor. Do not investigate by pressing deletion, drop or bulk-transfer controls while carrying valuable items.
+
+## Steps
+1. Write down the context: looking at the world, ordinary inventory, a recipe page or a particular container. Include what is hovered and whether a search field has focus. These distinctions matter more than a key name alone.
+2. Open the game's controls list. Controlling supplies **Show All**, **Show Conflicts**, **Show Unbound** and **Available Keys**. Use Show All to find the intended action, then Show Conflicts to inspect possible overlaps. Show Unbound means an action needs a binding; it does not mean the feature is absent.
+3. For [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/), compare the saved actions below. Start with Ctrl+F and a plain item-name query, not a crafting click. The expected checkpoint is a focused search field and matching items.
+4. If U opens another screen, compare the saved JEI/EMI uses action with the waypoint action in the table. Return to the inventory/recipe context; do not conclude that the recipe viewer is broken merely because a world-context action won.
+5. If a binding must change, record its original value first and change only the intended action. Available Keys is a candidate list, not a guarantee against every mod-specific mouse or contextual handler. Check the same original screen and hovered target with disposable items before trusting the change. Restore the original binding if the intended action still fails. Do not use a global reset to fix one overlap.
+
+## Expected result
+You can name the intended action, its saved binding if captured, and the context in which you need it. Runtime success remains an owner check, not a result of this documentation work.
+
+## Common failures
+- **No separate JEI panel:** the captured JEI setting is `enabled=false`, whereas EMI saves `enabled=true`. Treat EMI as the first visible route; neither value proves live loading or complete imported-category coverage.
+- **Ctrl+O appears to do nothing:** both viewers save the same visibility key. Check which viewer is visible before changing both.
+- **A mouse action moves items instead of browsing:** left/right clicks also have inventory meanings. Use R/U over the intended viewer item first, keeping the cursor empty.
+- **An action is missing from this table:** the processed settings did not capture every mod's keys. Find the exact action label in Controls or that mod's configuration; do not apply a remembered default. For inventory operations use [item safety](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/inventory-safety/); for world overlays use [Jade identification](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/jade-identification/).
+
+## Saved binding reference
+| Action | Captured binding | Context/limit |
+|---|---|---|
+| Open inventory | E | Saved game control |
+| EMI focus search / JEI focus search | Ctrl+F / Ctrl+F | Supported viewer context; field focus must be visible |
+| EMI recipes / uses | R or left click / U or right click | Viewer item context, not a general inventory gesture |
+| EMI favourites / back | A / Backspace | Applicable viewer context |
+| EMI visibility / JEI overlay | Ctrl+O / Ctrl+O | Potential overlap, not reproduced conflict |
+| EMI craft one / craft all | Left click / Shift+left click | Crafting action context; avoid bulk action until output is checked |
+| JEI recipe back / close | Backspace / Escape | JEI recipe GUI, if accessible |
+| JEI previous / next recipe page | Page Up / Page Down | JEI recipe GUI |
+| JEI previous / next category | Shift+Page Up / Shift+Page Down | JEI recipe GUI |
+| Xaero waypoint screen | U | Saved overlap with item uses; separate system, not a recipe function |
+
+`key.keyboard.unknown` denotes an unbound captured entry, not a physical key called Unknown. Uncaptured IPN, Jade, TrashSlot and Crafting Tweaks bindings are **unknown**, not unbound.
+
+## Sources
+Processed saved-controls evidence and global EMI/JEI settings for this baseline; Controlling 19.0.5 `assets/controlling/lang/en_us.json` (Show Conflicts, Show Unbound, Available Keys). Private retained witnesses and claim IDs E-CONTROL, E-VIEWER, E-IPN-SAVED are provided to reviewers. No original settings were reopened.
+--- END PAGE: Find the control for the screen you are using ---
+
+--- BEGIN PAGE: Organize items without treating locks as a backup ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/inventory-safety/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Organize items without treating locks as a backup
+
+## Baseline
+Inventory Profiles Next 2.2.5, Mouse Tweaks 2.26.1, Crafting Tweaks 21.1.11 and TrashSlot 21.1.11. How-to: prepare a bounded inventory operation and avoid destructive shortcuts.
+
+## Evidence status
+Exact shipped option descriptions plus processed saved IPN settings; **not runtime tested**. Feature descriptions establish what options intend to control, not which options are enabled here. Mouse Tweaks gestures and wheel direction remain unverified for the saved pack configuration. No default hotkey is prescribed.
+
+## Prerequisites
+A safe place to stop and an ordinary storage container with spare space. Put irreplaceable equipment and unusually named or enchanted items aside manually before experimenting. Use a few disposable items for the first check; do not start with a machine input/output slot or crafting result.
+
+## Steps
+1. Identify the intended operation: sort the player's inventory, sort the opened container, move matching items, refill stacks or clear a crafting grid. [Resolve the action and context](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/control-contexts/) before pressing a hotkey. IPN's saved overlay, inventory editor and inventory settings buttons are hidden; their absence is not evidence that sorting is disabled.
+2. For sorting or moving, inspect IPN's **Enable Locked Slots** and lock controls in its own settings. The shipped description says locks exclude slots from sort, move all, clean cursor and crafting/refill supply storage. It also explicitly excludes auto-refill monitoring slots from that protection. No saved lock shortcut or active lock state is captured here: stop if you cannot identify the control and its visual state.
+3. Check the separate protections relevant to your task. **Disable Shift+Click and Ctrl+Q and Q** describes inventory-screen protections; **Disable (Q) Drop For Non-Stackable Locked Slots In Game** describes a separate world-context protection. **Disable All User Input on Locked Slots** does not stop automated actions, profiles or auto refill. A lock is not a universal deletion barrier, a grave or a backup.
+4. Before a move, inspect **Move All Under the Cursor**. Its description distinguishes source-under-cursor behavior from player-to-container behavior. For a focused item-type operation, inspect **Only focused Item type**: the description says it moves all of the selected type even if that type is not already on the other side. For topping up existing stacks only, inspect **Just refill stacks** instead. Confirm the destination has room and inspect the first disposable result before repeating.
+5. Before enabling or relying on auto refill, inspect **Use Items From Locked Slots** and **Refill With Any Food**. The latter can choose an enchanted golden apple before ordinary food, according to the shipped description. **Allow refill with harmful foods** is a further condition. Keep valuable food outside the experiment; do not assume a lock or custom name preserves it.
+6. For a crafting grid, use the visibly labelled **Clear Grid** action only after making inventory space. Do **not** substitute **Force Clear Grid**: its exact tooltip says it drops items if necessary. Rotation, balance and spread change grid arrangement; after any such action recheck [the actual output](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/conflicting-outputs/) before taking it. Hotkeys, clear-grid overflow behavior and current Crafting Tweaks mode are not captured; use the labelled supported UI or stop.
+7. For TrashSlot, first establish the **Lock/Unlock TrashSlot** control and visible lock state using disposable items only. The captured evidence contains no saved key or active deletion options. Hiding the slot is not a universal safety method: **Allow Deletion While TrashSlot is Invisible** exists. Do not use **Delete All Items of Type** for a first check, and do not promise an undo.
+
+## Expected result
+A small, inspected operation with valuable items excluded and the chosen source/destination understood. If a control, mode or protection is unknown, leave the items where they are and use deliberate individual clicks instead of guessing a bulk gesture.
+
+## Common failures
+- **Locked slots moved or supplied items:** inspect auto-refill exceptions and automated/profile actions before treating this as a broken lock. Do not reproduce with valuable gear.
+- **Row/column sort does not fit around locks:** IPN's description requires the remaining unlocked shape to be rectangular. Ordinary sorting is a different operation; do not unlock precious slots just to obtain a rectangular pattern.
+- **Closing the screen did not immediately stop sorting:** with interval-between-clicks enabled, IPN has a separate Stop Sorting If Screen Closes option. Its saved value is unknown. Screen close is not a guaranteed cancel.
+- **Wheel movement is surprising:** IPN has item scrolling and Mouse Tweaks is also installed. No saved Mouse Tweaks direction or enabled-gesture evidence was captured. Stop scrolling, empty the cursor and return to individual clicks. Installed co-presence does not establish a reproduced conflict or justify a universal wheel direction.
+- **TrashSlot is disabled on a server:** its shipped message says the server must have TrashSlot installed. Do not install or change a server as part of this guide.
+- **An item is already gone:** stop further deletion, inspect the visible slot without adding another item, and seek the owner's recovery procedure. This evidence does not establish a recoverable buffer, lifetime, persistence or undo control. Creative delete keys are explicitly described as permanent regardless of Instant Deletion.
+
+## Tips with trade-offs
+**Top up rather than evacuate a container.** Prerequisite: identify IPN's Just refill stacks modifier and the move direction. Technique: constrain the operation to existing destination stacks. Benefit: avoids introducing new item types to a deliberately arranged inventory. Trade-off: it will not create a new destination stack; no binding or successful pack transfer is verified.
+
+**Keep valuable food out of refill candidates.** Prerequisite: inspect auto-refill choices. Technique: store special food separately before using an uncertain refill setup. Benefit: avoids the shipped any-food preference choosing rare food. Trade-off: that food is not immediately available on the hotbar. This is a precaution, not an assertion that any-food is enabled.
+
+## Sources
+IPN 2.2.5 `assets/inventoryprofilesnext/lang/en_us.json` option descriptions; processed IPN global settings. Crafting Tweaks 21.1.11 `assets/craftingtweaks/lang/en_us.json`; TrashSlot 21.1.11 `assets/trashslot/lang/en_us.json`. Mouse Tweaks 2.26.1 metadata establishes installed presence only. Claims E-IPN-LOCK, E-IPN-MOVE, E-IPN-REFILL, E-GRID and E-TRASH.
+--- END PAGE: Organize items without treating locks as a backup ---
+
+--- BEGIN PAGE: Check and choose a conflicting crafting output ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/conflicting-outputs/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Check and choose a conflicting crafting output
+
+## Baseline
+Polymorph 1.1.0+1.21.1, EMI 1.1.24 and JEI 19.32.0.359. How-to: avoid consuming ingredients for the wrong result.
+
+## Evidence status
+Installed Polymorph identity is freshly hash-matched. The UI procedure below is **supplemental upstream documentation**, pinned to the project's 1.21.x branch, not proven to match the exact installed release. No pack-specific conflicting recipe pair, selection packet success or recipe transfer has been runtime verified. Continue only when the described selector and result actually appear.
+
+## Prerequisites
+A crafting screen with a visible result; enough ordinary ingredients for a small test and inventory space for the result. Start from [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to identify the item you actually want. Do not use EMI's saved Shift+left-click craft-all action until a single output is confirmed. There is no named guaranteed conflict example in this evidence.
+
+## Steps
+1. Find the wanted recipe and note its result name, count and item identity where the UI exposes it. Place the ingredients in the relevant crafting grid. Merely locating the desired item in EMI does not establish that the current result slot produces it.
+2. Inspect the actual result slot before taking anything. If it matches your goal, no selector intervention is needed. If it differs, leave the ingredients unconsumed.
+3. When those ingredients match multiple recipes and a Polymorph button appears above the output slot, press that button. Upstream describes a list of possible results. If the button is missing or its location differs, stop this procedure rather than clicking an unlabelled nearby control.
+4. Select the wanted listed result. The checkpoint is the crafting output changing to that item. If the desired item is absent from the list, do not take another item as a workaround; investigate the recipe, workstation and ingredients instead.
+5. Take one ordinary result and inspect it. Recheck name and count before repeating or using a bulk craft. Upstream describes remembering the choice while the ingredients do not change, but this pack has not exercised that behavior. Recheck after changing ingredients, reopening a screen or transferring a recipe.
+6. To back out before a craft, do not take the result. Remove the ingredients individually into available inventory slots. Avoid Force Clear Grid because its [drop warning](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/inventory-safety/) makes it unsuitable as a universal rollback.
+
+## Expected result
+The visible output and the one inspected craft agree with the wanted item, or you stop without consuming the ingredients. These are reader checkpoints; no craft was executed during authoring.
+
+## Common failures
+- **No selector:** it may not be a multiple-recipe situation in the effective pack, or the screen/integration may not expose a selector. Static installation does not decide which cause applies. A removed or overridden recipe cannot be restored merely by choosing another output.
+- **The wanted result is not listed:** compare the exact recipe and workstation instead of repeatedly choosing the wrong result. Do not assume recipes with similar ingredient names use interchangeable tags.
+- **Viewer transfer chose a different output:** inspect the result after transfer and use the selector only if available. Installed EMI/JEI integration classes do not prove successful transfer on this stack.
+- **Selection does not change the output:** stop before crafting. Preserve a description of screen, inputs, visible choices and expected item for the owner. Polymorph ships a Networking Failure message, but this work has not observed such a failure.
+- **A furnace also appears ambiguous:** upstream documents a selector above furnace output and block-persisted selection. That is a separate, untested route; this guide does not establish fuel timing, existing-output handling or save/reopen behavior. Do not start a valuable smelt to test it.
+
+## Tip: preview, select, then scale
+Prerequisite: a visible supported selector and disposable ingredients. Technique: confirm the selected output with one small craft before bulk action. Benefit: limits the ingredients committed to a wrong output. Trade-off: one extra inspection and no protection against subsequent changed inputs. Sources: upstream crafting selector description and saved EMI craft-one/craft-all bindings.
+
+## Sources
+[Polymorph upstream crafting and smelting documentation](https://github.com/illusivesoulworks/polymorph/blob/a2dc1e5a91e5694943d84e32caa729cd477098e3/README.md), pinned 1.21.x branch; exact installed metadata and `assets/polymorph/lang/en_us.json`; processed EMI bindings. Claim E-POLY explicitly retains the release-correspondence limitation. No commands were run to enumerate conflicts and no logs were read.
+--- END PAGE: Check and choose a conflicting crafting output ---
+
+--- BEGIN PAGE: Read an enchantment before committing equipment ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/enchantment-information/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Read an enchantment before committing equipment
+
+## Baseline
+EMI Enchanting 0.1.2+1.21+neoforge, Enchantment Descriptions 21.1.11 and EMI 1.1.24. How-to with a compact named-enchantment reference.
+
+## Evidence status
+Exact-version translation labels and shipped descriptions; saved EMI lookup bindings. **Not runtime tested.** The Enchantment Info category's presence in a running viewer, generated values, modded-enchantment support and compatibility lists remain unverified. Descriptions are summaries, not damage formulas or promises about pack-specific overrides.
+
+## Prerequisites
+An item or enchantment name to inspect; a supported tooltip/recipe-viewer context. Do not equip cursed gear, spend XP or apply an enchantment merely to discover its effect.
+
+## Steps
+1. Hover the relevant item or enchanted book and read the enchantment name. Enchantment Descriptions ships the prompt **Hold shift to view enchantment descriptions**. If that prompt is shown, hold Shift while keeping the same target hovered. Shift is a shipped instruction, not proof that this pack's tooltip activation setting is unchanged.
+2. Use [EMI search and recipe lookup](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to find the named item/book; R is the saved recipes action in the applicable context. If an **Enchantment Info** category appears, open it. That is the exact shipped category label; the evidence does not establish a separate Enchantment Info hotkey or guarantee that R reaches it for every target.
+3. In that category, read **Enchantment Description**, **Max Level**, **Valid Items** and **Exclusions** before considering an application. Also distinguish **Treasure**, **Curse**, **Villagers Trade** and **Randomly Selectable**. A category label with a yes/no template is not itself an evaluated value for a particular enchantment.
+4. Compare a familiar named description below with the tooltip as a low-risk sanity check. If the UI displays **Unknown Enchantment**, a translation key or no description, record the name and stop making effect/compatibility assumptions. Another mod's namespace in Enchantment Descriptions' bundled language file is not evidence that that mod is installed.
+5. Leave equipment unchanged until both the effect and the target-item/exclusion information are understood. If no applicable compatibility information appears, ask for exact-item verification rather than treating a missing exclusion as permission to combine enchantments.
+
+## Expected result
+You can distinguish effect text from eligible-item and exclusion information, and identify an unresolved entry without spending resources. This authoring has not applied or combined an enchantment.
+
+## Named description reference
+The following are concise original summaries of Enchantment Descriptions' shipped text, not numeric or progression guidance.
+
+| Enchantment ID | Shipped-description meaning | Decision it helps |
+|---|---|---|
+| `minecraft:mending` | XP repairs armor/tool durability | Do not confuse repair with a slower durability-loss rate |
+| `minecraft:unbreaking` | Slows durability loss | Different function from Mending; no stacking compatibility proven here |
+| `minecraft:fortune` | Some blocks, such as coal/diamond ore, may drop more items | Not a promise of extra drops from every block |
+| `minecraft:silk_touch` | Collects fragile blocks such as glass | Identify collection behavior rather than assuming a yield multiplier |
+| `minecraft:infinity` | Free normal-arrow shots require at least one arrow | Do not discard the last normal arrow based on the name alone |
+| `minecraft:binding_curse` | Prevents removal from an armor slot | Inspect before equipping; no removal/recovery method established here |
+| `minecraft:vanishing_curse` | Destroys the cursed item on death while in inventory | Do not assume a storage or death-recovery mod overrides the curse |
+| `minecraft:density` | Attack damage increases with fall distance | Not a fixed damage bonus or tested combat recommendation |
+| `minecraft:breach` | Attacks are more effective against armored targets | Distinguish armor-related effect from Density's fall condition |
+| `minecraft:wind_burst` | Smash attacks launch the user back into the air | Recognize movement consequences before applying; no safe-height guarantee |
+
+## Common failures
+- **Shift does not reveal text:** the shipped prompt is not captured effective configuration. Check the target and visible instruction; do not invent another activation key.
+- **No Enchantment Info category:** verify the viewer context and item first. Static addon installation does not certify category registration, modded support or transfer.
+- **A book describes an effect but cannot apply:** description availability and Valid Items/Exclusions answer different questions. Do not consume another book to test compatibility.
+- **A modded enchantment is unknown:** record its literal ID when available. These vanilla descriptions are not substitutes for that enchantment's own mechanics.
+
+## Tip: compare purpose before level
+Prerequisite: readable descriptions. Technique: compare Mending with Unbreaking, or Fortune with Silk Touch, by the kind of effect first; then consult Max Level and target eligibility. Benefit: avoids choosing by a high numeral while misunderstanding the function. Trade-off: this is not a best-build recommendation, and no compatibility or numerical yield is implied.
+
+## Sources
+EMI Enchanting 0.1.2 `assets/emi_enchanting/lang/en_us.json`; Enchantment Descriptions 21.1.11 `assets/enchdesc/lang/en_us.json`; processed EMI bindings. Retained claims E-ENCHANT-UI and E-ENCHANT-NAMED keep the exact language keys and archive hashes for independent review.
+--- END PAGE: Read an enchantment before committing equipment ---
+
+--- BEGIN PAGE: Identify a target without breaking it ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/jade-identification/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Identify a target without breaking it
+
+## Baseline
+Jade 15.10.6+neoforge. How-to: use a world-target overlay as the starting point for item/recipe research.
+
+## Evidence status
+Exact shipped configuration descriptions and control labels; **not runtime tested**. The processed settings do not contain Jade's saved bindings, display mode or enabled information providers. No key such as a remembered default is prescribed.
+
+## Prerequisites
+A target you can safely look at and no need to mine or interact with it. An overlay is informational; it does not grant access to a container or establish that a block can be safely harvested.
+
+## Steps
+1. Look at the unfamiliar target without breaking it. If Jade's overlay is already visible, read the displayed name before acting. If not, find **Show Overlay** and **Open Config** in the controls/configuration UI via [control-context inspection](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/control-contexts/). Stop if you cannot identify their bindings.
+2. Check **Display Mode** before treating Show Overlay as a toggle. The shipped descriptions distinguish **Toggle** (press Show Overlay), **Hold** (keep Show Overlay held) and **Lite** (hold Show Details for further information). The active mode is unknown here; follow the mode you actually observe rather than repeatedly tapping a key.
+3. If the ordinary overlay gives too little detail, identify **Show Details** or **Show Details (Alternative)** and use the mode's instruction. Jade describes separate detailed/ordinary amounts for item storage and optional detail-only energy/fluid information. Their existence does not guarantee that every modded machine exposes those values.
+4. Take the displayed name to [recipe search](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/recipe-search/) to investigate ingredients and uses. Jade also ships **Show Recipes** and **Show Uses** action labels, but neither saved keys nor successful viewer integration are captured; use the established inventory-viewer route if those actions are unknown.
+5. Before any actual harvest, distinguish name identification from tool/harvest information. A readable block name alone does not certify an appropriate tool, drop, ownership permission or safe machine removal. Leave the target intact if those conditions are unresolved.
+
+## Expected result
+A target name and, where supplied, additional information that can guide the next lookup without changing the block. This is the intended source-backed route, not an observed HUD result.
+
+## Common failures
+- **Overlay vanishes in a GUI, debug screen or player list:** Jade ships Hide from GUIs, Hide from Debug Screen and Hide from Player List options. Inspect the relevant option, not every rendering setting; saved values are unknown.
+- **Only some information appears:** Lite mode and detail-only providers are possible documented causes. A missing field is not proof that a tank is empty or that a block has no stored energy.
+- **Fluid target is hard to select:** Jade ships Toggle Fluid and a fallback option that shows fluid only when no other target exists. Their saved state is unknown; do not break a block to force a fluid target.
+- **The HUD and boss bar overlap:** Jade includes boss-bar overlap choices including Hide Tooltip and Hide Boss Bar. This documents an option, not a recommendation to hide important combat warnings or a verified saved layout.
+- **Name lookup finds the wrong item:** blocks and their item forms need not share every behavior. Recheck the target name and exact identifier when exposed; do not infer a recipe from a similar name.
+
+## Tip: identify before interacting
+Prerequisite: a working overlay on the target. Technique: read the name, then perform an inventory-viewer lookup before mining or opening an unfamiliar machine. Benefit: gathers an initial lead without changing the target. Trade-off: the overlay may be incomplete and is not a permission, break-safety or compatibility check.
+
+## Sources
+Jade 15.10.6 `assets/jade/lang/en_us.json`: key labels, display-mode descriptions, GUI/debug/player-list hiding, detail-only storage fields and fluid fallback. Claim E-JADE retains selected witnesses and exact archive identity. No HUD placement or live feature state was read or changed.
+--- END PAGE: Identify a target without breaking it ---

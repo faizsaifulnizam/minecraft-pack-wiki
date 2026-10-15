@@ -1,0 +1,160 @@
+<!-- wiki.py managed group export schema=1 -->
+# Safe group bundle
+
+--- BEGIN PAGE: Exploration preparation ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/exploration-preparation/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Exploration preparation
+
+## Baseline
+Private candidate-r2 curriculum; unapplied and not canonically adopted. The preceding 66-page r2 integration received bounded local documentary acceptance only. This 69-page cross-cutting preview remains under review; neither milestone establishes canonical baseline adoption, runtime acceptance or publication. Twilight Forest 4.8.3345 and Dungeons and Taverns v4.4.4 are the candidate text versions, not a claim about a running game.
+
+## Evidence status
+The shipped portal tip and tags, progression messages and one surface overworld structure declaration were read. No world, coordinates, map data, settings, logs or effective server rules were inspected. Preparation advice below is conservative planning, not a mod-enforced equipment requirement or survival guarantee. Encounter identities and reward details are intentionally outside this safe page.
+
+## Prerequisites
+- A small replaceable travel kit: food, light, building blocks, a tool and protection appropriate to what you can already handle. No minimum armour tier is established here.
+- Spare recovery equipment left at a known safe base; avoid taking every valuable item on the first trip.
+- Permission from your group to begin a dimension visit. Arrange who returns first and who stays clear of the entrance.
+- Read [Dimension travel and return](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/) before spending portal materials. It distinguishes the shipped hint from an unconfirmed construction/exit procedure.
+
+## Conditional J1 reading chain — not a completed journey
+This optional sequence connects documentary checkpoints only. It neither requires dimension travel nor authorizes a game, map, settings or world inspection.
+
+1. Prepare the expendable kit and retreat plan on this page. Read [navigation control attribution](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/navigation-controls/) to distinguish historical saved providers without opening maps; it proves neither navigation nor teleport access.
+2. For a dimension outing, read [dimension travel and return](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/). **STOP before entry unless the owner has confirmed entry and return under the group's rules.** An arrival is not round-trip proof. For an ordinary outing, retain the same known-retreat requirement without inventing a portal prerequisite.
+3. Only with positive Lootr identity, room in ordinary inventory and host interaction permission, follow [personal loot](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/personal-loot/). Preserve the intact container for others; do not infer ordinary storage is personal. On denial stop and ask the owner; on destruction stop for host assessment, not an assumed restore command.
+4. Return is its own gate: revisit [the return evidence and limits](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/) for a dimension crossing. **STOP at an unconfirmed return; do not leave arrival to start combat.** Retreat on locks/danger; pause lethal recovery. No teleport, grave, safe respawn or undo is assumed.
+5. For the carrying handoff, read [first backpack access](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/first-backpack-access/). **STOP before relying on it to carry finds:** provisional empty-menu access is not deposit, withdrawal, carrying-and-return or persistence acceptance. Keep valuables out; a failed control is not permission to guess placement or worn-slot behavior.
+6. For organization, compare [storage choice](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/storage-choice/) and [storage boundaries](https://faizsaifulnizam.github.io/minecraft-pack-wiki/reference/storage-boundaries/). **STOP before moving main stock:** drawer crafting or a backpack menu does not prove usable storage, transfers, overflow or save/reopen persistence. No final organized-loot checkpoint is accepted here.
+
+J2 remains blocked at usable starter storage, MI operation and a proven MI/AE2 or Drawers/ME interface. J3's [shared-base preflight](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/shared-base-preflight/) produces an owner access request, not working membership/permissions or reconnect persistence. Do not broaden permissions or treat the untraced INFO event as harmless. These blockers remain open regardless of links.
+
+## Steps
+1. Make the first outing a reconnaissance trip, not a clear-everything expedition. Choose one objective: inspect a potential route, confirm an already-established crossing, or survey the outside of a building you encounter naturally. Do not search a saved world or copy another player's map.
+2. Reserve enough food, light and blocks for the retreat as well as the outward leg. Keep the return approach clear. These are suggested supplies, not a recipe or a proven ability to bypass a barrier.
+3. For dimension travel, keep valuables behind until the group has actually established that entry **and return** work under its rules. A rendered portal, an advancement toast or arrival alone does not establish round-trip safety. Do not break or redecorate the crossing while someone is away.
+4. At any unexpected protection, dangerous weather or locked-biome message, retreat along the known route rather than repeatedly trying to force entry. The shipped messages say “Biome Locked!” and “Check your advancements”; they do not say better armour is the solution. Read the current advancement text from safety, or opt into the full reference below. [S1]
+5. For an overworld structure, inspect the exterior and retreat route before taking loot or descending. A building's familiar style is not a guarantee of neutral occupants, safe floors or an accessible chest. The selected surface example declares a surface generation step, not a safety guarantee. [S2]
+6. Return before extending the route; deposit only if the organization handoff in the conditional J1 chain has separately been established. This manuscript does not establish that handoff. If you die, re-equip at the safe base first. Do not assume grave protection, item permanence, a safe respawn in the dimension, a teleport command or that another player received your progression. None was established by this evidence. If the recovery route remains lethal, pause rather than chaining deaths.
+
+Optional reading: [Full-spoiler content omitted], [Full-spoiler content omitted], and [Full-spoiler content omitted]. Each is a whole-page spoiler opt-in; no revealing anchors are used here.
+
+## Expected result
+A bounded objective, expendable kit, reserves for a retreat and an agreed stop condition. This page does not promise a discovered structure, a working portal or a completed progression stage.
+
+Useful tip: when your group is ready for a new crossing, treat the return check as its own objective before combat. Benefit: less gear is exposed while the route is uncertain. Trade-off: a shorter first expedition and possibly an aborted trip.
+
+## Common failures
+- **“It is in the mod list, so it must exist nearby.”** A structure JSON is a declaration, not a world observation. Seed, biome eligibility, existing chunks, overrides and runtime generation remain unverified.
+- **“The new item means the area is unlocked.”** Inventory, advancement completion and actual protection removal are separate observations; retreat if they disagree.
+- **“Death will bring me home with my gear.”** Respawn destination, recovery mods and item-loss rules were not inspected. Plan as though recovery may require another dangerous trip.
+- **“A character ability will bypass this.”** No cross-mod bypass or character-system integration was proved. These pages do not inherit a Twilight curriculum from the existing character notes.
+
+## Sources
+- [S1] `twilightforest-1.21.1-4.8.3345-universal.jar!assets/twilightforest/lang/en_us.json` — `misc.twilightforest.biome_locked`, `misc.twilightforest.biome_locked_2`, portal messages. Translation evidence, not handler proof.
+- [S2] `dungeons-and-taverns-v4.4.4.jar!data/nova_structures/worldgen/structure/tavern_oak.json` — `surface_structures` declaration only.
+--- END PAGE: Exploration preparation ---
+
+--- BEGIN PAGE: Dimension travel and return ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/dimension-travel/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Dimension travel and return
+
+## Baseline
+Private candidate-r2, dev-0.5-20261015-r2; unapplied, not canonical adoption. Candidate Twilight Forest 4.8.3345 text is distinct from current runtime behaviour. Start with [Exploration preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/exploration-preparation/).
+
+## Evidence status
+**The exact candidate construction, activation caller and return lifecycle are not fully proved.** The retained candidate tip says “Throw a diamond into a pool of water surrounded by flowers.” Its tags declare water as portal fluid, `#c:gems/diamond` as activator, and separate edge and decoration sets. A tag is not a complete geometric recipe or proof of effective merged tags. [S1–S5]
+
+An immutable upstream primary-source trace on the **1.21.1** branch, commit `008085c660f1f9fc9aad6376ea0dc8080b3c0629`, declares Minecraft 1.21.1 / mod version 4.8. It is dated to the release day of the 4.8.3345 listing, but the build-3345-to-commit correspondence and modified candidate's provenance are **unknown**. The listing reports a JAPPA reload fix, not portal mechanics. Do not treat the trace as exact-binary verification. The similarly named 1.21.x branch targets another Minecraft/mod version and is not used here. [P1–P4]
+
+## Prerequisites
+- An already approved crossing with a group plan for return; otherwise use this page to identify what still needs confirmation, not as permission to experiment with your only gear.
+- Reserve activation material if the owner confirms its effective role; the candidate tag alone does not establish that all diamond-like items work.
+- A clear nonflammable working area is prudent: the candidate translations describe destructive activation lightning as a configurable possibility. No effective value was read. [S1]
+
+## Steps
+1. Read the shipped hint as a **hint**, not a complete build specification: diamond, water pool, flowers. The edge tag additionally names farmland, dirt path and `#minecraft:dirt`; the decoration tag includes flowers via a tag reference and many other entries. These are declared inputs, not permission to substitute anything without confirming effective tags. [S1–S5]
+2. If you need exact construction dimensions, stop at this evidence boundary. The upstream trace has a minimum of four pool spaces, horizontal validation, a sturdy floor, tagged edges and tagged decoration above those edges; successful creation shrinks the catalyst by one and invokes configurable lightning. **This is an unmatched upstream example, not a verified 2×2 construction recipe for candidate 4.8.3345.** Its activator-detection caller was not traced. Do not throw repeated valuables or enlarge a pool to solve an unresponsive candidate crossing. [P2]
+3. For an already-established, owner-confirmed crossing, enter with only the planned scouting kit and clear the arrival edge before the next person comes through. Entry timing is not fixed by this evidence. In the unmatched upstream trace, normal active portal contact registers the entity for transition and delay is read from game rules, with an advancement-lock check for survival players. That does not establish this candidate's effective rules. [P2]
+4. Make return the first objective after arrival. The upstream direction switch sends entities outside Twilight Forest to it, and sends entities inside it to the **configured origin dimension**, not necessarily a universal Overworld or the exact starting block. Destination creation can reuse or make a portal, reroute, or fall back; a safety-search name does not guarantee a harmless arrival. These remain upstream-only mechanics here. Do not infer a fixed coordinate ratio or a guaranteed same-portal round trip. [P2–P3]
+5. Identify the existing return crossing and keep its border intact. In the unmatched upstream source, a generated portal may carry `is_one_way`, affected by a `locked` input or `shouldReturnPortalBeUsable`; candidate translation text says a return portal may require an activation item. **No universally usable exit or exact reactivation procedure is proved for this candidate.** If the group cannot confirm return, do not leave the arrival area to start combat. [S1, P3]
+6. If crossing is blocked, move clear and ask the owner to confirm its established method. Candidate messages distinguish “It doesn't seem safe here...” from an unresponsive/unworthy pool; candidate translation keys describe portal disablement, permission, advancement locks and other-dimension creation. They establish available concepts, not their effective values. Do not change configuration or use commands as an assumed fix. [S1]
+
+## Expected result
+You can distinguish a shipped material hint, declared tags, an upstream implementation example and an actually confirmed group crossing. A successful outward trip does not complete the return check. An exact self-service portal recipe and universally reliable exit are deliberately **not delivered** where source correspondence is insufficient.
+
+Useful tip: once the owner has established the crossing, make one light-kit round trip before taking rare equipment. Benefit: tests the route you will depend on. Trade-off: an extra journey; it still does not guarantee later safety, respawn location or item recovery.
+
+## Common failures
+- **The tip looks exact enough.** It omits geometry, effective tags, activation permissions, origin dimension and return locking. Do not fill those gaps from remembered wiki recipes.
+- **An arrival portal guarantees escape.** Its presence, usability and linking must be distinguished. The source trace contains return-lock and fallback paths.
+- **The root advancement proves entry.** The candidate root allows either being in the dimension or the custom make-portal trigger; it is not round-trip proof. [S6]
+- **The source version is 4.8, so this is build 3345.** Family version and release-day alignment do not prove exact commit correspondence, original provenance or candidate bytecode equivalence.
+
+## Sources
+- [S1] `twilightforest-1.21.1-4.8.3345-universal.jar!assets/twilightforest/lang/en_us.json` — `twilightforest.tips.twilight_portal`, `config.twilightforest.*portal*`, destructive-lightning and portal warning keys.
+- [S2] `twilightforest-1.21.1-4.8.3345-universal.jar!data/twilightforest/tags/item/portal/activator.json`.
+- [S3] `twilightforest-1.21.1-4.8.3345-universal.jar!data/twilightforest/tags/block/portal/fluid.json`.
+- [S4] `twilightforest-1.21.1-4.8.3345-universal.jar!data/twilightforest/tags/block/portal/edge.json`.
+- [S5] `twilightforest-1.21.1-4.8.3345-universal.jar!data/twilightforest/tags/block/portal/decoration.json`.
+- [S6] `twilightforest-1.21.1-4.8.3345-universal.jar!data/twilightforest/advancement/root.json`.
+- [P1] [Primary version declaration](https://github.com/TeamTwilight/twilightforest/blob/008085c660f1f9fc9aad6376ea0dc8080b3c0629/gradle.properties#L5-L19).
+- [P2] [Upstream portal validation/contact/direction](https://github.com/TeamTwilight/twilightforest/blob/008085c660f1f9fc9aad6376ea0dc8080b3c0629/src/main/java/twilightforest/block/TFPortalBlock.java#L55-L295), selected methods only; correspondence unestablished.
+- [P3] [Upstream transition and generated return state](https://github.com/TeamTwilight/twilightforest/blob/008085c660f1f9fc9aad6376ea0dc8080b3c0629/src/main/java/twilightforest/world/TFTeleporter.java#L42-L530), selected methods only; correspondence unestablished.
+- [P4] [Exact 4.8.3345 release listing](https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest/files/7797302) — release identity only; no original-file provenance established.
+--- END PAGE: Dimension travel and return ---
+
+--- BEGIN PAGE: Encounter readiness ---
+<!-- wiki.py managed raw export schema=1 -->
+Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/encounter-readiness/
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
+
+# Encounter readiness
+
+## Baseline
+
+Bosses of Mass Destruction 1.3.3, Minecraft 1.21.1. Documentation baseline; not a gameplay acceptance result.
+
+## Evidence status
+
+This is a preparation and go/no-go task, not an encounter activation or combat tutorial. The shipped metadata describes high-threat mobs. Exact source-to-binary control correspondence and effective server settings are not established. Recommendations below are conservative planning choices, not mod-enforced requirements. [S1]
+
+## Prerequisites
+
+- A party decision about acceptable losses and who may initiate encounters.
+- Ordinary replacement equipment, food and an agreed fallback location. No particular armor tier, weapon damage or number of supplies is guaranteed sufficient.
+- Read [exploration preparation](https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/exploration-preparation/) before leaving a shared base.
+
+## Steps
+
+1. Separate essential supplies from optional valuables. Leave irreplaceable belongings behind; take only a kit you can afford to lose. This limits loss rather than preventing death.
+2. Agree on a single encounter initiator. Until exact controls are confirmed for the server, do not use unfamiliar items on suspicious blocks merely to discover their function. This also avoids accidental item consumption.
+3. Before approaching an unfamiliar site, identify an ordinary retreat route and a fallback meeting place. Do not count an untested portal, teleport item or grave interaction as your way out.
+4. Decide a retreat threshold before fighting: for example, inability to keep the agreed route clear. This is a party policy, not a supported boss-reset mechanic. A teammate leaving does not prove the encounter ends.
+5. Assign one player to observe the result and one to keep the retreat clear. Record only what actually happened: an advancement notification, items seen and items collected are different checkpoints.
+6. Choose reconnaissance instead of activation when the return route, initiator permission or replacement kit is missing. The optional [Full-spoiler content omitted] distinguish declared rewards from observed rewards and explain why an upstream activation recipe is not yet an exact installed-build guarantee.
+
+## Expected result
+
+You have a replaceable kit, one named initiator, a retreat decision and a return route that does not rely on an untested control. This completes readiness planning only; it does not establish a discovered structure, a summon, victory or successful recovery.
+
+## Common failures
+
+- **Someone already activated the encounter:** do not promise a reset or refund. Prioritize withdrawing by the known route; avoid spending more unfamiliar items while diagnosing it.
+- **A player dies:** a rescue is a new risk decision, not an automatic step. Do not assume inventory retention, a grave, loot protection or shared advancement credit.
+- **The route becomes unsafe:** abandon the attempt rather than proving the equipment was sufficient by repeated losses. Replaceable kits lower the cost of this choice, but cannot make combat safe.
+- **The party returns with no reward:** compare observations in the full notes; a loot declaration alone is not proof that it ran.
+
+## Sources
+
+- [S1] `BOMD-NeoForge-1.21-1.3.3.jar!META-INF/neoforge.mods.toml` — version, mod identity and high-threat description. Kit/party recommendations are editorial precautions, not claims derived from a combat implementation.
+--- END PAGE: Encounter readiness ---

@@ -1,9 +1,11 @@
+<!-- wiki.py managed raw export schema=1 -->
 Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/
-Baseline: dev-0.5-20261015
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
 
 # Minecraft pack handbook
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 Find the system you want to investigate, check what is known for this version, then follow its guide. This handbook does not establish or impose a shared technology-to-magic or character-progression order. Starting and awarding paths remain partly unmapped.
 
@@ -33,3 +35,16 @@ Use this handbook for my Minecraft pack. Check its baseline and evidence status 
 Installed files and selected saved settings were inspected. Every active archive was indexed, but only nine archives received representative gameplay-data reading. This is not a full mechanics reference or a compatibility certificate.
 
 [Sources and evidence](https://faizsaifulnizam.github.io/minecraft-pack-wiki/sources/) explain the limits. [Changes](https://faizsaifulnizam.github.io/minecraft-pack-wiki/changes/) records the snapshot.
+
+
+## Candidate snapshot scope
+
+This is a proposed documentation snapshot, not an applied wiki release or a tested pack release.
+
+Four named archives were freshly hashed and their shipped metadata/text inspected: Dungeons and Taverns, Iron's Spellbooks, Tensura and Twilight Forest. Their declared mod identities and dependency tables match the retained earlier declarations; their archive hashes differ. This does not establish why they differ or that their gameplay is unchanged.
+
+The remaining roster identities are imported from the earlier snapshot. A separate named-file hash audit matched the other 118 existing archive filenames, but did not enumerate newly added filenames. The roster counts—120 active archives, two disabled archives and 121 active declared IDs—describe this candidate roster, not a fresh complete installed-population audit.
+
+The snapshot timestamp records the four-archive documentation observation. It is not a new observation of saved settings, effective server/world rules, tag resolution, recipe overrides or gameplay. Saved-setting descriptions remain historical evidence unless explicitly refreshed. No game launch, recipe craft, progression award, persistence or compatibility test is implied.
+
+Only this sanitized roster is a public-baseline candidate. Private witnesses, impact ledgers, local paths, raw archive content and lifecycle receipts must remain outside the public wiki. Guides retain claim-specific evidence and unknowns; a new snapshot label alone does not validate their instructions.

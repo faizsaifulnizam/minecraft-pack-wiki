@@ -1,12 +1,14 @@
+<!-- wiki.py managed raw export schema=1 -->
 Source: https://faizsaifulnizam.github.io/minecraft-pack-wiki/guides/ae2-starter/
-Baseline: dev-0.5-20261015
+Baseline: dev-0.5-20261015-r2
+Spoiler: safe
 
 # Prepare your first AE2 storage system
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Baseline
-Applied Energistics 2 **19.2.18** in `dev-0.5-20261015`.
+Applied Energistics 2 **19.2.18** in `dev-0.5-20261015-r2`.
 
 ## Evidence status
 **Shipped documentation/data.** The installed guide supports this route. This is a preparation/build outline, not a gameplay-tested end-to-end network tutorial. A working power source and this pack's cross-mod power compatibility are not established here.
@@ -20,7 +22,7 @@ Access to meteorite materials, a way to make the listed AE2 components, and a po
 3. Use the Charger to obtain charged certus as needed. The guide makes Fluix from charged certus, redstone and nether quartz in water.
 4. Use the Inscriber and presses to prepare processors. Consult the current recipe view for each processor rather than mixing up printed circuits and completed processors.
 5. Prepare one ME Drive, one Terminal or Crafting Terminal, one Energy Acceptor, a few ordinary glass/covered/smart cables and storage cells. The shipped small-network list does not require a controller.
-6. Place the drive and energy acceptor together; the guide distinguishes cube and flat acceptor forms. Connect the terminal through cable, insert the cells, and supply compatible energy. Stop here if the power interface is unresolved rather than adding random power mods.
+6. Place the cube Energy Acceptor beside the ME Drive, or place the flat Energy Acceptor on a cable attached to the drive, as described in the shipped guide. Connect the terminal through cable, insert the cells, and supply compatible energy. Stop here if the power interface is unresolved rather than adding random power mods.
 
 ## Expected result
 The shipped guide's target is a small searchable ME inventory, without autocrafting. Whether it works with the chosen power source and current pack configuration still needs a real build check.

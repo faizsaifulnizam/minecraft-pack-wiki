@@ -2,12 +2,12 @@
 layout: default
 title: "Sources and evidence"
 permalink: /sources/
-baseline: dev-0.5-20261015
+baseline: dev-0.5-20261015-r2
 ---
 
 # Sources and evidence
 
-> Development snapshot: **dev-0.5-20261015**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
+> Development snapshot: **dev-0.5-20261015-r2**. Minecraft **1.21.1**, NeoForge **21.1.250**. The pack is still changing.
 
 ## Status labels
 | Label | Meaning |
@@ -19,7 +19,7 @@ baseline: dev-0.5-20261015
 | Unknown | Evidence is missing or a mechanism remains unresolved. Do not replace it with a guess. |
 
 ## Baseline and reproducibility
-Baseline ID: `dev-0.5-20261015`. The UTC inventory was captured late on 14 October; the snapshot ID uses its 15 October Singapore date. Exact versions and SHA-256 identities are retained in the safe baseline payload. Public content does not include local absolute paths, raw configs, logs, saves or mod binaries.
+Baseline ID: `dev-0.5-20261015-r2`. The UTC inventory was captured late on 14 October; the snapshot ID uses its 15 October Singapore date. Exact versions and SHA-256 identities are retained in the safe baseline payload. Public content does not include local absolute paths, raw configs, logs, saves or mod binaries.
 
 Archive citations use `archive.jar!internal/path`. They point inside the installed version, not to a claim about the newest upstream release. They are not downloadable JAR links and do not grant redistribution rights.
 
